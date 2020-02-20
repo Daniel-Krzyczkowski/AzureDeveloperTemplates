@@ -7,6 +7,7 @@
 
 #### 1. Azure Function With Dependency Injection Template
 
+Aaa
 
 #### 2. Azure Application Insights SDK with ASP .NET Core Template
 
@@ -28,7 +29,7 @@ Aaa
 
 Aaa
 
-#### 7. Azure Notification Hub SDD with ASP .NET Core Template
+#### 7. Azure Notification Hub SDK with ASP .NET Core Template
 
 Aaa
 
