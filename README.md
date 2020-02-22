@@ -47,7 +47,7 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
 Sample project to present how to enable logging with the Azure Application Insights.
 
 
-#### 3. [Azure Cosmos DB SDK Repository Pattern with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-cosmos-db-sdk-repository-pattern-asp-net-core-template)
+#### [3. Azure Cosmos DB SDK Repository Pattern with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-cosmos-db-sdk-repository-pattern-asp-net-core-template)
 
 Sample project to present how to use repository pattern with Azure Cosmos DB.
 
@@ -119,24 +119,233 @@ Sample project to present how to use repository pattern with Azure Cosmos DB.
 
 #### 4. [Azure Key Vault SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-key-vault-sdk-asp-net-core-template)
 
-Aaa
+Sample project to present how to integrate with the Azure Key Vault to eliminate storing credentials in the code.
+
+```csharp
+                        if (context.HostingEnvironment.IsProduction())
+                        {
+                            var builtConfig = config.Build();
+
+                            var azureServiceTokenProvider = new AzureServiceTokenProvider();
+                            var keyVaultClient = new KeyVaultClient(
+                                new KeyVaultClient.AuthenticationCallback(
+                                    azureServiceTokenProvider.KeyVaultTokenCallback));
+
+                            config.AddAzureKeyVault(
+                                $"https://{builtConfig["KeyVaultName"]}.vault.azure.net/",
+                                keyVaultClient,
+                                new DefaultKeyVaultSecretManager());
+                        }
+```
+
 
 #### 5. [Azure Notification Hub SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-notification-hub-sdk-asp-net-core-template)
 
-Aaa
+Sample project to present how to use Azure Notification Hub SDK to send push notifications.
+
+```csharp
+    public class PushNotificationService : IPushNotificationService
+    {
+        private readonly INotificationHubFactory _notificationHubFactory;
+        public PushNotificationService(INotificationHubFactory notificationHubFactory)
+        {
+            _notificationHubFactory = notificationHubFactory;
+        }
+
+        public async Task<string> CreateRegistrationId(string handle)
+        {
+            var hub = _notificationHubFactory.NotificationHubClient;
+            string newRegistrationId = null;
+
+            if (handle != null)
+            {
+                var registrations = await hub.GetRegistrationsByChannelAsync(handle, 100);
+
+                foreach (RegistrationDescription registration in registrations)
+                {
+                    if (newRegistrationId == null)
+                    {
+                        newRegistrationId = registration.RegistrationId;
+                    }
+                    else
+                    {
+                        await hub.DeleteRegistrationAsync(registration);
+                    }
+                }
+            }
+
+            if (newRegistrationId == null)
+            {
+                newRegistrationId = await hub.CreateRegistrationIdAsync();
+            }
+
+            return newRegistrationId;
+        }
+
+        public async Task DeleteRegistration(string registrationId)
+        {
+            await _notificationHubFactory.NotificationHubClient.DeleteRegistrationAsync(registrationId);
+        }
+
+        public async Task RegisterForPushNotifications(string registrationId, DeviceRegistration deviceUpdate)
+        {
+            var hub = _notificationHubFactory.NotificationHubClient;
+            RegistrationDescription registrationDescription = null;
+
+            switch (deviceUpdate.Platform)
+            {
+                case MobilePlatform.wns:
+                    registrationDescription = new WindowsRegistrationDescription(deviceUpdate.Handle);
+                    break;
+                case MobilePlatform.apns:
+                    registrationDescription = new AppleRegistrationDescription(deviceUpdate.Handle);
+                    break;
+                case MobilePlatform.fcm:
+                    registrationDescription = new FcmRegistrationDescription(deviceUpdate.Handle);
+                    break;
+                default:
+                    throw new ArgumentException("Please provide correct platform notification service name");
+            }
+
+            registrationDescription.RegistrationId = registrationId;
+            if (deviceUpdate.Tags != null)
+                registrationDescription.Tags = new HashSet<string>(deviceUpdate.Tags);
+
+            try
+            {
+                await hub.CreateOrUpdateRegistrationAsync(registrationDescription);
+            }
+            catch (MessagingException exception)
+            {
+                System.Diagnostics.Debug.WriteLine("Unhandled exception was thrown during registration in the Azure Notification Hub:");
+                System.Diagnostics.Debug.WriteLine(exception.Message);
+                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
+            }
+        }
+
+        public async Task<NotificationOutcome> SendNotification(PushNotification newNotification)
+        {
+            var hub = _notificationHubFactory.NotificationHubClient;
+
+            try
+            {
+                NotificationOutcome outcome = null;
+
+                switch (newNotification.MobilePlatform)
+                {
+                    case MobilePlatform.wns:
+                        var toast = @"<toast><visual><binding template=""ToastText01""><text id=""1"">"
+                         + newNotification.Message + "</text></binding></visual></toast>";
+
+                        if (newNotification.Tags == null)
+                            outcome = await hub.SendWindowsNativeNotificationAsync(toast);
+                        else
+                            outcome = await hub.SendWindowsNativeNotificationAsync(toast, newNotification.Tags);
+                        break;
+                    case MobilePlatform.apns:
+                        var alert = "{\"aps\":{\"alert\":\"" + newNotification.Message + "\"}}";
+
+                        if (newNotification.Tags == null)
+                            outcome = await hub.SendAppleNativeNotificationAsync(alert);
+                        else
+                            outcome = await hub.SendAppleNativeNotificationAsync(alert, newNotification.Tags);
+                        break;
+                    case MobilePlatform.fcm:
+                        var notification = "{ \"data\" : {\"message\":\"" + newNotification.Message + "\"}}";
+
+                        if (newNotification.Tags == null)
+                            outcome = await hub.SendFcmNativeNotificationAsync(notification);
+                        else
+                            outcome = await hub.SendFcmNativeNotificationAsync(notification, newNotification.Tags);
+                        break;
+                }
+
+                if (outcome != null)
+                {
+                    if (!((outcome.State == NotificationOutcomeState.Abandoned) ||
+                        (outcome.State == NotificationOutcomeState.Unknown)))
+                    {
+                        return outcome;
+                    }
+                }
+
+                System.Diagnostics.Debug.WriteLine("Notification was not sent due to issue. Please send again.");
+                return null;
+            }
+
+            catch (MessagingException exception)
+            {
+                System.Diagnostics.Debug.WriteLine("Unhandled exception was thrown during sending notification with the Azure Notification Hub:");
+                System.Diagnostics.Debug.WriteLine(exception.Message);
+                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
+                return null;
+            }
+
+            catch (ArgumentException exception)
+            {
+                System.Diagnostics.Debug.WriteLine("Unhandled exception was thrown during sending notification with the Azure Notification Hub:");
+                System.Diagnostics.Debug.WriteLine(exception.Message);
+                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
+                return null;
+            }
+        }
+    }
+```
+
 
 #### 6. [Azure SignalR Service SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-signalr-service-sdk-asp-net-core-template)
 
-Aaa
+Sample project to present how to use SignalR Service to send real time messages.
+
+```csharp
+    [Authorize]
+    public class SampleHub : Hub
+    {
+        [HubMethodName("SendDirectMessageToUser")]
+        public async Task SendDirectMessageToUser(string sampleMessageAsJson)
+        {
+            var sampleMessage = JsonConvert.DeserializeObject<SampleMessage>(sampleMessageAsJson);
+
+            sampleMessage.SenderId = new Guid(Context.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var messageAsJson = JsonConvert.SerializeObject(sampleMessage);
+
+            await Clients.User(sampleMessage.ReceiverId.ToString()).SendAsync(messageAsJson);
+        }
+    }
+```
+
 
 #### [7. Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-sql-db-repository-pattern-asp-net-core-template)
 
-Aaa
+Sample project to present how to use repository pattern with Azure SQL DB.
+
+```csharp
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+                                                                        : base(options)
+        {
+        }
+
+        public DbSet<SampleEntity> SampleEntities { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<SampleEntity>().HasData(new SampleEntity
+            {
+                Id = Guid.NewGuid()
+            });
+        }
+    }
+```
+
 
 #### 8. Azure Service Bus SDK with ASP .NET Core Template
 
-TBA
+To be added soon.
 
 #### 9. Azure Cognitive Search SDK with ASP .NET Core Template
 
-TBA
+To be added soon.
