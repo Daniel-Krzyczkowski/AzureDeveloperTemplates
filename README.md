@@ -117,7 +117,7 @@ Sample project to present how to use repository pattern with Azure Cosmos DB.
 ```
 
 
-#### 4. [Azure Key Vault SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-key-vault-sdk-asp-net-core-template)
+#### [4. Azure Key Vault SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-key-vault-sdk-asp-net-core-template)
 
 Sample project to present how to integrate with the Azure Key Vault to eliminate storing credentials in the code.
 
@@ -293,7 +293,7 @@ Sample project to present how to use Azure Notification Hub SDK to send push not
 ```
 
 
-#### 6. [Azure SignalR Service SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-signalr-service-sdk-asp-net-core-template)
+#### [6. Azure SignalR Service SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-signalr-service-sdk-asp-net-core-template)
 
 Sample project to present how to use SignalR Service to send real time messages.
 
