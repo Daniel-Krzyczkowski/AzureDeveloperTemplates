@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDeveloperTemplates.CosmosDbSdk.Core\AzureDeveloperTemplates.CosmosDbSdk.Core.csproj" />
+    <ProjectReference Include="..\AzureDeveloperTemplates.CosmosDbSdk.Infrastructure\AzureDeveloperTemplates.CosmosDbSdk.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>

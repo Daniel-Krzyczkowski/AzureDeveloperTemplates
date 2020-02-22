@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.CosmosDbSdk.WebAPI", "AzureDeveloperTemplates.CosmosDbSdk.WebAPI\AzureDeveloperTemplates.CosmosDbSdk.WebAPI.csproj", "{74394AA5-41A6-4AE2-8334-B63F5A609463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.CosmosDbSdk.WebAPI", "AzureDeveloperTemplates.CosmosDbSdk.WebAPI\AzureDeveloperTemplates.CosmosDbSdk.WebAPI.csproj", "{74394AA5-41A6-4AE2-8334-B63F5A609463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.CosmosDbSdk.Infrastructure", "AzureDeveloperTemplates.CosmosDbSdk.Infrastructure\AzureDeveloperTemplates.CosmosDbSdk.Infrastructure.csproj", "{31F8DB99-CC56-46B3-ADA5-D2E94B21B377}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.CosmosDbSdk.Core", "AzureDeveloperTemplates.CosmosDbSdk.Core\AzureDeveloperTemplates.CosmosDbSdk.Core.csproj", "{C7E207CF-8CFD-4D66-982D-5D1A12849EDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{74394AA5-41A6-4AE2-8334-B63F5A609463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74394AA5-41A6-4AE2-8334-B63F5A609463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74394AA5-41A6-4AE2-8334-B63F5A609463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F8DB99-CC56-46B3-ADA5-D2E94B21B377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F8DB99-CC56-46B3-ADA5-D2E94B21B377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F8DB99-CC56-46B3-ADA5-D2E94B21B377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F8DB99-CC56-46B3-ADA5-D2E94B21B377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E207CF-8CFD-4D66-982D-5D1A12849EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E207CF-8CFD-4D66-982D-5D1A12849EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E207CF-8CFD-4D66-982D-5D1A12849EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E207CF-8CFD-4D66-982D-5D1A12849EDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
