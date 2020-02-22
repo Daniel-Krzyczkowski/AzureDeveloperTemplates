@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDeveloperTemplates.AzureSqlEntityFramework.Core\AzureDeveloperTemplates.AzureSqlEntityFramework.Core.csproj" />
+    <ProjectReference Include="..\AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure\AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>
