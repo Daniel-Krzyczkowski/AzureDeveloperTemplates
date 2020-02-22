@@ -5,11 +5,11 @@
 
 ### Below there is a list of repositories presented together with descriptions:
 
-#### 1. Azure Function With Dependency Injection Template
+#### [1. Azure Function With Dependency Injection Template] (https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates)
 
 Aaa
 
-#### 2. Azure Application Insights SDK with ASP .NET Core Template
+#### [2. Azure Application Insights SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-application-insights-sdk-asp-net-core-template)
 
 Aaa
 
