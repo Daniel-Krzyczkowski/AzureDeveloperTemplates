@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AzureDeveloperTemplates.SignalrSdk.WebAPI.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +28,7 @@ namespace AzureDeveloperTemplates.SignalrSdk.WebAPI
         {
             services.AddControllers();
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSignalR().AddAzureSignalR();
         }
 
