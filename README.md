@@ -13,34 +13,30 @@ Aaa
 
 Aaa
 
-#### 3. Azure Application Insights SDK with ASP .NET Core Template
+#### 3. Azure Cognitive Search SDK with ASP .NET Core Template
 
 Aaa
 
-#### 4. Azure Cognitive Search SDK with ASP .NET Core Template
+#### 4. Azure Cosmos DB SDK Repository Pattern with ASP .NET Core Template
 
 Aaa
 
-#### 5. Azure Cosmos DB SDK Repository Pattern with ASP .NET Core Template
+#### 5. Azure Key Vault SDK with ASP .NET Core Template
 
 Aaa
 
-#### 6. Azure Key Vault SDK with ASP .NET Core Template
+#### 6. Azure Notification Hub SDK with ASP .NET Core Template
 
 Aaa
 
-#### 7. Azure Notification Hub SDK with ASP .NET Core Template
+#### 7. Azure Service Bus SDK with ASP .NET Core Template
 
 Aaa
 
-#### 8. Azure Service Bus SDK with ASP .NET Core Template
+#### 8. Azure SignalR Service SDK with ASP .NET Core Template
 
 Aaa
 
-#### 9. Azure SignalR Service SDK with ASP .NET Core Template
-
-Aaa
-
-#### 10. Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core Template
+#### 9. Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core Template
 
 Aaa
