@@ -5,7 +5,7 @@
 
 ### Below there is a list of repositories presented together with descriptions:
 
-#### [1. Azure Function With Dependency Injection Template] (https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates)
+#### [1. Azure Function With Dependency Injection Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates)
 
 Aaa
 
@@ -13,30 +13,30 @@ Aaa
 
 Aaa
 
-#### 3. Azure Cosmos DB SDK Repository Pattern with ASP .NET Core Template
+#### 3. [Azure Cosmos DB SDK Repository Pattern with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-cosmos-db-sdk-repository-pattern-asp-net-core-template)
 
 Aaa
 
-#### 4. Azure Key Vault SDK with ASP .NET Core Template
+#### 4. [Azure Key Vault SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-key-vault-sdk-asp-net-core-template)
 
 Aaa
 
-#### 5. Azure Notification Hub SDK with ASP .NET Core Template
+#### 5. [Azure Notification Hub SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-notification-hub-sdk-asp-net-core-template)
 
 Aaa
 
-#### 6. Azure SignalR Service SDK with ASP .NET Core Template
+#### 6. [Azure SignalR Service SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-signalr-service-sdk-asp-net-core-template)
 
 Aaa
 
-#### 7. Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core Template
+#### [7. Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-sql-db-repository-pattern-asp-net-core-template)
 
 Aaa
 
 #### 8. Azure Service Bus SDK with ASP .NET Core Template
 
-Aaa
+TBA
 
 #### 9. Azure Cognitive Search SDK with ASP .NET Core Template
 
-Aaa
+TBA
