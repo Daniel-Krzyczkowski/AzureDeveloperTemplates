@@ -3,6 +3,9 @@
 # Introduction
 ## This project and repository was created to collect templates related with Azure Services .NET SDK integration and commonly used design patterns.
 
+*If you like this content, please give it a star!*
+![github-start.png](images/github-start2.png)
+
 ### Below there is a list of repositories presented together with descriptions:
 
 #### [1. Azure Function With Dependency Injection Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates)
