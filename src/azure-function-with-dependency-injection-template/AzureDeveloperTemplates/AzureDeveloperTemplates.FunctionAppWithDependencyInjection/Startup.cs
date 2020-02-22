@@ -17,12 +17,6 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
         public override void Configure(IFunctionsHostBuilder builder)
         {
             ConfigureSettings(builder);
-            //builder.Services.AddLogging(options =>
-            //{
-            //    options.AddFilter("AzureDeveloperTemplates", LogLevel.Information);
-            //    options.AddFilter("AzureDeveloperTemplates", LogLevel.Error);
-            //});
-
             builder.Services.AddSingleton<IMailService, MailService>();
         }
 
