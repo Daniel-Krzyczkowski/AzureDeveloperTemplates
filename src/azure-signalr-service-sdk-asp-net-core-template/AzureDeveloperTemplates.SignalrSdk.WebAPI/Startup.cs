@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AzureDeveloperTemplates.SignalrSdk.WebAPI.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,8 @@ namespace AzureDeveloperTemplates.SignalrSdk.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddSignalR().AddAzureSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +44,7 @@ namespace AzureDeveloperTemplates.SignalrSdk.WebAPI
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHub<SampleHub>("/chat");
                 endpoints.MapControllers();
             });
         }
