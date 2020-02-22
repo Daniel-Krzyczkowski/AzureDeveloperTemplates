@@ -4,5 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDeveloperTemplates.NotificationHubSdk.Infrastructure\AzureDeveloperTemplates.NotificationHubSdk.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>
