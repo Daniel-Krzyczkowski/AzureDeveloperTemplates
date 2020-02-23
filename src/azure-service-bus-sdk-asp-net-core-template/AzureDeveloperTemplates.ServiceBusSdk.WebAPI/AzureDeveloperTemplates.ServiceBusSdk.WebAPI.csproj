@@ -4,5 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDeveloperTemplates.ServiceBusSdk.Infrastructure\AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>

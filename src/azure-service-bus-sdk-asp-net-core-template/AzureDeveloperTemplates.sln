@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.ServiceBusSdk.WebAPI", "AzureDeveloperTemplates.ServiceBusSdk.WebAPI\AzureDeveloperTemplates.ServiceBusSdk.WebAPI.csproj", "{79A8C0B8-043A-4E78-A6AE-82DC60607116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.ServiceBusSdk.WebAPI", "AzureDeveloperTemplates.ServiceBusSdk.WebAPI\AzureDeveloperTemplates.ServiceBusSdk.WebAPI.csproj", "{79A8C0B8-043A-4E78-A6AE-82DC60607116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.ServiceBusSdk.Infrastructure", "AzureDeveloperTemplates.ServiceBusSdk.Infrastructure\AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.csproj", "{5091FFD8-9030-4926-B003-A0AC783A932B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{79A8C0B8-043A-4E78-A6AE-82DC60607116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79A8C0B8-043A-4E78-A6AE-82DC60607116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79A8C0B8-043A-4E78-A6AE-82DC60607116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5091FFD8-9030-4926-B003-A0AC783A932B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5091FFD8-9030-4926-B003-A0AC783A932B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5091FFD8-9030-4926-B003-A0AC783A932B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5091FFD8-9030-4926-B003-A0AC783A932B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
