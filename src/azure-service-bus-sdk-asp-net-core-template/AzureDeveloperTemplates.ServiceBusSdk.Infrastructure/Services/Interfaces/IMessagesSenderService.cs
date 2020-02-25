@@ -7,6 +7,6 @@ namespace AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Services.Interfac
 {
     public interface IMessagesSenderService
     {
-        Task SendMessageToTopicAsync(string messageBody);
+        Task<string> SendMessageAsync(string messageBody);
     }
 }

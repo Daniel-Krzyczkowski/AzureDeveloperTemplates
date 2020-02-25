@@ -1,6 +1,8 @@
 ﻿using AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Services.Interfaces;
 using AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Settings;
 using Microsoft.Azure.ServiceBus;
+using Microsoft.Azure.ServiceBus.Primitives;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,16 +12,28 @@ namespace AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Services
 {
     public class MessagesSenderService : IMessagesSenderService
     {
-        private readonly IServiceBusClientFactory _serviceBusClientFactory;
+        private readonly ITopicClient _client;
+        private readonly ServiceBusSettings _serviceBusSettings;
 
-        public MessagesSenderService(IServiceBusClientFactory serviceBusClientFactory)
+        public MessagesSenderService(ServiceBusSettings serviceBusSettings)
         {
-            _serviceBusClientFactory = serviceBusClientFactory;
+            _serviceBusSettings = serviceBusSettings;
+            var token = TokenProvider.CreateSharedAccessSignatureTokenProvider(_serviceBusSettings.SharedAccessName,
+                                                                            _serviceBusSettings.SharedAccessKey, TokenScope.Entity);
+            _client = new TopicClient(_serviceBusSettings.ServiceBusNamespace, _serviceBusSettings.TopicName, token);
         }
 
-        public async Task SendMessageToTopicAsync(string messageBody)
+        public async Task<string> SendMessageAsync(string messageBody)
         {
-            throw new NotImplementedException();
+            var correlationId = Guid.NewGuid().ToString("N");
+            var messageToSend = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messageBody));
+            var message = new Message(messageToSend)
+            {
+                ContentType = $"{System.Net.Mime.MediaTypeNames.Application.Json};charset=utf-8",
+                CorrelationId = correlationId
+            };
+            await _client.SendAsync(message);
+            return correlationId;
         }
     }
 }
