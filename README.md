@@ -347,7 +347,9 @@ Sample project to present how to use repository pattern with Azure SQL DB.
 
 #### 8. Azure Service Bus SDK with ASP .NET Core Template
 
-To be added soon.
+Sample project to present how to use Azure Service Bus SDK to send and receive messages.
+Many thanks to [Paweł Haracz](https://twitter.com/HaraczPawel) who helped create this sample basing on the sample from his original [repository](https://github.com/PawelHaracz/pawelharacz.com)!
+
 
 #### 9. Azure Cognitive Search SDK with ASP .NET Core Template
 
