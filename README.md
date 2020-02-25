@@ -6,6 +6,9 @@
 *If you like this content, please give it a star!*
 ![github-start.png](images/github-start2.png)
 
+[Azure SDK Latest Releases](https://azure.github.io/azure-sdk/releases/latest/dotnet.html)
+
+
 ### Below there is a list of repositories presented together with descriptions:
 
 #### [1. Azure Function With Dependency Injection Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates)
