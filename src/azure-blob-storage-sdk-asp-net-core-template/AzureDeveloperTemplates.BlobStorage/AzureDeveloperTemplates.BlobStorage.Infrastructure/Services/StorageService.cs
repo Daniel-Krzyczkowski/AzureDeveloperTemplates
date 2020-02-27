@@ -65,6 +65,7 @@ namespace AzureDeveloperTemplates.BlobStorage.Infrastructure.Services
 
         public async Task UploadBlobAsync(Stream stream, string blobName)
         {
+            stream.Seek(0, SeekOrigin.Begin);
             var container = await GetBlobContainer();
 
             BlobClient blob = container.GetBlobClient(blobName);
