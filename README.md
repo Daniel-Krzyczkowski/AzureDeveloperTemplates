@@ -466,6 +466,7 @@ Sample project to present how to use Azure Storage Blobs SDK to upload and downl
 
         public async Task UploadBlobAsync(Stream stream, string blobName)
         {
+            stream.Seek(0, SeekOrigin.Begin);
             var container = await GetBlobContainer();
 
             BlobClient blob = container.GetBlobClient(blobName);
