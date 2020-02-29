@@ -128,20 +128,48 @@ Sample project to present how to use repository pattern with Azure Cosmos DB.
 Sample project to present how to integrate with the Azure Key Vault to eliminate storing credentials in the code.
 
 ```csharp
-                        if (context.HostingEnvironment.IsProduction())
-                        {
-                            var builtConfig = config.Build();
+        private static KeyVaultSecretClientClientFactory InitializeSecretClientInstanceAsync(IConfiguration configuration)
+        {
+            string keyVaultUrl = configuration["KeyVaultSettings:Url"];
+            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
+            var keyVaultSecretClientClientFactory = new KeyVaultSecretClientClientFactory(secretClient);
+            return keyVaultSecretClientClientFactory;
+        }
+```
 
-                            var azureServiceTokenProvider = new AzureServiceTokenProvider();
-                            var keyVaultClient = new KeyVaultClient(
-                                new KeyVaultClient.AuthenticationCallback(
-                                    azureServiceTokenProvider.KeyVaultTokenCallback));
 
-                            config.AddAzureKeyVault(
-                                $"https://{builtConfig["KeyVaultName"]}.vault.azure.net/",
-                                keyVaultClient,
-                                new DefaultKeyVaultSecretManager());
-                        }
+```csharp
+    public class SecretManager : ISecretManager
+    {
+        protected readonly IKeyVaultSecretClientClientFactory _keyVaultSecretClientClientFactory;
+        private readonly SecretClient _secretClient;
+
+        public SecretManager(IKeyVaultSecretClientClientFactory keyVaultSecretClientClientFactory)
+        {
+            _keyVaultSecretClientClientFactory = keyVaultSecretClientClientFactory;
+
+            _secretClient = _keyVaultSecretClientClientFactory.SecretClient;
+        }
+
+        public async Task<string> GetSecretAsync(string secretName)
+        {
+            KeyVaultSecret secret = await _secretClient.GetSecretAsync(secretName);
+            if (secret != null)
+            {
+                return secret.Value;
+            }
+
+            else
+            {
+                return string.Empty;
+            }
+        }
+
+        public async Task SetSecretAsync(string secretName, string secretValue)
+        {
+            await _secretClient.SetSecretAsync(secretName, secretValue);
+        }
+    }
 ```
 
 
