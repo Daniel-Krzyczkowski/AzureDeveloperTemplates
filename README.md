@@ -147,7 +147,6 @@ Sample project to present how to integrate with the Azure Key Vault to eliminate
         public SecretManager(IKeyVaultSecretClientClientFactory keyVaultSecretClientClientFactory)
         {
             _keyVaultSecretClientClientFactory = keyVaultSecretClientClientFactory;
-
             _secretClient = _keyVaultSecretClientClientFactory.SecretClient;
         }
 

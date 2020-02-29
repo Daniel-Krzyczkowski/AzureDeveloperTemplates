@@ -15,7 +15,6 @@ namespace AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.Services
         public SecretManager(IKeyVaultSecretClientClientFactory keyVaultSecretClientClientFactory)
         {
             _keyVaultSecretClientClientFactory = keyVaultSecretClientClientFactory;
-
             _secretClient = _keyVaultSecretClientClientFactory.SecretClient;
         }
 
