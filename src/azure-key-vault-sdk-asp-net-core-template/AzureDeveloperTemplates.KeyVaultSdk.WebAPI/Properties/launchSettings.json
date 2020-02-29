@@ -1,5 +1,4 @@
-﻿{
-  "$schema": "http://json.schemastore.org/launchsettings.json",
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -8,6 +7,7 @@
       "sslPort": 0
     }
   },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
@@ -21,10 +21,13 @@
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
-      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+        "AZURE_CLIENT_SECRET": "BkPS671Lc9n.FluEjNnM-MW@HJtFsq-T",
+        "AZURE_CLIENT_ID": "7d6423e2-353f-4518-bf97-6d306d6883f0",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AZURE_TENANT_ID": "7ab5a903-94f2-490a-b145-43863c529e1b"
+      },
+      "applicationUrl": "http://localhost:5000"
     }
   }
 }
