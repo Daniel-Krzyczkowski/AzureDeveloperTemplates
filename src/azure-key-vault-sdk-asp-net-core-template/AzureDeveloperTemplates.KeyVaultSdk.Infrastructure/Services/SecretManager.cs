@@ -36,5 +36,15 @@ namespace AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.Services
         {
             await _secretClient.SetSecretAsync(secretName, secretValue);
         }
+
+        public async Task DeleteSecret(string secretName)
+        {
+            DeleteSecretOperation operation = await _secretClient.StartDeleteSecretAsync(secretName);
+        }
+
+        public async Task UpdateSecret(string secretName, string secretValue)
+        {
+            await SetSecretAsync(secretName, secretValue);
+        }
     }
 }

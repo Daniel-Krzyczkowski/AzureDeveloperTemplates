@@ -9,5 +9,7 @@ namespace AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.Services.Interfaces
     {
         Task<string> GetSecretAsync(string secretName);
         Task SetSecretAsync(string secretName, string secretValue);
+        Task DeleteSecret(string secretName);
+        Task UpdateSecret(string secretName, string secretValue);
     }
 }
