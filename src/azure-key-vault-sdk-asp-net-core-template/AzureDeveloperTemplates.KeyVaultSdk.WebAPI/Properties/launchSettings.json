@@ -22,10 +22,7 @@
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
       "environmentVariables": {
-        "AZURE_CLIENT_SECRET": "BkPS671Lc9n.FluEjNnM-MW@HJtFsq-T",
-        "AZURE_CLIENT_ID": "7d6423e2-353f-4518-bf97-6d306d6883f0",
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "AZURE_TENANT_ID": "7ab5a903-94f2-490a-b145-43863c529e1b"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:5000"
     }
