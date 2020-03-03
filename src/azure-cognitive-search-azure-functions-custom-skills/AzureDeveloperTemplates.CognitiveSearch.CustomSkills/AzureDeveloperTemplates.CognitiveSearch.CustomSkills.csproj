@@ -8,7 +8,6 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AzureDeveloperTemplates.CognitiveSearch.CustomSkills.Core\AzureDeveloperTemplates.CognitiveSearch.CustomSkills.Core.csproj" />
     <ProjectReference Include="..\AzureDeveloperTemplates.CognitiveSearch.CustomSkills.Infrastructure\AzureDeveloperTemplates.CognitiveSearch.CustomSkills.Infrastructure.csproj" />
   </ItemGroup>
   <ItemGroup>

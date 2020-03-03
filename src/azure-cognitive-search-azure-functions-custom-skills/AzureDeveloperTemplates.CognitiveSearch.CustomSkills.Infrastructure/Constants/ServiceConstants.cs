@@ -6,6 +6,6 @@ namespace AzureDeveloperTemplates.CognitiveSearch.CustomSkills.Infrastructure.Co
 {
     public static class ServiceConstants
     {
-        public const string FormAnalyzerServiceName = "form-recognizer";
+        public const string FormAnalyzerServiceName = "form-recognizer-skill";
     }
 }
