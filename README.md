@@ -522,7 +522,7 @@ Sample project to present how to use Azure Storage Blobs SDK to upload and downl
     }
 ```
 
-#### 10. Azure Event Hub SDK with ASP .NET Core Template
+#### [10. Azure Event Hub SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-event-hub-sdk-asp-net-core-template/AzureDeveloperTemplates)
 
 Sample project to present how to use Azure Event Hub SDK to send and receive events using Azure Event Hub:
 
