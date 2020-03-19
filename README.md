@@ -11,7 +11,7 @@
 
 ### Below there is a list of repositories presented together with descriptions:
 
-#### [1. Azure Function With Dependency Injection Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates)
+#### [1. Azure Function With Dependency Injection Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template)
 
 Sample project to present how to use dependency injection in the Azure Functions.
 
