@@ -2,7 +2,7 @@
 
 **Daniel Krzyczkowski**
 
-![Author.jpg](assets/images/Author.jpg)
+![Author.jpg](assets/images/Author.JPG)
 
 Passionate about Microsoft technologies.
 
