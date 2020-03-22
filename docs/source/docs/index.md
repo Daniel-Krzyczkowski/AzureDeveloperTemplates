@@ -4,6 +4,6 @@
 
 [Azure SDK Latest Releases](https://azure.github.io/azure-sdk/releases/latest/dotnet.html)
 
-In the samples section you will find the links to the source code together with 
+In the samples section you will find the links to the source code together with implementation explanation.
 
 ![AzureDeveloperTemplates.png](assets/images/AzureDeveloperTemplates.png)
