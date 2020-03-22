@@ -2,6 +2,11 @@
 
 Sample project to present how to use Azure Event Hub SDK to send and receive events using Azure Event Hub:
 
+#### Packages used:
+1. [Azure.Messaging.EventHubs](https://www.nuget.org/packages/Azure.Messaging.EventHubs/)
+
+#### Code sample preview:
+
 ```csharp
     public class EventsReceiverService : IEventsReceiverService
     {

@@ -2,6 +2,12 @@
 
 Sample project to present how to integrate with the Azure Key Vault to eliminate storing credentials in the code.
 
+#### Packages used:
+1. [Azure.Identity](https://www.nuget.org/packages/Azure.identity?WT.mc_id=ondotnet-c9-cephilli)
+2. [Azure.Security.KeyVault.Secrets](https://www.nuget.org/packages/Azure.Security.KeyVault.Secrets/)
+
+#### Code sample preview:
+
 ```csharp
         private static KeyVaultSecretClientClientFactory InitializeSecretClientInstanceAsync(IConfiguration configuration)
         {

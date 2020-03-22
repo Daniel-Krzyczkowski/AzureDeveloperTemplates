@@ -2,6 +2,11 @@
 
  Sample project to present how to use repository pattern with Azure Cosmos DB.
 
+#### Packages used:
+1. [Microsoft.Azure.Cosmos](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/)
+
+#### Code sample preview:
+
 ```csharp
     public abstract class CosmosDbRepository<T> : IAsyncRepository<T> where T : BaseEntity
     {

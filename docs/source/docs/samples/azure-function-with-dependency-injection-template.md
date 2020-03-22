@@ -2,6 +2,12 @@
 
 Sample project to present how to use dependency injection in the Azure Functions.
 
+#### Packages used:
+1. [Microsoft.Azure.Functions.Extensions](https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/)
+2. [Microsoft.NET.Sdk.Functions](https://www.nuget.org/packages/Microsoft.NET.Sdk.Functions/)
+
+#### Code sample preview:
+
 ```csharp
 [assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
 namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection

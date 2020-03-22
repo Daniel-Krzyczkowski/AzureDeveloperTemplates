@@ -2,6 +2,11 @@
 
 Sample project to present how to use Azure Notification Hub SDK to send push notifications.
 
+#### Packages used:
+1. [Microsoft.Azure.NotificationHubs](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/)
+
+#### Code sample preview:
+
 ```csharp
     public class PushNotificationService : IPushNotificationService
     {

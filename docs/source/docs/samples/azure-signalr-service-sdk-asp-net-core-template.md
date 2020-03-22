@@ -2,6 +2,11 @@
 
 Sample project to present how to use SignalR Service to send real time messages.
 
+#### Packages used:
+1. [Microsoft.Azure.SignalR](https://www.nuget.org/packages/Microsoft.Azure.SignalR/)
+
+#### Code sample preview:
+
 ```csharp
     [Authorize]
     public class SampleHub : Hub

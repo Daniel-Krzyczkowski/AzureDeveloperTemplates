@@ -2,6 +2,12 @@
 
 Sample project to present how to use repository pattern with Azure SQL DB.
 
+#### Packages used:
+1. [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/)
+2. [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools/)
+
+#### Code sample preview:
+
 ```csharp
     public class ApplicationDbContext : DbContext
     {

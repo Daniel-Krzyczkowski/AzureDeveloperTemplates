@@ -3,6 +3,11 @@
 Sample project to present how to use Azure Service Bus SDK to send and receive messages.
 Many thanks to [@HaraczPawel](https://twitter.com/HaraczPawel) who helped create this sample basing on the sample from his original [repository](https://github.com/PawelHaracz/pawelharacz.com)!
 
+#### Packages used:
+1. [Microsoft.Azure.ServiceBus](https://www.nuget.org/packages/Microsoft.Azure.ServiceBus/)
+
+#### Code sample preview:
+
 ```csharp
     public class MessagesReceiverService : IMessagesReceiverService
     {

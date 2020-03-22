@@ -2,6 +2,11 @@
 
 Sample project to present how to use Azure Storage Blobs SDK to upload and downlad files from the Azure Blob Storage:
 
+#### Packages used:
+1. [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs/)
+
+#### Code sample preview:
+
 ```csharp
     public class StorageService : IStorageService
     {
