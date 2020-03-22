@@ -1,6 +1,9 @@
 site_name: Azure Developer Templates
 theme:
   name: 'material'
+  palette:
+    primary: 'blue'
+    accent: 'blue grey'
 nav:
     - Home: 'index.md'
     - 'Samples library':
