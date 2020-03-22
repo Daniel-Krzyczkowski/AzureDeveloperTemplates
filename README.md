@@ -182,7 +182,7 @@ Sample project to present how to integrate with the Azure Key Vault to eliminate
 ```
 
 
-#### 5. [Azure Notification Hub SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-notification-hub-sdk-asp-net-core-template)
+#### [5. Azure Notification Hub SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-notification-hub-sdk-asp-net-core-template)
 
 Sample project to present how to use Azure Notification Hub SDK to send push notifications.
 
