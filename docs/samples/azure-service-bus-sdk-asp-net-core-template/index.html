@@ -36,7 +36,7 @@
     
     
       
-        <title>Azure Function With Dependency Injection - Azure Developer Templates</title>
+        <title>Azure Service Bus SDK with ASP .NET Core - Azure Developer Templates</title>
       
     
     
@@ -97,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Azure Function With Dependency Injection
+                Azure Service Bus SDK with ASP .NET Core
               
             </span>
           
@@ -197,18 +197,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Azure Function With Dependency Injection" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-nav__link">
       Azure Function With Dependency Injection
     </a>
-    
   </li>
 
         
@@ -288,11 +281,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../azure-service-bus-sdk-asp-net-core-template/" title="Azure Service Bus SDK with ASP .NET Core" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Azure Service Bus SDK with ASP .NET Core" class="md-nav__link md-nav__link--active">
       Azure Service Bus SDK with ASP .NET Core
     </a>
+    
   </li>
 
         
@@ -362,40 +362,59 @@
               
                 
                 
-                  <h1>Azure Function With Dependency Injection</h1>
+                  <h1>Azure Service Bus SDK with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template">Azure Function With Dependency Injection Template</a></p>
-<p>Sample project to present how to use dependency injection in the Azure Functions.</p>
-<pre><code class="csharp">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
-namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
-{
-    class Startup : FunctionsStartup
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-service-bus-sdk-asp-net-core-template">Azure Service Bus SDK with ASP .NET Core Template</a></p>
+<p>Sample project to present how to use Azure Service Bus SDK to send and receive messages.
+Many thanks to <a href="https://twitter.com/HaraczPawel">@HaraczPawel</a> who helped create this sample basing on the sample from his original <a href="https://github.com/PawelHaracz/pawelharacz.com">repository</a>!</p>
+<pre><code class="csharp">    public class MessagesReceiverService : IMessagesReceiverService
     {
-        private IConfiguration _configuration;
+        private readonly ServiceBusSettings _serviceBusSettings;
+        private readonly IMessageReceiver _messageReceiver;
 
-        public override void Configure(IFunctionsHostBuilder builder)
+        public MessagesReceiverService(ServiceBusSettings serviceBusSettings)
         {
-            ConfigureSettings(builder);
-            builder.Services.AddSingleton&lt;IMailService, MailService&gt;();
+            _serviceBusSettings = serviceBusSettings;
+
+            var connectionString = new ServiceBusConnectionStringBuilder(_serviceBusSettings.ConnectionString);
+            _messageReceiver = new MessageReceiver(connectionString.GetNamespaceConnectionString(),
+                EntityNameHelper.FormatSubscriptionPath(_serviceBusSettings.TopicName, _serviceBusSettings.Subscription),
+                ReceiveMode.ReceiveAndDelete, RetryPolicy.Default);
         }
 
-        private void ConfigureSettings(IFunctionsHostBuilder builder)
-        {
-            var config = new ConfigurationBuilder()
-               .SetBasePath(Environment.CurrentDirectory)
-               .AddJsonFile(&quot;local.settings.json&quot;, optional: true, reloadOnChange: true)
-               .AddEnvironmentVariables()
-               .Build();
-            _configuration = config;
+        public Task&lt;Message&gt; ReceiveMessageAsync() =&gt; _messageReceiver.ReceiveAsync();
+        public Task&lt;Message&gt; ReceiveMessageAsync(TimeSpan operationTimeout) =&gt; _messageReceiver.ReceiveAsync(operationTimeout);
+        public Task&lt;IList&lt;Message&gt;&gt; ReceiveMessageAsync(int maxMessageCount) =&gt; _messageReceiver.ReceiveAsync(maxMessageCount);
+        public Task&lt;IList&lt;Message&gt;&gt; ReceiveMessageAsync(int maxMessageCount, TimeSpan operationTimeout) =&gt; _messageReceiver.ReceiveAsync(maxMessageCount, operationTimeout);
+    }
+</code></pre>
 
-            var mailServiceSettings = new MailServiceSettings()
+<pre><code class="csharp">    public class MessagesSenderService : IMessagesSenderService
+    {
+        private readonly ITopicClient _client;
+        private readonly ServiceBusSettings _serviceBusSettings;
+
+        public MessagesSenderService(ServiceBusSettings serviceBusSettings)
+        {
+            _serviceBusSettings = serviceBusSettings;
+            var token = TokenProvider.CreateSharedAccessSignatureTokenProvider(_serviceBusSettings.SharedAccessName,
+                                                                            _serviceBusSettings.SharedAccessKey, TokenScope.Entity);
+            _client = new TopicClient(_serviceBusSettings.ServiceBusNamespace, _serviceBusSettings.TopicName, token);
+        }
+
+        public async Task&lt;string&gt; SendMessageAsync(string messageBody)
+        {
+            var correlationId = Guid.NewGuid().ToString(&quot;N&quot;);
+            var messageToSend = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messageBody));
+            var message = new Message(messageToSend)
             {
-                SMTPFromAddress = _configuration[&quot;MailService:SMTPFromAddress&quot;]
+                ContentType = $&quot;{System.Net.Mime.MediaTypeNames.Application.Json};charset=utf-8&quot;,
+                CorrelationId = correlationId
             };
-            builder.Services.AddSingleton(mailServiceSettings);
+            await _client.SendAsync(message);
+            return correlationId;
         }
     }
-}
 </code></pre>
                 
                   
@@ -418,7 +437,7 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-sql-db-repository-pattern-asp-net-core-template/" title="Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -427,19 +446,19 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
               </span>
             </div>
           </a>
         
         
-          <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-blob-storage-sdk-asp-net-core-template/" title="Azure Storage Blobs SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Azure Application Insights SDK with ASP .NET Core
+                Azure Storage Blobs SDK with ASP .NET Core
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -36,18 +36,12 @@
     
     
       
-        <title>Azure Application Insights SDK with ASP .NET Core Template - Azure Developer Templates</title>
+        <title>Azure Storage Blobs SDK with ASP .NET Core - Azure Developer Templates</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#2196f3">
       
     
     
@@ -69,9 +63,7 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue-grey">
+    <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
@@ -105,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Azure Application Insights SDK with ASP .NET Core Template
+                Azure Storage Blobs SDK with ASP .NET Core
               
             </span>
           
@@ -192,11 +184,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      Samples
+      Samples library
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Samples
+        Samples library
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -207,8 +199,92 @@
 
 
   <li class="md-nav__item">
-    <a href="../sample1/" title="Azure Function With Dependency Injection Template" class="md-nav__link">
-      Azure Function With Dependency Injection Template
+    <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-nav__link">
+      Azure Function With Dependency Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-nav__link">
+      Azure Application Insights SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-cosmos-db-sdk-repository-pattern-asp-net-core-template/" title="Azure Cosmos DB SDK Repository Pattern with ASP .NET Core" class="md-nav__link">
+      Azure Cosmos DB SDK Repository Pattern with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-key-vault-sdk-asp-net-core-template/" title="Azure Key Vault SDK with ASP .NET Core" class="md-nav__link">
+      Azure Key Vault SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-nav__link">
+      Azure Notification Hub SDK with ASP .NET Core Template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link">
+      Azure SignalR Service SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-sql-db-repository-pattern-asp-net-core-template/" title="Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core" class="md-nav__link">
+      Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-service-bus-sdk-asp-net-core-template/" title="Azure Service Bus SDK with ASP .NET Core" class="md-nav__link">
+      Azure Service Bus SDK with ASP .NET Core
     </a>
   </li>
 
@@ -225,10 +301,34 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="Azure Application Insights SDK with ASP .NET Core Template" class="md-nav__link md-nav__link--active">
-      Azure Application Insights SDK with ASP .NET Core Template
+    <a href="./" title="Azure Storage Blobs SDK with ASP .NET Core" class="md-nav__link md-nav__link--active">
+      Azure Storage Blobs SDK with ASP .NET Core
     </a>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-event-hub-sdk-asp-net-core-template/" title="Azure Event Hub SDK with ASP .NET Core" class="md-nav__link">
+      Azure Event Hub SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-cognitive-search-sdk-asp-net-core-template/" title="Azure Cognitive Search SDK with ASP .NET Core" class="md-nav__link">
+      Azure Cognitive Search SDK with ASP .NET Core
+    </a>
   </li>
 
         
@@ -262,9 +362,84 @@
               
                 
                 
-                  <h1>Azure Application Insights SDK with ASP .NET Core Template</h1>
+                  <h1>Azure Storage Blobs SDK with ASP .NET Core</h1>
                 
-                <p>Samples description</p>
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-blob-storage-sdk-asp-net-core-template/AzureDeveloperTemplates.BlobStorage">Azure Storage Blobs SDK with ASP .NET Core Template</a></p>
+<p>Sample project to present how to use Azure Storage Blobs SDK to upload and downlad files from the Azure Blob Storage:</p>
+<pre><code class="csharp">    public class StorageService : IStorageService
+    {
+        private readonly BlobStorageSettings _blobStorageSettings;
+
+        public StorageService(BlobStorageSettings blobStorageSettings)
+        {
+            _blobStorageSettings = blobStorageSettings;
+        }
+
+        public async Task DeleteBlobIfExistsAsync(string blobName)
+        {
+            var container = await GetBlobContainer();
+            var blockBlob = container.GetBlobClient(blobName);
+            await blockBlob.DeleteIfExistsAsync();
+        }
+
+        public async Task&lt;bool&gt; DoesBlobExistAsync(string blobName)
+        {
+            var container = await GetBlobContainer();
+            var blockBlob = container.GetBlobClient(blobName);
+            var doesBlobExist = await blockBlob.ExistsAsync();
+            return doesBlobExist.Value;
+        }
+
+        public async Task DownloadBlobIfExistsAsync(Stream stream, string blobName)
+        {
+            var container = await GetBlobContainer();
+            var blockBlob = container.GetBlobClient(blobName);
+
+            var doesBlobExist = await blockBlob.ExistsAsync();
+
+            if (doesBlobExist.Value == true)
+            {
+                await blockBlob.DownloadToAsync(stream);
+            }
+        }
+
+        public async Task&lt;string&gt; GetBlobUrl(string blobName)
+        {
+            var container = await GetBlobContainer();
+            var blockBlob = container.GetBlobClient(blobName);
+
+            var exists = await blockBlob.ExistsAsync();
+
+            if (exists)
+            {
+                return blockBlob.Uri.ToString();
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
+        public async Task UploadBlobAsync(Stream stream, string blobName)
+        {
+            stream.Seek(0, SeekOrigin.Begin);
+            var container = await GetBlobContainer();
+
+            BlobClient blob = container.GetBlobClient(blobName);
+            await blob.UploadAsync(stream);
+        }
+
+        private async Task&lt;BlobContainerClient&gt; GetBlobContainer()
+        {
+            BlobContainerClient container = new BlobContainerClient(_blobStorageSettings.ConnectionString,
+                                                                            _blobStorageSettings.ContainerName);
+
+            await container.CreateIfNotExistsAsync();
+
+            return container;
+        }
+    }
+</code></pre>
                 
                   
                 
@@ -286,7 +461,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../sample1/" title="Azure Function With Dependency Injection Template" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-service-bus-sdk-asp-net-core-template/" title="Azure Service Bus SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -295,19 +470,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Azure Function With Dependency Injection Template
+                Azure Service Bus SDK with ASP .NET Core
               </span>
             </div>
           </a>
         
         
-          <a href="../../about/" title="About the author" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-event-hub-sdk-asp-net-core-template/" title="Azure Event Hub SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                About the author
+                Azure Event Hub SDK with ASP .NET Core
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

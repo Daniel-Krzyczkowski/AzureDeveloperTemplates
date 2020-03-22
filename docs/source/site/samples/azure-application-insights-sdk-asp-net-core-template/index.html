@@ -36,7 +36,7 @@
     
     
       
-        <title>Azure Function With Dependency Injection - Azure Developer Templates</title>
+        <title>Azure Application Insights SDK with ASP .NET Core - Azure Developer Templates</title>
       
     
     
@@ -97,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Azure Function With Dependency Injection
+                Azure Application Insights SDK with ASP .NET Core
               
             </span>
           
@@ -197,6 +197,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-nav__link">
+      Azure Function With Dependency Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -205,22 +217,10 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="Azure Function With Dependency Injection" class="md-nav__link md-nav__link--active">
-      Azure Function With Dependency Injection
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-nav__link">
+    <a href="./" title="Azure Application Insights SDK with ASP .NET Core" class="md-nav__link md-nav__link--active">
       Azure Application Insights SDK with ASP .NET Core
     </a>
+    
   </li>
 
         
@@ -362,41 +362,10 @@
               
                 
                 
-                  <h1>Azure Function With Dependency Injection</h1>
+                  <h1>Azure Application Insights SDK with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template">Azure Function With Dependency Injection Template</a></p>
-<p>Sample project to present how to use dependency injection in the Azure Functions.</p>
-<pre><code class="csharp">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
-namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
-{
-    class Startup : FunctionsStartup
-    {
-        private IConfiguration _configuration;
-
-        public override void Configure(IFunctionsHostBuilder builder)
-        {
-            ConfigureSettings(builder);
-            builder.Services.AddSingleton&lt;IMailService, MailService&gt;();
-        }
-
-        private void ConfigureSettings(IFunctionsHostBuilder builder)
-        {
-            var config = new ConfigurationBuilder()
-               .SetBasePath(Environment.CurrentDirectory)
-               .AddJsonFile(&quot;local.settings.json&quot;, optional: true, reloadOnChange: true)
-               .AddEnvironmentVariables()
-               .Build();
-            _configuration = config;
-
-            var mailServiceSettings = new MailServiceSettings()
-            {
-                SMTPFromAddress = _configuration[&quot;MailService:SMTPFromAddress&quot;]
-            };
-            builder.Services.AddSingleton(mailServiceSettings);
-        }
-    }
-}
-</code></pre>
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-application-insights-sdk-asp-net-core-template">Azure Application Insights SDK with ASP .NET Core Template</a></p>
+<p>Sample project to present how to enable logging with the Azure Application Insights.</p>
                 
                   
                 
@@ -418,7 +387,7 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -427,19 +396,19 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Azure Function With Dependency Injection
               </span>
             </div>
           </a>
         
         
-          <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-cosmos-db-sdk-repository-pattern-asp-net-core-template/" title="Azure Cosmos DB SDK Repository Pattern with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Azure Application Insights SDK with ASP .NET Core
+                Azure Cosmos DB SDK Repository Pattern with ASP .NET Core
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

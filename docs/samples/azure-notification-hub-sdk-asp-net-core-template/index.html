@@ -36,7 +36,7 @@
     
     
       
-        <title>Azure Function With Dependency Injection - Azure Developer Templates</title>
+        <title>Azure Notification Hub SDK with ASP .NET Core Template - Azure Developer Templates</title>
       
     
     
@@ -97,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Azure Function With Dependency Injection
+                Azure Notification Hub SDK with ASP .NET Core Template
               
             </span>
           
@@ -197,18 +197,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Azure Function With Dependency Injection" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-nav__link">
       Azure Function With Dependency Injection
     </a>
-    
   </li>
 
         
@@ -252,11 +245,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-nav__link md-nav__link--active">
       Azure Notification Hub SDK with ASP .NET Core Template
     </a>
+    
   </li>
 
         
@@ -362,40 +362,156 @@
               
                 
                 
-                  <h1>Azure Function With Dependency Injection</h1>
+                  <h1>Azure Notification Hub SDK with ASP .NET Core Template</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template">Azure Function With Dependency Injection Template</a></p>
-<p>Sample project to present how to use dependency injection in the Azure Functions.</p>
-<pre><code class="csharp">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
-namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
-{
-    class Startup : FunctionsStartup
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-notification-hub-sdk-asp-net-core-template">Azure Notification Hub SDK with ASP .NET Core Template</a></p>
+<p>Sample project to present how to use Azure Notification Hub SDK to send push notifications.</p>
+<pre><code class="csharp">    public class PushNotificationService : IPushNotificationService
     {
-        private IConfiguration _configuration;
-
-        public override void Configure(IFunctionsHostBuilder builder)
+        private readonly INotificationHubFactory _notificationHubFactory;
+        public PushNotificationService(INotificationHubFactory notificationHubFactory)
         {
-            ConfigureSettings(builder);
-            builder.Services.AddSingleton&lt;IMailService, MailService&gt;();
+            _notificationHubFactory = notificationHubFactory;
         }
 
-        private void ConfigureSettings(IFunctionsHostBuilder builder)
+        public async Task&lt;string&gt; CreateRegistrationId(string handle)
         {
-            var config = new ConfigurationBuilder()
-               .SetBasePath(Environment.CurrentDirectory)
-               .AddJsonFile(&quot;local.settings.json&quot;, optional: true, reloadOnChange: true)
-               .AddEnvironmentVariables()
-               .Build();
-            _configuration = config;
+            var hub = _notificationHubFactory.NotificationHubClient;
+            string newRegistrationId = null;
 
-            var mailServiceSettings = new MailServiceSettings()
+            if (handle != null)
             {
-                SMTPFromAddress = _configuration[&quot;MailService:SMTPFromAddress&quot;]
-            };
-            builder.Services.AddSingleton(mailServiceSettings);
+                var registrations = await hub.GetRegistrationsByChannelAsync(handle, 100);
+
+                foreach (RegistrationDescription registration in registrations)
+                {
+                    if (newRegistrationId == null)
+                    {
+                        newRegistrationId = registration.RegistrationId;
+                    }
+                    else
+                    {
+                        await hub.DeleteRegistrationAsync(registration);
+                    }
+                }
+            }
+
+            if (newRegistrationId == null)
+            {
+                newRegistrationId = await hub.CreateRegistrationIdAsync();
+            }
+
+            return newRegistrationId;
+        }
+
+        public async Task DeleteRegistration(string registrationId)
+        {
+            await _notificationHubFactory.NotificationHubClient.DeleteRegistrationAsync(registrationId);
+        }
+
+        public async Task RegisterForPushNotifications(string registrationId, DeviceRegistration deviceUpdate)
+        {
+            var hub = _notificationHubFactory.NotificationHubClient;
+            RegistrationDescription registrationDescription = null;
+
+            switch (deviceUpdate.Platform)
+            {
+                case MobilePlatform.wns:
+                    registrationDescription = new WindowsRegistrationDescription(deviceUpdate.Handle);
+                    break;
+                case MobilePlatform.apns:
+                    registrationDescription = new AppleRegistrationDescription(deviceUpdate.Handle);
+                    break;
+                case MobilePlatform.fcm:
+                    registrationDescription = new FcmRegistrationDescription(deviceUpdate.Handle);
+                    break;
+                default:
+                    throw new ArgumentException(&quot;Please provide correct platform notification service name&quot;);
+            }
+
+            registrationDescription.RegistrationId = registrationId;
+            if (deviceUpdate.Tags != null)
+                registrationDescription.Tags = new HashSet&lt;string&gt;(deviceUpdate.Tags);
+
+            try
+            {
+                await hub.CreateOrUpdateRegistrationAsync(registrationDescription);
+            }
+            catch (MessagingException exception)
+            {
+                System.Diagnostics.Debug.WriteLine(&quot;Unhandled exception was thrown during registration in the Azure Notification Hub:&quot;);
+                System.Diagnostics.Debug.WriteLine(exception.Message);
+                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
+            }
+        }
+
+        public async Task&lt;NotificationOutcome&gt; SendNotification(PushNotification newNotification)
+        {
+            var hub = _notificationHubFactory.NotificationHubClient;
+
+            try
+            {
+                NotificationOutcome outcome = null;
+
+                switch (newNotification.MobilePlatform)
+                {
+                    case MobilePlatform.wns:
+                        var toast = @&quot;&lt;toast&gt;&lt;visual&gt;&lt;binding template=&quot;&quot;ToastText01&quot;&quot;&gt;&lt;text id=&quot;&quot;1&quot;&quot;&gt;&quot;
+                         + newNotification.Message + &quot;&lt;/text&gt;&lt;/binding&gt;&lt;/visual&gt;&lt;/toast&gt;&quot;;
+
+                        if (newNotification.Tags == null)
+                            outcome = await hub.SendWindowsNativeNotificationAsync(toast);
+                        else
+                            outcome = await hub.SendWindowsNativeNotificationAsync(toast, newNotification.Tags);
+                        break;
+                    case MobilePlatform.apns:
+                        var alert = &quot;{\&quot;aps\&quot;:{\&quot;alert\&quot;:\&quot;&quot; + newNotification.Message + &quot;\&quot;}}&quot;;
+
+                        if (newNotification.Tags == null)
+                            outcome = await hub.SendAppleNativeNotificationAsync(alert);
+                        else
+                            outcome = await hub.SendAppleNativeNotificationAsync(alert, newNotification.Tags);
+                        break;
+                    case MobilePlatform.fcm:
+                        var notification = &quot;{ \&quot;data\&quot; : {\&quot;message\&quot;:\&quot;&quot; + newNotification.Message + &quot;\&quot;}}&quot;;
+
+                        if (newNotification.Tags == null)
+                            outcome = await hub.SendFcmNativeNotificationAsync(notification);
+                        else
+                            outcome = await hub.SendFcmNativeNotificationAsync(notification, newNotification.Tags);
+                        break;
+                }
+
+                if (outcome != null)
+                {
+                    if (!((outcome.State == NotificationOutcomeState.Abandoned) ||
+                        (outcome.State == NotificationOutcomeState.Unknown)))
+                    {
+                        return outcome;
+                    }
+                }
+
+                System.Diagnostics.Debug.WriteLine(&quot;Notification was not sent due to issue. Please send again.&quot;);
+                return null;
+            }
+
+            catch (MessagingException exception)
+            {
+                System.Diagnostics.Debug.WriteLine(&quot;Unhandled exception was thrown during sending notification with the Azure Notification Hub:&quot;);
+                System.Diagnostics.Debug.WriteLine(exception.Message);
+                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
+                return null;
+            }
+
+            catch (ArgumentException exception)
+            {
+                System.Diagnostics.Debug.WriteLine(&quot;Unhandled exception was thrown during sending notification with the Azure Notification Hub:&quot;);
+                System.Diagnostics.Debug.WriteLine(exception.Message);
+                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
+                return null;
+            }
         }
     }
-}
 </code></pre>
                 
                   
@@ -418,7 +534,7 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-key-vault-sdk-asp-net-core-template/" title="Azure Key Vault SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -427,19 +543,19 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Azure Key Vault SDK with ASP .NET Core
               </span>
             </div>
           </a>
         
         
-          <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Azure Application Insights SDK with ASP .NET Core
+                Azure SignalR Service SDK with ASP .NET Core
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

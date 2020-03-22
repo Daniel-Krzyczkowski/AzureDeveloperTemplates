@@ -36,7 +36,7 @@
     
     
       
-        <title>Azure Function With Dependency Injection - Azure Developer Templates</title>
+        <title>Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core - Azure Developer Templates</title>
       
     
     
@@ -97,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Azure Function With Dependency Injection
+                Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
               
             </span>
           
@@ -197,18 +197,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Azure Function With Dependency Injection" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-nav__link">
       Azure Function With Dependency Injection
     </a>
-    
   </li>
 
         
@@ -276,11 +269,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../azure-sql-db-repository-pattern-asp-net-core-template/" title="Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core" class="md-nav__link md-nav__link--active">
       Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
     </a>
+    
   </li>
 
         
@@ -362,41 +362,32 @@
               
                 
                 
-                  <h1>Azure Function With Dependency Injection</h1>
+                  <h1>Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template">Azure Function With Dependency Injection Template</a></p>
-<p>Sample project to present how to use dependency injection in the Azure Functions.</p>
-<pre><code class="csharp">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
-namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
-{
-    class Startup : FunctionsStartup
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-sql-db-repository-pattern-asp-net-core-template">Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core Template</a></p>
+<p>Sample project to present how to use repository pattern with Azure SQL DB.</p>
+<pre><code class="csharp">    public class ApplicationDbContext : DbContext
     {
-        private IConfiguration _configuration;
-
-        public override void Configure(IFunctionsHostBuilder builder)
+        public ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options)
+                                                                        : base(options)
         {
-            ConfigureSettings(builder);
-            builder.Services.AddSingleton&lt;IMailService, MailService&gt;();
         }
 
-        private void ConfigureSettings(IFunctionsHostBuilder builder)
-        {
-            var config = new ConfigurationBuilder()
-               .SetBasePath(Environment.CurrentDirectory)
-               .AddJsonFile(&quot;local.settings.json&quot;, optional: true, reloadOnChange: true)
-               .AddEnvironmentVariables()
-               .Build();
-            _configuration = config;
+        public DbSet&lt;SampleEntity&gt; SampleEntities { get; set; }
 
-            var mailServiceSettings = new MailServiceSettings()
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity&lt;SampleEntity&gt;().HasData(new SampleEntity
             {
-                SMTPFromAddress = _configuration[&quot;MailService:SMTPFromAddress&quot;]
-            };
-            builder.Services.AddSingleton(mailServiceSettings);
+                Id = Guid.NewGuid()
+            });
         }
     }
-}
 </code></pre>
+
+<p>```</p>
                 
                   
                 
@@ -418,7 +409,7 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -427,19 +418,19 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Azure SignalR Service SDK with ASP .NET Core
               </span>
             </div>
           </a>
         
         
-          <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-service-bus-sdk-asp-net-core-template/" title="Azure Service Bus SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Azure Application Insights SDK with ASP .NET Core
+                Azure Service Bus SDK with ASP .NET Core
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

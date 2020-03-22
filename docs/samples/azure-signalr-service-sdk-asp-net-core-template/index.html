@@ -36,7 +36,7 @@
     
     
       
-        <title>Azure Function With Dependency Injection - Azure Developer Templates</title>
+        <title>Azure SignalR Service SDK with ASP .NET Core - Azure Developer Templates</title>
       
     
     
@@ -97,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Azure Function With Dependency Injection
+                Azure SignalR Service SDK with ASP .NET Core
               
             </span>
           
@@ -197,18 +197,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Azure Function With Dependency Injection" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-nav__link">
       Azure Function With Dependency Injection
     </a>
-    
   </li>
 
         
@@ -264,11 +257,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link md-nav__link--active">
       Azure SignalR Service SDK with ASP .NET Core
     </a>
+    
   </li>
 
         
@@ -362,40 +362,24 @@
               
                 
                 
-                  <h1>Azure Function With Dependency Injection</h1>
+                  <h1>Azure SignalR Service SDK with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template">Azure Function With Dependency Injection Template</a></p>
-<p>Sample project to present how to use dependency injection in the Azure Functions.</p>
-<pre><code class="csharp">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
-namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
-{
-    class Startup : FunctionsStartup
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-signalr-service-sdk-asp-net-core-template">Azure SignalR Service SDK with ASP .NET Core Template</a></p>
+<p>Sample project to present how to use SignalR Service to send real time messages.</p>
+<pre><code class="csharp">    [Authorize]
+    public class SampleHub : Hub
     {
-        private IConfiguration _configuration;
-
-        public override void Configure(IFunctionsHostBuilder builder)
+        [HubMethodName(&quot;SendDirectMessageToUser&quot;)]
+        public async Task SendDirectMessageToUser(string sampleMessageAsJson)
         {
-            ConfigureSettings(builder);
-            builder.Services.AddSingleton&lt;IMailService, MailService&gt;();
-        }
+            var sampleMessage = JsonConvert.DeserializeObject&lt;SampleMessage&gt;(sampleMessageAsJson);
 
-        private void ConfigureSettings(IFunctionsHostBuilder builder)
-        {
-            var config = new ConfigurationBuilder()
-               .SetBasePath(Environment.CurrentDirectory)
-               .AddJsonFile(&quot;local.settings.json&quot;, optional: true, reloadOnChange: true)
-               .AddEnvironmentVariables()
-               .Build();
-            _configuration = config;
+            sampleMessage.SenderId = new Guid(Context.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var messageAsJson = JsonConvert.SerializeObject(sampleMessage);
 
-            var mailServiceSettings = new MailServiceSettings()
-            {
-                SMTPFromAddress = _configuration[&quot;MailService:SMTPFromAddress&quot;]
-            };
-            builder.Services.AddSingleton(mailServiceSettings);
+            await Clients.User(sampleMessage.ReceiverId.ToString()).SendAsync(messageAsJson);
         }
     }
-}
 </code></pre>
                 
                   
@@ -418,7 +402,7 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -427,19 +411,19 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Azure Notification Hub SDK with ASP .NET Core Template
               </span>
             </div>
           </a>
         
         
-          <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-sql-db-repository-pattern-asp-net-core-template/" title="Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Azure Application Insights SDK with ASP .NET Core
+                Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

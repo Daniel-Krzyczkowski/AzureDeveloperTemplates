@@ -36,7 +36,7 @@
     
     
       
-        <title>Sample2 - Azure Developer Templates</title>
+        <title>Azure Function With Dependency Injection - Azure Developer Templates</title>
       
     
     
@@ -97,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Sample2
+                Azure Function With Dependency Injection
               
             </span>
           
@@ -176,10 +176,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Samples library
@@ -195,10 +197,137 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Azure Function With Dependency Injection" class="md-nav__link md-nav__link--active">
+      Azure Function With Dependency Injection
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-nav__link">
-      Azure Function With Dependency Injection
+    <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-nav__link">
+      Azure Application Insights SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-cosmos-db-sdk-repository-pattern-asp-net-core-template/" title="Azure Cosmos DB SDK Repository Pattern with ASP .NET Core" class="md-nav__link">
+      Azure Cosmos DB SDK Repository Pattern with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-key-vault-sdk-asp-net-core-template/" title="Azure Key Vault SDK with ASP .NET Core" class="md-nav__link">
+      Azure Key Vault SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-nav__link">
+      Azure Notification Hub SDK with ASP .NET Core Template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link">
+      Azure SignalR Service SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-sql-db-repository-pattern-asp-net-core-template/" title="Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core" class="md-nav__link">
+      Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-service-bus-sdk-asp-net-core-template/" title="Azure Service Bus SDK with ASP .NET Core" class="md-nav__link">
+      Azure Service Bus SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-blob-storage-sdk-asp-net-core-template/" title="Azure Storage Blobs SDK with ASP .NET Core" class="md-nav__link">
+      Azure Storage Blobs SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-event-hub-sdk-asp-net-core-template/" title="Azure Event Hub SDK with ASP .NET Core" class="md-nav__link">
+      Azure Event Hub SDK with ASP .NET Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-cognitive-search-sdk-asp-net-core-template/" title="Azure Cognitive Search SDK with ASP .NET Core" class="md-nav__link">
+      Azure Cognitive Search SDK with ASP .NET Core
     </a>
   </li>
 
@@ -214,8 +343,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../about/" title="About" class="md-nav__link">
-      About
+    <a href="../../about/" title="About the author" class="md-nav__link">
+      About the author
     </a>
   </li>
 
@@ -233,9 +362,41 @@
               
                 
                 
-                  <h1>Sample2</h1>
+                  <h1>Azure Function With Dependency Injection</h1>
                 
-                <p>Samples description</p>
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template">Azure Function With Dependency Injection Template</a></p>
+<p>Sample project to present how to use dependency injection in the Azure Functions.</p>
+<pre><code class="csharp">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
+namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
+{
+    class Startup : FunctionsStartup
+    {
+        private IConfiguration _configuration;
+
+        public override void Configure(IFunctionsHostBuilder builder)
+        {
+            ConfigureSettings(builder);
+            builder.Services.AddSingleton&lt;IMailService, MailService&gt;();
+        }
+
+        private void ConfigureSettings(IFunctionsHostBuilder builder)
+        {
+            var config = new ConfigurationBuilder()
+               .SetBasePath(Environment.CurrentDirectory)
+               .AddJsonFile(&quot;local.settings.json&quot;, optional: true, reloadOnChange: true)
+               .AddEnvironmentVariables()
+               .Build();
+            _configuration = config;
+
+            var mailServiceSettings = new MailServiceSettings()
+            {
+                SMTPFromAddress = _configuration[&quot;MailService:SMTPFromAddress&quot;]
+            };
+            builder.Services.AddSingleton(mailServiceSettings);
+        }
+    }
+}
+</code></pre>
                 
                   
                 
@@ -253,6 +414,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Azure Application Insights SDK with ASP .NET Core
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

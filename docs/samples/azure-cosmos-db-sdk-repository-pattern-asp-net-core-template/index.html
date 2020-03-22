@@ -36,7 +36,7 @@
     
     
       
-        <title>Azure Function With Dependency Injection - Azure Developer Templates</title>
+        <title>Azure Cosmos DB SDK Repository Pattern with ASP .NET Core - Azure Developer Templates</title>
       
     
     
@@ -97,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Azure Function With Dependency Injection
+                Azure Cosmos DB SDK Repository Pattern with ASP .NET Core
               
             </span>
           
@@ -197,18 +197,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Azure Function With Dependency Injection" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../azure-function-with-dependency-injection-template/" title="Azure Function With Dependency Injection" class="md-nav__link">
       Azure Function With Dependency Injection
     </a>
-    
   </li>
 
         
@@ -228,11 +221,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../azure-cosmos-db-sdk-repository-pattern-asp-net-core-template/" title="Azure Cosmos DB SDK Repository Pattern with ASP .NET Core" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Azure Cosmos DB SDK Repository Pattern with ASP .NET Core" class="md-nav__link md-nav__link--active">
       Azure Cosmos DB SDK Repository Pattern with ASP .NET Core
     </a>
+    
   </li>
 
         
@@ -362,40 +362,72 @@
               
                 
                 
-                  <h1>Azure Function With Dependency Injection</h1>
+                  <h1>Azure Cosmos DB SDK Repository Pattern with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template">Azure Function With Dependency Injection Template</a></p>
-<p>Sample project to present how to use dependency injection in the Azure Functions.</p>
-<pre><code class="csharp">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
-namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
-{
-    class Startup : FunctionsStartup
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-cosmos-db-sdk-repository-pattern-asp-net-core-template">Azure Cosmos DB SDK Repository Pattern with ASP .NET Core Template</a></p>
+<p>Sample project to present how to use repository pattern with Azure Cosmos DB.</p>
+<pre><code class="csharp">    public abstract class CosmosDbRepository&lt;T&gt; : IAsyncRepository&lt;T&gt; where T : BaseEntity
     {
-        private IConfiguration _configuration;
+        protected Container _container;
+        protected readonly ICosmosDbClientFactory _cosmosDbClientFactory;
+        protected readonly CosmosDbSettings _cosmosDbSettings;
 
-        public override void Configure(IFunctionsHostBuilder builder)
+        public abstract string ContainerName { get; }
+
+        public CosmosDbRepository(ICosmosDbClientFactory cosmosDbClientFactory,
+                                  CosmosDbSettings cosmosDbSettings)
         {
-            ConfigureSettings(builder);
-            builder.Services.AddSingleton&lt;IMailService, MailService&gt;();
+            _cosmosDbClientFactory = cosmosDbClientFactory;
+            _cosmosDbSettings = cosmosDbSettings;
+
+            _container = _cosmosDbClientFactory.CosmosClient
+                                               .GetContainer(_cosmosDbSettings.DatabaseName,
+                                                            ContainerName);
         }
 
-        private void ConfigureSettings(IFunctionsHostBuilder builder)
+        public async Task&lt;T&gt; AddAsync(T entity)
         {
-            var config = new ConfigurationBuilder()
-               .SetBasePath(Environment.CurrentDirectory)
-               .AddJsonFile(&quot;local.settings.json&quot;, optional: true, reloadOnChange: true)
-               .AddEnvironmentVariables()
-               .Build();
-            _configuration = config;
+            var response = await _container.CreateItemAsync&lt;T&gt;(entity, new PartitionKey(entity.Id.ToString()));
+            return response.Resource;
+        }
 
-            var mailServiceSettings = new MailServiceSettings()
+        public async Task DeleteAsync(T entity)
+        {
+            await _container.DeleteItemAsync&lt;T&gt;(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
+        }
+
+        public async Task&lt;T&gt; GetByIdAsync(Guid id)
+        {
+            try
             {
-                SMTPFromAddress = _configuration[&quot;MailService:SMTPFromAddress&quot;]
-            };
-            builder.Services.AddSingleton(mailServiceSettings);
+                ItemResponse&lt;T&gt; response = await _container.ReadItemAsync&lt;T&gt;(id.ToString(), new PartitionKey(id.ToString()));
+                return response.Resource;
+            }
+            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return null;
+            }
+        }
+
+        public async Task&lt;IReadOnlyList&lt;T&gt;&gt; ListAllAsync()
+        {
+            var query = _container.GetItemQueryIterator&lt;T&gt;(new QueryDefinition(&quot;Select * from c&quot;));
+            List&lt;T&gt; results = new List&lt;T&gt;();
+            while (query.HasMoreResults)
+            {
+                var response = await query.ReadNextAsync();
+
+                results.AddRange(response.ToList());
+            }
+
+            return results;
+        }
+
+        public async Task UpdateAsync(T entity)
+        {
+            await _container.UpsertItemAsync&lt;T&gt;(entity, new PartitionKey(entity.Id.ToString()));
         }
     }
-}
 </code></pre>
                 
                   
@@ -418,7 +450,7 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -427,19 +459,19 @@ namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Azure Application Insights SDK with ASP .NET Core
               </span>
             </div>
           </a>
         
         
-          <a href="../azure-application-insights-sdk-asp-net-core-template/" title="Azure Application Insights SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-key-vault-sdk-asp-net-core-template/" title="Azure Key Vault SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Azure Application Insights SDK with ASP .NET Core
+                Azure Key Vault SDK with ASP .NET Core
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
