@@ -1,5 +1,7 @@
 ![AzureDeveloperTemplates.png](images/AzureDeveloperTemplates.png)
 
+![.NET Core](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/workflows/.NET%20Core/badge.svg)
+
 # Introduction
 ## This project and repository was created to collect templates related with Azure Services .NET SDK integration and commonly used design patterns.
 
