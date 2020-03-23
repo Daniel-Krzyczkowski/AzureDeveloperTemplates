@@ -20,4 +20,22 @@ jobs:
     - name: Build azure-application-insights-sdk-asp-net-core-template
       run: dotnet build ./src/azure-application-insights-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
     - name: Build azure-blob-storage-sdk-asp-net-core-template
-      run: dotnet build ./src/azure-blob-storage-sdk-asp-net-core-template/AzureDeveloperTemplates.BlobStorage/AzureDeveloperTemplates.BlobStorage.sln --configuration Release
+      run: dotnet build ./src/azure-blob-storage-sdk-asp-net-core-template/AzureDeveloperTemplates.BlobStorage.sln --configuration Release
+    - name: Build azure-cognitive-search-sdk-asp-net-core-template
+      run: dotnet build ./src/azure-cognitive-search-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-cosmos-db-sdk-repository-pattern-asp-net-core-template
+      run: dotnet build ./src/azure-cosmos-db-sdk-repository-pattern-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-event-hub-sdk-asp-net-core-template
+      run: dotnet build ./src/azure-event-hub-sdk-asp-net-core-template/AzureDeveloperTemplates/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-function-with-dependency-injection-template
+      run: dotnet build ./src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-key-vault-sdk-asp-net-core-template
+      run: dotnet build ./src/azure-key-vault-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-notification-hub-sdk-asp-net-core-template
+      run: dotnet build ./src/azure-notification-hub-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-service-bus-sdk-asp-net-core-template
+      run: dotnet build ./src/azure-service-bus-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-signalr-service-sdk-asp-net-core-template
+      run: dotnet build ./src/azure-signalr-service-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-sql-db-repository-pattern-asp-net-core-template
+      run: dotnet build ./src/azure-sql-db-repository-pattern-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
