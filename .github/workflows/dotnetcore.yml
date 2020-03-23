@@ -17,5 +17,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Build with dotnet
+    - name: Build azure-application-insights-sdk-asp-net-core-template
       run: dotnet build ./src/azure-application-insights-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-blob-storage-sdk-asp-net-core-template
+      run: dotnet build ./src/azure-blob-storage-sdk-asp-net-core-template/AzureDeveloperTemplates.BlobStorage/AzureDeveloperTemplates.BlobStorage.sln --configuration Release
