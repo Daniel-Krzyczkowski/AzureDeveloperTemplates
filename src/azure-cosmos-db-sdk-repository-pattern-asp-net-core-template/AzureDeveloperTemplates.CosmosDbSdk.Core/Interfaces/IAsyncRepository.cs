@@ -1,7 +1,6 @@
 ﻿using AzureDeveloperTemplates.CosmosDbSdk.Core.Entities;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.CosmosDbSdk.Core.Interfaces

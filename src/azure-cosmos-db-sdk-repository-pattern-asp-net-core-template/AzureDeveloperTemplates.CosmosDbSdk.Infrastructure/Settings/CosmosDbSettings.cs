@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AzureDeveloperTemplates.CosmosDbSdk.Infrastructure.Settings
+﻿namespace AzureDeveloperTemplates.CosmosDbSdk.Infrastructure.Settings
 {
     public class CosmosDbSettings
     {

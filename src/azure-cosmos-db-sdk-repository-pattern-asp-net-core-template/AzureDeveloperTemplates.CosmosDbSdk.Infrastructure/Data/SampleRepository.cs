@@ -1,9 +1,6 @@
 ﻿using AzureDeveloperTemplates.CosmosDbSdk.Core.Entities;
 using AzureDeveloperTemplates.CosmosDbSdk.Infrastructure.Data.Interfaces;
 using AzureDeveloperTemplates.CosmosDbSdk.Infrastructure.Settings;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AzureDeveloperTemplates.CosmosDbSdk.Infrastructure.Data
 {
