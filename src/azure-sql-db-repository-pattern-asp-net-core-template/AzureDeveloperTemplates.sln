@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.AzureSqlEntityFramework.WebAPI", "AzureDeveloperTemplates.AzureSqlEntityFramework.WebAPI\AzureDeveloperTemplates.AzureSqlEntityFramework.WebAPI.csproj", "{F7641B1F-6CE4-4F98-9248-3711655F7142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.AzureSqlEntityFramework.Core", "AzureDeveloperTemplates.AzureSqlEntityFramework.Core\AzureDeveloperTemplates.AzureSqlEntityFramework.Core.csproj", "{F3225639-2A00-4B16-87CC-F8E1163283B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.AzureSqlEntityFramework.Core", "AzureDeveloperTemplates.AzureSqlEntityFramework.Core\AzureDeveloperTemplates.AzureSqlEntityFramework.Core.csproj", "{F3225639-2A00-4B16-87CC-F8E1163283B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure", "AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure\AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure.csproj", "{71234A8A-1178-43CA-BBE8-126FC03439D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure", "AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure\AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure.csproj", "{71234A8A-1178-43CA-BBE8-126FC03439D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

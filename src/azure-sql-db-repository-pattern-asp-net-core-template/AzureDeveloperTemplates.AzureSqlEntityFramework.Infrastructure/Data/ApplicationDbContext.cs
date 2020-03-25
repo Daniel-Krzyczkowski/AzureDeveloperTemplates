@@ -1,8 +1,6 @@
 ﻿using AzureDeveloperTemplates.AzureSqlEntityFramework.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AzureDeveloperTemplates.AzureSqlEntityFramework.Infrastructure.Data
 {
