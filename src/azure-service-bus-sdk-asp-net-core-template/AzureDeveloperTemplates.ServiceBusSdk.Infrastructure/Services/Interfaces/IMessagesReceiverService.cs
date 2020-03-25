@@ -1,7 +1,6 @@
 ﻿using Microsoft.Azure.ServiceBus;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Services.Interfaces

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Settings
+﻿namespace AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Settings
 {
     public class ServiceBusSettings
     {

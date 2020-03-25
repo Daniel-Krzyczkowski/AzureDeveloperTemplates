@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Services.Contracts
+﻿namespace AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Services.Contracts
 {
     public interface IDeserializer<out T>
     {

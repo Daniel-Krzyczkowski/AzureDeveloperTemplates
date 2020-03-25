@@ -1,7 +1,5 @@
 ﻿using AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Services.Contracts;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace AzureDeveloperTemplates.ServiceBusSdk.Infrastructure.Services
