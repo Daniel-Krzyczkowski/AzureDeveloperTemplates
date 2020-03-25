@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
+﻿namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
 {
     class MailServiceSettings
     {
