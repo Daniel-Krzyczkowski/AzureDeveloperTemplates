@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AzureDeveloperTemplates.NotificationHubSdk.Infrastructure.Services.PushNotifications
+﻿namespace AzureDeveloperTemplates.NotificationHubSdk.Infrastructure.Services.PushNotifications
 {
     public class DeviceRegistration
     {

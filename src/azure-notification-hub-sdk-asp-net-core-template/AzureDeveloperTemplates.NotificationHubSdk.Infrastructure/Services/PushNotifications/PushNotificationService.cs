@@ -3,7 +3,6 @@ using Microsoft.Azure.NotificationHubs;
 using Microsoft.Azure.NotificationHubs.Messaging;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.NotificationHubSdk.Infrastructure.Services.PushNotifications

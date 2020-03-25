@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AzureDeveloperTemplates.NotificationHubSdk.Infrastructure.Settings
+﻿namespace AzureDeveloperTemplates.NotificationHubSdk.Infrastructure.Settings
 {
     public class NotificationHubSettings
     {
