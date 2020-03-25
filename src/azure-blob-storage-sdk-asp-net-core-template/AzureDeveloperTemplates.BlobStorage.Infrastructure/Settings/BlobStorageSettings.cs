@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AzureDeveloperTemplates.BlobStorage.Infrastructure.Settings
+﻿namespace AzureDeveloperTemplates.BlobStorage.Infrastructure.Settings
 {
     public class BlobStorageSettings
     {

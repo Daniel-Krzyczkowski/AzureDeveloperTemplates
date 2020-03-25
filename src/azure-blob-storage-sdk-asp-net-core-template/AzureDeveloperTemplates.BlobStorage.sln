@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.BlobStorage.WebAPI", "AzureDeveloperTemplates.BlobStorage.WebAPI\AzureDeveloperTemplates.BlobStorage.WebAPI.csproj", "{2BFE537E-8E46-43CE-B7EE-50F47AC183DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.BlobStorage.WebAPI", "AzureDeveloperTemplates.BlobStorage.WebAPI\AzureDeveloperTemplates.BlobStorage.WebAPI.csproj", "{2BFE537E-8E46-43CE-B7EE-50F47AC183DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.BlobStorage.Infrastructure", "AzureDeveloperTemplates.BlobStorage.Infrastructure\AzureDeveloperTemplates.BlobStorage.Infrastructure.csproj", "{16CD559E-77A1-4492-A874-EBF9C4DF7EA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.BlobStorage.Infrastructure", "AzureDeveloperTemplates.BlobStorage.Infrastructure\AzureDeveloperTemplates.BlobStorage.Infrastructure.csproj", "{16CD559E-77A1-4492-A874-EBF9C4DF7EA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

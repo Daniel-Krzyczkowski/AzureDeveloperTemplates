@@ -1,10 +1,7 @@
 ﻿using Azure.Storage.Blobs;
 using AzureDeveloperTemplates.BlobStorage.Infrastructure.Services.Interfaces;
 using AzureDeveloperTemplates.BlobStorage.Infrastructure.Settings;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.BlobStorage.Infrastructure.Services
