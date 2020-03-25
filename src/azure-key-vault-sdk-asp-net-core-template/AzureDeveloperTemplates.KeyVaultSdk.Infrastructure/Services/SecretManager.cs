@@ -1,8 +1,5 @@
 ﻿using Azure.Security.KeyVault.Secrets;
 using AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.Services

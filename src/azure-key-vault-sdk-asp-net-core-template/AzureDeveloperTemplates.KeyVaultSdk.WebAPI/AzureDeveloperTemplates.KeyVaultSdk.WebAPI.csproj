@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>8b540751-4814-42c0-b8e5-188ca828a49d</UserSecretsId>
+    <UserSecretsId>2202b3bb-df1e-454a-9cbd-6b55c01aada2</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\AzureDeveloperTemplates.KeyVaultSdk.Infrastructure\AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.csproj" />

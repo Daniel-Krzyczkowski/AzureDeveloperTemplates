@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.KeyVaultSdk.WebAPI", "AzureDeveloperTemplates.KeyVaultSdk.WebAPI\AzureDeveloperTemplates.KeyVaultSdk.WebAPI.csproj", "{5B683AB1-7131-430F-8FAB-D50BC2660C87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.KeyVaultSdk.Infrastructure", "AzureDeveloperTemplates.KeyVaultSdk.Infrastructure\AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.csproj", "{17FC4F6E-DE45-4F99-94FD-B54E3E9FF7F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.KeyVaultSdk.Infrastructure", "AzureDeveloperTemplates.KeyVaultSdk.Infrastructure\AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.csproj", "{17FC4F6E-DE45-4F99-94FD-B54E3E9FF7F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

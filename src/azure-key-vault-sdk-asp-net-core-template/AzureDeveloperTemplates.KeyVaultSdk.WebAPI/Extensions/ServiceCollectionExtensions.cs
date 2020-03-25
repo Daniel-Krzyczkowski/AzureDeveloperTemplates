@@ -1,13 +1,11 @@
-﻿using Azure.Identity;
+﻿using Azure.Core;
+using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.Services;
 using AzureDeveloperTemplates.KeyVaultSdk.Infrastructure.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.KeyVaultSdk.WebAPI.Extensions
 {
@@ -23,7 +21,15 @@ namespace AzureDeveloperTemplates.KeyVaultSdk.WebAPI.Extensions
         private static KeyVaultSecretClientClientFactory InitializeSecretClientInstanceAsync(IConfiguration configuration)
         {
             string keyVaultUrl = configuration["KeyVaultSettings:Url"];
-            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
+
+            TokenCredential credential = new DefaultAzureCredential();
+#if DEBUG
+            credential = new ClientSecretCredential(configuration["AZURE_TENANT_ID"],
+                                                    configuration["AZURE_CLIENT_ID"],
+                                                    configuration["AZURE_CLIENT_SECRET"]);
+#endif
+
+            var secretClient = new SecretClient(new Uri(keyVaultUrl), credential);
             var keyVaultSecretClientClientFactory = new KeyVaultSecretClientClientFactory(secretClient);
             return keyVaultSecretClientClientFactory;
         }
