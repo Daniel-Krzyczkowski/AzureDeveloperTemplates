@@ -2,7 +2,7 @@
 
 **Daniel Krzyczkowski**
 
-![Author.jpg](assets/images/Author.JPG)
+![Author.jpg](https://avatars1.githubusercontent.com/u/15244422?s=400&u=9926d1d4e9e4f437c731ecb5532ab221495130a4&v=4)
 
 Passionate about Microsoft technologies.
 
