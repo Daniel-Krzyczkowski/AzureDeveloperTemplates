@@ -17,5 +17,6 @@ nav:
         - 'Azure Service Bus SDK with ASP .NET Core': 'samples/azure-service-bus-sdk-asp-net-core-template.md'
         - 'Azure Storage Blobs SDK with ASP .NET Core': 'samples/azure-blob-storage-sdk-asp-net-core-template.md'
         - 'Azure Event Hub SDK with ASP .NET Core': 'samples/azure-event-hub-sdk-asp-net-core-template.md'
+        - 'Azure Storage Queues SDK with ASP .NET Core': 'samples/azure-queue-storage-sdk-asp-net-core-template.md'
         - 'Azure Cognitive Search SDK with ASP .NET Core': 'samples/azure-cognitive-search-sdk-asp-net-core-template.md'
     - About the author: 'about.md'

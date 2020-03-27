@@ -1,4 +1,4 @@
-[Azure Event Hub SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-event-hub-sdk-asp-net-core-template/AzureDeveloperTemplates)
+[Azure Event Hub SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-event-hub-sdk-asp-net-core-template/)
 
 Sample project to present how to use Azure Event Hub SDK to send and receive events using Azure Event Hub.
 

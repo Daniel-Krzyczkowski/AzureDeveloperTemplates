@@ -36,7 +36,7 @@
     
     
       
-        <title>Azure SignalR Service SDK with ASP .NET Core - Azure Developer Templates</title>
+        <title>Azure Storage Queues SDK with ASP .NET Core - Azure Developer Templates</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Azure SignalR Service SDK with ASP .NET Core
+                Azure Storage Queues SDK with ASP .NET Core
               
             </span>
           
@@ -269,52 +269,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Azure SignalR Service SDK with ASP .NET Core
-      </label>
-    
-    <a href="./" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link">
       Azure SignalR Service SDK with ASP .NET Core
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#packages-used" class="md-nav__link">
-    Packages used:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -370,11 +329,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../azure-queue-storage-sdk-asp-net-core-template/" title="Azure Storage Queues SDK with ASP .NET Core" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Azure Storage Queues SDK with ASP .NET Core
+      </label>
+    
+    <a href="./" title="Azure Storage Queues SDK with ASP .NET Core" class="md-nav__link md-nav__link--active">
       Azure Storage Queues SDK with ASP .NET Core
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packages-used" class="md-nav__link">
+    Packages used:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-sample-preview" class="md-nav__link">
+    Code sample preview:
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -456,27 +456,58 @@
               
                 
                 
-                  <h1>Azure SignalR Service SDK with ASP .NET Core</h1>
+                  <h1>Azure Storage Queues SDK with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-signalr-service-sdk-asp-net-core-template">Azure SignalR Service SDK with ASP .NET Core Template</a></p>
-<p>Sample project to present how to use SignalR Service to send real time messages.</p>
+                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-queue-storage-sdk-asp-net-core-template/">Azure Storage Queues SDK with ASP .NET Core Template</a></p>
+<p>Sample project to present how to use Azure Storage Queues SDK to send and receive queue messages using Azure Storage Queues.</p>
 <h4 id="packages-used">Packages used:</h4>
 <ol>
-<li><a href="https://www.nuget.org/packages/Microsoft.Azure.SignalR/">Microsoft.Azure.SignalR</a></li>
+<li><a href="https://www.nuget.org/packages/Azure.Storage.Queues/">Azure.Storage.Queues</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    [Authorize]
-    public class SampleHub : Hub
+<pre><code class="csharp">    public class QueueMessagesReceiverService : IQueueMessagesReceiverService
     {
-        [HubMethodName(&quot;SendDirectMessageToUser&quot;)]
-        public async Task SendDirectMessageToUser(string sampleMessageAsJson)
+        public event EventHandler&lt;string&gt; NewQueueMessageReceived;
+        private readonly QueueClient _client;
+        private readonly QueueStorageSettings _queueStorageSettings;
+
+        public QueueMessagesReceiverService(QueueStorageSettings queueStorageSettings)
         {
-            var sampleMessage = JsonConvert.DeserializeObject&lt;SampleMessage&gt;(sampleMessageAsJson);
+            _queueStorageSettings = queueStorageSettings;
+            _client = new QueueClient(_queueStorageSettings.ConnectionString, _queueStorageSettings.QueueName);
+        }
 
-            sampleMessage.SenderId = new Guid(Context.User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var messageAsJson = JsonConvert.SerializeObject(sampleMessage);
 
-            await Clients.User(sampleMessage.ReceiverId.ToString()).SendAsync(messageAsJson);
+        public async Task ReceiveQueueMessagesAsync(CancellationToken cancellationToken)
+        {
+            var queueMessages = await _client.ReceiveMessagesAsync(cancellationToken);
+
+            foreach (QueueMessage message in queueMessages.Value)
+            {
+                NewQueueMessageReceived?.Invoke(this, message.MessageText);
+
+                _client.DeleteMessage(message.MessageId, message.PopReceipt);
+            }
+        }
+    }
+</code></pre>
+
+<pre><code class="csharp">    public class QueueMessagesSenderService : IQueueMessagesSenderService
+    {
+        private readonly QueueClient _client;
+        private readonly QueueStorageSettings _queueStorageSettings;
+
+        public QueueMessagesSenderService(QueueStorageSettings queueStorageSettings)
+        {
+            _queueStorageSettings = queueStorageSettings;
+            _client = new QueueClient(_queueStorageSettings.ConnectionString, _queueStorageSettings.QueueName);
+        }
+
+        public async Task SendEventAsync(string queueMessageBody)
+        {
+            await _client.CreateIfNotExistsAsync();
+
+            await _client.SendMessageAsync(queueMessageBody);
         }
     }
 </code></pre>
@@ -501,7 +532,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-event-hub-sdk-asp-net-core-template/" title="Azure Event Hub SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -510,19 +541,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Azure Notification Hub SDK with ASP .NET Core Template
+                Azure Event Hub SDK with ASP .NET Core
               </span>
             </div>
           </a>
         
         
-          <a href="../azure-sql-db-repository-pattern-asp-net-core-template/" title="Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-cognitive-search-sdk-asp-net-core-template/" title="Azure Cognitive Search SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
+                Azure Cognitive Search SDK with ASP .NET Core
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

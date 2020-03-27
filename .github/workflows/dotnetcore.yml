@@ -39,3 +39,5 @@ jobs:
       run: dotnet build ./src/azure-signalr-service-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
     - name: Build azure-sql-db-repository-pattern-asp-net-core-template
       run: dotnet build ./src/azure-sql-db-repository-pattern-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
+    - name: Build azure-queue-storage-sdk-asp-net-core-template
+      run: dotnet build ./src/azure-queue-storage-sdk-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
