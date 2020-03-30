@@ -6,4 +6,5 @@
 
 In the samples section you will find the links to the source code together with implementation explanation.
 
-![AzureDeveloperTemplates.png](assets/images/AzureDeveloperTemplates.png)
+
+![AzureDeveloperTemplates.png](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/blob/master/images/AzureDeveloperTemplates.png?raw=true)
