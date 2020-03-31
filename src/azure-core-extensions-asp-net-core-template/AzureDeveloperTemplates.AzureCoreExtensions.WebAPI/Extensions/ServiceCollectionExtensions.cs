@@ -55,15 +55,18 @@ namespace AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions
                             options.Retry.MaxRetries = 10;
                             options.Retry.Delay = TimeSpan.FromSeconds(3);
                             options.Diagnostics.IsLoggingEnabled = true;
-                            options.AddPolicy(provider.GetService<SimpleTracingPolicy>(), HttpPipelinePosition.PerCall);
+                            options.Diagnostics.ApplicationId = "AzureDeveloperTemplates";
+                            //options.AddPolicy(provider.GetService<SimpleTracingPolicy>(), HttpPipelinePosition.PerCall);
                         });
 
 
 
-
                 //Set global configuration for all clients:
-                //builder.ConfigureDefaults(options => options.Retry.Mode = RetryMode.Exponential);
-
+                //builder.ConfigureDefaults(options =>
+                //{
+                //    options.Retry.Mode = RetryMode.Exponential;
+                //    options.Diagnostics.IsLoggingEnabled = true;
+                //});
             });
         }
     }
