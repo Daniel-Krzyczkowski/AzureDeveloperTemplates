@@ -65,7 +65,7 @@ namespace AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Controllers
         [Route("{fileName}")]
         public async Task<IActionResult> Delete([FromRoute] string fileName)
         {
-            var blobContainer = _blobServiceClient.GetBlobContainerClient("");
+            var blobContainer = _blobServiceClient.GetBlobContainerClient(_blobStorageSettings.ContainerName);
             await blobContainer.CreateIfNotExistsAsync();
 
             var blockBlob = blobContainer.GetBlobClient(fileName);
