@@ -477,69 +477,69 @@
 <li><a href="https://www.nuget.org/packages/Microsoft.Azure.Cosmos/">Microsoft.Azure.Cosmos</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    public abstract class CosmosDbRepository&lt;T&gt; : IAsyncRepository&lt;T&gt; where T : BaseEntity
-    {
-        protected Container _container;
-        protected readonly ICosmosDbClientFactory _cosmosDbClientFactory;
-        protected readonly CosmosDbSettings _cosmosDbSettings;
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">CosmosDbRepository</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">:</span> <span class="n">IAsyncRepository</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="k">where</span> <span class="n">T</span> <span class="p">:</span> <span class="n">BaseEntity</span>
+    <span class="p">{</span>
+        <span class="k">protected</span> <span class="n">Container</span> <span class="n">_container</span><span class="p">;</span>
+        <span class="k">protected</span> <span class="k">readonly</span> <span class="n">ICosmosDbClientFactory</span> <span class="n">_cosmosDbClientFactory</span><span class="p">;</span>
+        <span class="k">protected</span> <span class="k">readonly</span> <span class="n">CosmosDbSettings</span> <span class="n">_cosmosDbSettings</span><span class="p">;</span>
 
-        public abstract string ContainerName { get; }
+        <span class="k">public</span> <span class="k">abstract</span> <span class="kt">string</span> <span class="n">ContainerName</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
 
-        public CosmosDbRepository(ICosmosDbClientFactory cosmosDbClientFactory,
-                                  CosmosDbSettings cosmosDbSettings)
-        {
-            _cosmosDbClientFactory = cosmosDbClientFactory;
-            _cosmosDbSettings = cosmosDbSettings;
+        <span class="k">public</span> <span class="nf">CosmosDbRepository</span><span class="p">(</span><span class="n">ICosmosDbClientFactory</span> <span class="n">cosmosDbClientFactory</span><span class="p">,</span>
+                                  <span class="n">CosmosDbSettings</span> <span class="n">cosmosDbSettings</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_cosmosDbClientFactory</span> <span class="p">=</span> <span class="n">cosmosDbClientFactory</span><span class="p">;</span>
+            <span class="n">_cosmosDbSettings</span> <span class="p">=</span> <span class="n">cosmosDbSettings</span><span class="p">;</span>
 
-            _container = _cosmosDbClientFactory.CosmosClient
-                                               .GetContainer(_cosmosDbSettings.DatabaseName,
-                                                            ContainerName);
-        }
+            <span class="n">_container</span> <span class="p">=</span> <span class="n">_cosmosDbClientFactory</span><span class="p">.</span><span class="n">CosmosClient</span>
+                                               <span class="p">.</span><span class="n">GetContainer</span><span class="p">(</span><span class="n">_cosmosDbSettings</span><span class="p">.</span><span class="n">DatabaseName</span><span class="p">,</span>
+                                                            <span class="n">ContainerName</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        public async Task&lt;T&gt; AddAsync(T entity)
-        {
-            var response = await _container.CreateItemAsync&lt;T&gt;(entity, new PartitionKey(entity.Id.ToString()));
-            return response.Resource;
-        }
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">AddAsync</span><span class="p">(</span><span class="n">T</span> <span class="n">entity</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_container</span><span class="p">.</span><span class="n">CreateItemAsync</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">entity</span><span class="p">,</span> <span class="k">new</span> <span class="n">PartitionKey</span><span class="p">(</span><span class="n">entity</span><span class="p">.</span><span class="n">Id</span><span class="p">.</span><span class="n">ToString</span><span class="p">()));</span>
+            <span class="k">return</span> <span class="n">response</span><span class="p">.</span><span class="n">Resource</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        public async Task DeleteAsync(T entity)
-        {
-            await _container.DeleteItemAsync&lt;T&gt;(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
-        }
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DeleteAsync</span><span class="p">(</span><span class="n">T</span> <span class="n">entity</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="n">_container</span><span class="p">.</span><span class="n">DeleteItemAsync</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">entity</span><span class="p">.</span><span class="n">Id</span><span class="p">.</span><span class="n">ToString</span><span class="p">(),</span> <span class="k">new</span> <span class="n">PartitionKey</span><span class="p">(</span><span class="n">entity</span><span class="p">.</span><span class="n">Id</span><span class="p">.</span><span class="n">ToString</span><span class="p">()));</span>
+        <span class="p">}</span>
 
-        public async Task&lt;T&gt; GetByIdAsync(Guid id)
-        {
-            try
-            {
-                ItemResponse&lt;T&gt; response = await _container.ReadItemAsync&lt;T&gt;(id.ToString(), new PartitionKey(id.ToString()));
-                return response.Resource;
-            }
-            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                return null;
-            }
-        }
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">GetByIdAsync</span><span class="p">(</span><span class="n">Guid</span> <span class="n">id</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="n">ItemResponse</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_container</span><span class="p">.</span><span class="n">ReadItemAsync</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">id</span><span class="p">.</span><span class="n">ToString</span><span class="p">(),</span> <span class="k">new</span> <span class="n">PartitionKey</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">ToString</span><span class="p">()));</span>
+                <span class="k">return</span> <span class="n">response</span><span class="p">.</span><span class="n">Resource</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">CosmosException</span> <span class="n">ex</span><span class="p">)</span> <span class="n">when</span> <span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">StatusCode</span> <span class="p">==</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">NotFound</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-        public async Task&lt;IReadOnlyList&lt;T&gt;&gt; ListAllAsync()
-        {
-            var query = _container.GetItemQueryIterator&lt;T&gt;(new QueryDefinition(&quot;Select * from c&quot;));
-            List&lt;T&gt; results = new List&lt;T&gt;();
-            while (query.HasMoreResults)
-            {
-                var response = await query.ReadNextAsync();
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">IReadOnlyList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;&gt;</span> <span class="n">ListAllAsync</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="n">_container</span><span class="p">.</span><span class="n">GetItemQueryIterator</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="k">new</span> <span class="n">QueryDefinition</span><span class="p">(</span><span class="s">&quot;Select * from c&quot;</span><span class="p">));</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">results</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;();</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">query</span><span class="p">.</span><span class="n">HasMoreResults</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">query</span><span class="p">.</span><span class="n">ReadNextAsync</span><span class="p">();</span>
 
-                results.AddRange(response.ToList());
-            }
+                <span class="n">results</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">ToList</span><span class="p">());</span>
+            <span class="p">}</span>
 
-            return results;
-        }
+            <span class="k">return</span> <span class="n">results</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        public async Task UpdateAsync(T entity)
-        {
-            await _container.UpsertItemAsync&lt;T&gt;(entity, new PartitionKey(entity.Id.ToString()));
-        }
-    }
-</code></pre>
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">UpdateAsync</span><span class="p">(</span><span class="n">T</span> <span class="n">entity</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="n">_container</span><span class="p">.</span><span class="n">UpsertItemAsync</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">entity</span><span class="p">,</span> <span class="k">new</span> <span class="n">PartitionKey</span><span class="p">(</span><span class="n">entity</span><span class="p">.</span><span class="n">Id</span><span class="p">.</span><span class="n">ToString</span><span class="p">()));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

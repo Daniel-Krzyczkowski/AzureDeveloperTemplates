@@ -477,80 +477,80 @@
 <li><a href="https://www.nuget.org/packages/Azure.Storage.Blobs/">Azure.Storage.Blobs</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    public class StorageService : IStorageService
-    {
-        private readonly BlobStorageSettings _blobStorageSettings;
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">StorageService</span> <span class="p">:</span> <span class="n">IStorageService</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">BlobStorageSettings</span> <span class="n">_blobStorageSettings</span><span class="p">;</span>
 
-        public StorageService(BlobStorageSettings blobStorageSettings)
-        {
-            _blobStorageSettings = blobStorageSettings;
-        }
+        <span class="k">public</span> <span class="nf">StorageService</span><span class="p">(</span><span class="n">BlobStorageSettings</span> <span class="n">blobStorageSettings</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_blobStorageSettings</span> <span class="p">=</span> <span class="n">blobStorageSettings</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        public async Task DeleteBlobIfExistsAsync(string blobName)
-        {
-            var container = await GetBlobContainer();
-            var blockBlob = container.GetBlobClient(blobName);
-            await blockBlob.DeleteIfExistsAsync();
-        }
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DeleteBlobIfExistsAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">blockBlob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
+            <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">DeleteIfExistsAsync</span><span class="p">();</span>
+        <span class="p">}</span>
 
-        public async Task&lt;bool&gt; DoesBlobExistAsync(string blobName)
-        {
-            var container = await GetBlobContainer();
-            var blockBlob = container.GetBlobClient(blobName);
-            var doesBlobExist = await blockBlob.ExistsAsync();
-            return doesBlobExist.Value;
-        }
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">DoesBlobExistAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">blockBlob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">doesBlobExist</span> <span class="p">=</span> <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">ExistsAsync</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">doesBlobExist</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        public async Task DownloadBlobIfExistsAsync(Stream stream, string blobName)
-        {
-            var container = await GetBlobContainer();
-            var blockBlob = container.GetBlobClient(blobName);
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DownloadBlobIfExistsAsync</span><span class="p">(</span><span class="n">Stream</span> <span class="n">stream</span><span class="p">,</span> <span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">blockBlob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
 
-            var doesBlobExist = await blockBlob.ExistsAsync();
+            <span class="kt">var</span> <span class="n">doesBlobExist</span> <span class="p">=</span> <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">ExistsAsync</span><span class="p">();</span>
 
-            if (doesBlobExist.Value == true)
-            {
-                await blockBlob.DownloadToAsync(stream);
-            }
-        }
+            <span class="k">if</span> <span class="p">(</span><span class="n">doesBlobExist</span><span class="p">.</span><span class="n">Value</span> <span class="p">==</span> <span class="k">true</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">DownloadToAsync</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-        public async Task&lt;string&gt; GetBlobUrl(string blobName)
-        {
-            var container = await GetBlobContainer();
-            var blockBlob = container.GetBlobClient(blobName);
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">GetBlobUrl</span><span class="p">(</span><span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">blockBlob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
 
-            var exists = await blockBlob.ExistsAsync();
+            <span class="kt">var</span> <span class="n">exists</span> <span class="p">=</span> <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">ExistsAsync</span><span class="p">();</span>
 
-            if (exists)
-            {
-                return blockBlob.Uri.ToString();
-            }
-            else
-            {
-                return string.Empty;
-            }
-        }
+            <span class="k">if</span> <span class="p">(</span><span class="n">exists</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">Uri</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-        public async Task UploadBlobAsync(Stream stream, string blobName)
-        {
-            stream.Seek(0, SeekOrigin.Begin);
-            var container = await GetBlobContainer();
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">UploadBlobAsync</span><span class="p">(</span><span class="n">Stream</span> <span class="n">stream</span><span class="p">,</span> <span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">stream</span><span class="p">.</span><span class="n">Seek</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">SeekOrigin</span><span class="p">.</span><span class="n">Begin</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
 
-            BlobClient blob = container.GetBlobClient(blobName);
-            await blob.UploadAsync(stream);
-        }
+            <span class="n">BlobClient</span> <span class="n">blob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
+            <span class="k">await</span> <span class="n">blob</span><span class="p">.</span><span class="n">UploadAsync</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        private async Task&lt;BlobContainerClient&gt; GetBlobContainer()
-        {
-            BlobContainerClient container = new BlobContainerClient(_blobStorageSettings.ConnectionString,
-                                                                            _blobStorageSettings.ContainerName);
+        <span class="k">private</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">BlobContainerClient</span><span class="p">&gt;</span> <span class="n">GetBlobContainer</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">BlobContainerClient</span> <span class="n">container</span> <span class="p">=</span> <span class="k">new</span> <span class="n">BlobContainerClient</span><span class="p">(</span><span class="n">_blobStorageSettings</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">,</span>
+                                                                            <span class="n">_blobStorageSettings</span><span class="p">.</span><span class="n">ContainerName</span><span class="p">);</span>
 
-            await container.CreateIfNotExistsAsync();
+            <span class="k">await</span> <span class="n">container</span><span class="p">.</span><span class="n">CreateIfNotExistsAsync</span><span class="p">();</span>
 
-            return container;
-        }
-    }
-</code></pre>
+            <span class="k">return</span> <span class="n">container</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

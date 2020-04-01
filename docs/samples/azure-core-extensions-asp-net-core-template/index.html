@@ -477,38 +477,38 @@
 <li><a href="https://www.nuget.org/packages/Microsoft.Extensions.Azure/">Microsoft.Extensions.Azure</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">        public static void RegisterDependencies(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddSingleton&lt;SimpleTracingPolicy&gt;();
+<div class="codehilite"><pre><span></span><code>        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">RegisterDependencies</span><span class="p">(</span><span class="k">this</span> <span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">,</span> <span class="n">IConfiguration</span> <span class="n">configuration</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="p">&lt;</span><span class="n">SimpleTracingPolicy</span><span class="p">&gt;();</span>
 
-            services.AddAzureClients(builder =&gt;
-            {
-                TokenCredential credential = new DefaultAzureCredential();
-#if DEBUG
-                credential = new ClientSecretCredential(configuration[&quot;AZURE_TENANT_ID&quot;],
-                                                        configuration[&quot;AZURE_CLIENT_ID&quot;],
-                                                        configuration[&quot;AZURE_CLIENT_SECRET&quot;]);
-#endif
+            <span class="n">services</span><span class="p">.</span><span class="n">AddAzureClients</span><span class="p">(</span><span class="n">builder</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="n">TokenCredential</span> <span class="n">credential</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DefaultAzureCredential</span><span class="p">();</span>
+<span class="cp">#if DEBUG</span>
+                <span class="n">credential</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ClientSecretCredential</span><span class="p">(</span><span class="n">configuration</span><span class="p">[</span><span class="s">&quot;AZURE_TENANT_ID&quot;</span><span class="p">],</span>
+                                                        <span class="n">configuration</span><span class="p">[</span><span class="s">&quot;AZURE_CLIENT_ID&quot;</span><span class="p">],</span>
+                                                        <span class="n">configuration</span><span class="p">[</span><span class="s">&quot;AZURE_CLIENT_SECRET&quot;</span><span class="p">]);</span>
+<span class="cp">#endif</span>
 
-                builder.AddSecretClient(new Uri(configuration.GetSection(&quot;KeyVaultSettings:Url&quot;).Value))
-                        .ConfigureOptions(options =&gt; options.Retry.MaxRetries = 3)
-                        .WithCredential(credential);
+                <span class="n">builder</span><span class="p">.</span><span class="n">AddSecretClient</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="n">configuration</span><span class="p">.</span><span class="n">GetSection</span><span class="p">(</span><span class="s">&quot;KeyVaultSettings:Url&quot;</span><span class="p">).</span><span class="n">Value</span><span class="p">))</span>
+                        <span class="p">.</span><span class="n">ConfigureOptions</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span> <span class="n">options</span><span class="p">.</span><span class="n">Retry</span><span class="p">.</span><span class="n">MaxRetries</span> <span class="p">=</span> <span class="m">3</span><span class="p">)</span>
+                        <span class="p">.</span><span class="n">WithCredential</span><span class="p">(</span><span class="n">credential</span><span class="p">);</span>
 
-                var secretClient = services.BuildServiceProvider().GetService&lt;SecretClient&gt;();
-                var secret = secretClient.GetSecret(&quot;BlobStorageConnectionString&quot;).Value;
+                <span class="kt">var</span> <span class="n">secretClient</span> <span class="p">=</span> <span class="n">services</span><span class="p">.</span><span class="n">BuildServiceProvider</span><span class="p">().</span><span class="n">GetService</span><span class="p">&lt;</span><span class="n">SecretClient</span><span class="p">&gt;();</span>
+                <span class="kt">var</span> <span class="n">secret</span> <span class="p">=</span> <span class="n">secretClient</span><span class="p">.</span><span class="n">GetSecret</span><span class="p">(</span><span class="s">&quot;BlobStorageConnectionString&quot;</span><span class="p">).</span><span class="n">Value</span><span class="p">;</span>
 
-                builder.AddBlobServiceClient(secret.Value)
-                       .ConfigureOptions((options, provider) =&gt;
-                        {
-                            options.Retry.MaxRetries = 10;
-                            options.Retry.Delay = TimeSpan.FromSeconds(3);
-                            options.Diagnostics.IsLoggingEnabled = true;
-                            options.AddPolicy(provider.GetService&lt;SimpleTracingPolicy&gt;(), HttpPipelinePosition.PerCall);
-                        });
+                <span class="n">builder</span><span class="p">.</span><span class="n">AddBlobServiceClient</span><span class="p">(</span><span class="n">secret</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span>
+                       <span class="p">.</span><span class="n">ConfigureOptions</span><span class="p">((</span><span class="n">options</span><span class="p">,</span> <span class="n">provider</span><span class="p">)</span> <span class="p">=&gt;</span>
+                        <span class="p">{</span>
+                            <span class="n">options</span><span class="p">.</span><span class="n">Retry</span><span class="p">.</span><span class="n">MaxRetries</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
+                            <span class="n">options</span><span class="p">.</span><span class="n">Retry</span><span class="p">.</span><span class="n">Delay</span> <span class="p">=</span> <span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromSeconds</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
+                            <span class="n">options</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">IsLoggingEnabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                            <span class="n">options</span><span class="p">.</span><span class="n">AddPolicy</span><span class="p">(</span><span class="n">provider</span><span class="p">.</span><span class="n">GetService</span><span class="p">&lt;</span><span class="n">SimpleTracingPolicy</span><span class="p">&gt;(),</span> <span class="n">HttpPipelinePosition</span><span class="p">.</span><span class="n">PerCall</span><span class="p">);</span>
+                        <span class="p">});</span>
 
-            });
-        }
-</code></pre>
+            <span class="p">});</span>
+        <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

@@ -477,51 +477,52 @@
 <li><a href="https://www.nuget.org/packages/Azure.Messaging.EventHubs/">Azure.Messaging.EventHubs</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    public class EventsReceiverService : IEventsReceiverService
-    {
-        private readonly EventHubConsumerClient _client;
-        private readonly EventHubSettings _eventHubSettings;
-        public event EventHandler&lt;string&gt; NewEventMessageReceived;
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">EventsReceiverService</span> <span class="p">:</span> <span class="n">IEventsReceiverService</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">EventHubConsumerClient</span> <span class="n">_client</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">EventHubSettings</span> <span class="n">_eventHubSettings</span><span class="p">;</span>
+        <span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">NewEventMessageReceived</span><span class="p">;</span>
 
-        public EventsReceiverService(EventHubSettings eventHubSettings)
-        {
-            _eventHubSettings = eventHubSettings;
-            _client = new EventHubConsumerClient(EventHubConsumerClient.DefaultConsumerGroupName,
-                                                 _eventHubSettings.ListenConnectionString,
-                                                 _eventHubSettings.EventHubName);
-        }
+        <span class="k">public</span> <span class="nf">EventsReceiverService</span><span class="p">(</span><span class="n">EventHubSettings</span> <span class="n">eventHubSettings</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_eventHubSettings</span> <span class="p">=</span> <span class="n">eventHubSettings</span><span class="p">;</span>
+            <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EventHubConsumerClient</span><span class="p">(</span><span class="n">EventHubConsumerClient</span><span class="p">.</span><span class="n">DefaultConsumerGroupName</span><span class="p">,</span>
+                                                 <span class="n">_eventHubSettings</span><span class="p">.</span><span class="n">ListenConnectionString</span><span class="p">,</span>
+                                                 <span class="n">_eventHubSettings</span><span class="p">.</span><span class="n">EventHubName</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        public async Task ReceiveEventsAsync(CancellationToken cancellationToken)
-        {
-            await foreach (PartitionEvent partitionEvent in _client.ReadEventsAsync(cancellationToken))
-            {
-                var eventMessage = Encoding.UTF8.GetString(partitionEvent.Data.Body.ToArray());
-                NewEventMessageReceived?.Invoke(this, eventMessage);
-            };
-        }
-    }
-</code></pre>
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ReceiveEventsAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="nf">foreach</span> <span class="p">(</span><span class="n">PartitionEvent</span> <span class="n">partitionEvent</span> <span class="k">in</span> <span class="n">_client</span><span class="p">.</span><span class="n">ReadEventsAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="kt">var</span> <span class="n">eventMessage</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetString</span><span class="p">(</span><span class="n">partitionEvent</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Body</span><span class="p">.</span><span class="n">ToArray</span><span class="p">());</span>
+                <span class="n">NewEventMessageReceived</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">eventMessage</span><span class="p">);</span>
+            <span class="p">};</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
 
-<pre><code class="csharp">    public class EventsSenderService : IEventsSenderService
-    {
-        private readonly EventHubProducerClient _client;
-        private readonly EventHubSettings _eventHubSettings;
 
-        public EventsSenderService(EventHubSettings eventHubSettings)
-        {
-            _eventHubSettings = eventHubSettings;
-            _client = new EventHubProducerClient(_eventHubSettings.SendConnectionString,
-                                                 _eventHubSettings.EventHubName);
-        }
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">EventsSenderService</span> <span class="p">:</span> <span class="n">IEventsSenderService</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">EventHubProducerClient</span> <span class="n">_client</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">EventHubSettings</span> <span class="n">_eventHubSettings</span><span class="p">;</span>
 
-        public async Task SendEventAsync(string eventBody)
-        {
-            EventDataBatch eventBatch = await _client.CreateBatchAsync();
-            eventBatch.TryAdd(new EventData(Encoding.UTF8.GetBytes(eventBody)));
-            await _client.SendAsync(eventBatch);
-        }
-    }
-</code></pre>
+        <span class="k">public</span> <span class="nf">EventsSenderService</span><span class="p">(</span><span class="n">EventHubSettings</span> <span class="n">eventHubSettings</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_eventHubSettings</span> <span class="p">=</span> <span class="n">eventHubSettings</span><span class="p">;</span>
+            <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EventHubProducerClient</span><span class="p">(</span><span class="n">_eventHubSettings</span><span class="p">.</span><span class="n">SendConnectionString</span><span class="p">,</span>
+                                                 <span class="n">_eventHubSettings</span><span class="p">.</span><span class="n">EventHubName</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">SendEventAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">eventBody</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">EventDataBatch</span> <span class="n">eventBatch</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">CreateBatchAsync</span><span class="p">();</span>
+            <span class="n">eventBatch</span><span class="p">.</span><span class="n">TryAdd</span><span class="p">(</span><span class="k">new</span> <span class="n">EventData</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">eventBody</span><span class="p">)));</span>
+            <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">eventBatch</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

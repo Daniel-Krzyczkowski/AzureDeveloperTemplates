@@ -477,21 +477,21 @@
 <li><a href="https://www.nuget.org/packages/Microsoft.Azure.SignalR/">Microsoft.Azure.SignalR</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    [Authorize]
-    public class SampleHub : Hub
-    {
-        [HubMethodName(&quot;SendDirectMessageToUser&quot;)]
-        public async Task SendDirectMessageToUser(string sampleMessageAsJson)
-        {
-            var sampleMessage = JsonConvert.DeserializeObject&lt;SampleMessage&gt;(sampleMessageAsJson);
+<div class="codehilite"><pre><span></span><code><span class="na">    [Authorize]</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">SampleHub</span> <span class="p">:</span> <span class="n">Hub</span>
+    <span class="p">{</span>
+<span class="na">        [HubMethodName(&quot;SendDirectMessageToUser&quot;)]</span>
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">SendDirectMessageToUser</span><span class="p">(</span><span class="kt">string</span> <span class="n">sampleMessageAsJson</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">sampleMessage</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="n">SampleMessage</span><span class="p">&gt;(</span><span class="n">sampleMessageAsJson</span><span class="p">);</span>
 
-            sampleMessage.SenderId = new Guid(Context.User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var messageAsJson = JsonConvert.SerializeObject(sampleMessage);
+            <span class="n">sampleMessage</span><span class="p">.</span><span class="n">SenderId</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Guid</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="n">User</span><span class="p">.</span><span class="n">FindFirst</span><span class="p">(</span><span class="n">ClaimTypes</span><span class="p">.</span><span class="n">NameIdentifier</span><span class="p">).</span><span class="n">Value</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">messageAsJson</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">sampleMessage</span><span class="p">);</span>
 
-            await Clients.User(sampleMessage.ReceiverId.ToString()).SendAsync(messageAsJson);
-        }
-    }
-</code></pre>
+            <span class="k">await</span> <span class="n">Clients</span><span class="p">.</span><span class="n">User</span><span class="p">(</span><span class="n">sampleMessage</span><span class="p">.</span><span class="n">ReceiverId</span><span class="p">.</span><span class="n">ToString</span><span class="p">()).</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">messageAsJson</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

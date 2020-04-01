@@ -477,153 +477,153 @@
 <li><a href="https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/">Microsoft.Azure.NotificationHubs</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    public class PushNotificationService : IPushNotificationService
-    {
-        private readonly INotificationHubFactory _notificationHubFactory;
-        public PushNotificationService(INotificationHubFactory notificationHubFactory)
-        {
-            _notificationHubFactory = notificationHubFactory;
-        }
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">PushNotificationService</span> <span class="p">:</span> <span class="n">IPushNotificationService</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">INotificationHubFactory</span> <span class="n">_notificationHubFactory</span><span class="p">;</span>
+        <span class="k">public</span> <span class="nf">PushNotificationService</span><span class="p">(</span><span class="n">INotificationHubFactory</span> <span class="n">notificationHubFactory</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_notificationHubFactory</span> <span class="p">=</span> <span class="n">notificationHubFactory</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        public async Task&lt;string&gt; CreateRegistrationId(string handle)
-        {
-            var hub = _notificationHubFactory.NotificationHubClient;
-            string newRegistrationId = null;
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">CreateRegistrationId</span><span class="p">(</span><span class="kt">string</span> <span class="n">handle</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">hub</span> <span class="p">=</span> <span class="n">_notificationHubFactory</span><span class="p">.</span><span class="n">NotificationHubClient</span><span class="p">;</span>
+            <span class="kt">string</span> <span class="n">newRegistrationId</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
-            if (handle != null)
-            {
-                var registrations = await hub.GetRegistrationsByChannelAsync(handle, 100);
+            <span class="k">if</span> <span class="p">(</span><span class="n">handle</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">var</span> <span class="n">registrations</span> <span class="p">=</span> <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">GetRegistrationsByChannelAsync</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
 
-                foreach (RegistrationDescription registration in registrations)
-                {
-                    if (newRegistrationId == null)
-                    {
-                        newRegistrationId = registration.RegistrationId;
-                    }
-                    else
-                    {
-                        await hub.DeleteRegistrationAsync(registration);
-                    }
-                }
-            }
+                <span class="k">foreach</span> <span class="p">(</span><span class="n">RegistrationDescription</span> <span class="n">registration</span> <span class="k">in</span> <span class="n">registrations</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">newRegistrationId</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="n">newRegistrationId</span> <span class="p">=</span> <span class="n">registration</span><span class="p">.</span><span class="n">RegistrationId</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">else</span>
+                    <span class="p">{</span>
+                        <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">DeleteRegistrationAsync</span><span class="p">(</span><span class="n">registration</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
 
-            if (newRegistrationId == null)
-            {
-                newRegistrationId = await hub.CreateRegistrationIdAsync();
-            }
+            <span class="k">if</span> <span class="p">(</span><span class="n">newRegistrationId</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">newRegistrationId</span> <span class="p">=</span> <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">CreateRegistrationIdAsync</span><span class="p">();</span>
+            <span class="p">}</span>
 
-            return newRegistrationId;
-        }
+            <span class="k">return</span> <span class="n">newRegistrationId</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        public async Task DeleteRegistration(string registrationId)
-        {
-            await _notificationHubFactory.NotificationHubClient.DeleteRegistrationAsync(registrationId);
-        }
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DeleteRegistration</span><span class="p">(</span><span class="kt">string</span> <span class="n">registrationId</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="n">_notificationHubFactory</span><span class="p">.</span><span class="n">NotificationHubClient</span><span class="p">.</span><span class="n">DeleteRegistrationAsync</span><span class="p">(</span><span class="n">registrationId</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        public async Task RegisterForPushNotifications(string registrationId, DeviceRegistration deviceUpdate)
-        {
-            var hub = _notificationHubFactory.NotificationHubClient;
-            RegistrationDescription registrationDescription = null;
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">RegisterForPushNotifications</span><span class="p">(</span><span class="kt">string</span> <span class="n">registrationId</span><span class="p">,</span> <span class="n">DeviceRegistration</span> <span class="n">deviceUpdate</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">hub</span> <span class="p">=</span> <span class="n">_notificationHubFactory</span><span class="p">.</span><span class="n">NotificationHubClient</span><span class="p">;</span>
+            <span class="n">RegistrationDescription</span> <span class="n">registrationDescription</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
-            switch (deviceUpdate.Platform)
-            {
-                case MobilePlatform.wns:
-                    registrationDescription = new WindowsRegistrationDescription(deviceUpdate.Handle);
-                    break;
-                case MobilePlatform.apns:
-                    registrationDescription = new AppleRegistrationDescription(deviceUpdate.Handle);
-                    break;
-                case MobilePlatform.fcm:
-                    registrationDescription = new FcmRegistrationDescription(deviceUpdate.Handle);
-                    break;
-                default:
-                    throw new ArgumentException(&quot;Please provide correct platform notification service name&quot;);
-            }
+            <span class="k">switch</span> <span class="p">(</span><span class="n">deviceUpdate</span><span class="p">.</span><span class="n">Platform</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">case</span> <span class="n">MobilePlatform</span><span class="p">.</span><span class="n">wns</span><span class="p">:</span>
+                    <span class="n">registrationDescription</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WindowsRegistrationDescription</span><span class="p">(</span><span class="n">deviceUpdate</span><span class="p">.</span><span class="n">Handle</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="n">MobilePlatform</span><span class="p">.</span><span class="n">apns</span><span class="p">:</span>
+                    <span class="n">registrationDescription</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AppleRegistrationDescription</span><span class="p">(</span><span class="n">deviceUpdate</span><span class="p">.</span><span class="n">Handle</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="n">MobilePlatform</span><span class="p">.</span><span class="n">fcm</span><span class="p">:</span>
+                    <span class="n">registrationDescription</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FcmRegistrationDescription</span><span class="p">(</span><span class="n">deviceUpdate</span><span class="p">.</span><span class="n">Handle</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">default</span><span class="p">:</span>
+                    <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentException</span><span class="p">(</span><span class="s">&quot;Please provide correct platform notification service name&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
 
-            registrationDescription.RegistrationId = registrationId;
-            if (deviceUpdate.Tags != null)
-                registrationDescription.Tags = new HashSet&lt;string&gt;(deviceUpdate.Tags);
+            <span class="n">registrationDescription</span><span class="p">.</span><span class="n">RegistrationId</span> <span class="p">=</span> <span class="n">registrationId</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">deviceUpdate</span><span class="p">.</span><span class="n">Tags</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                <span class="n">registrationDescription</span><span class="p">.</span><span class="n">Tags</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="n">deviceUpdate</span><span class="p">.</span><span class="n">Tags</span><span class="p">);</span>
 
-            try
-            {
-                await hub.CreateOrUpdateRegistrationAsync(registrationDescription);
-            }
-            catch (MessagingException exception)
-            {
-                System.Diagnostics.Debug.WriteLine(&quot;Unhandled exception was thrown during registration in the Azure Notification Hub:&quot;);
-                System.Diagnostics.Debug.WriteLine(exception.Message);
-                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
-            }
-        }
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">CreateOrUpdateRegistrationAsync</span><span class="p">(</span><span class="n">registrationDescription</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">MessagingException</span> <span class="n">exception</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Unhandled exception was thrown during registration in the Azure Notification Hub:&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-        public async Task&lt;NotificationOutcome&gt; SendNotification(PushNotification newNotification)
-        {
-            var hub = _notificationHubFactory.NotificationHubClient;
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">NotificationOutcome</span><span class="p">&gt;</span> <span class="n">SendNotification</span><span class="p">(</span><span class="n">PushNotification</span> <span class="n">newNotification</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">hub</span> <span class="p">=</span> <span class="n">_notificationHubFactory</span><span class="p">.</span><span class="n">NotificationHubClient</span><span class="p">;</span>
 
-            try
-            {
-                NotificationOutcome outcome = null;
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="n">NotificationOutcome</span> <span class="n">outcome</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 
-                switch (newNotification.MobilePlatform)
-                {
-                    case MobilePlatform.wns:
-                        var toast = @&quot;&lt;toast&gt;&lt;visual&gt;&lt;binding template=&quot;&quot;ToastText01&quot;&quot;&gt;&lt;text id=&quot;&quot;1&quot;&quot;&gt;&quot;
-                         + newNotification.Message + &quot;&lt;/text&gt;&lt;/binding&gt;&lt;/visual&gt;&lt;/toast&gt;&quot;;
+                <span class="k">switch</span> <span class="p">(</span><span class="n">newNotification</span><span class="p">.</span><span class="n">MobilePlatform</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">case</span> <span class="n">MobilePlatform</span><span class="p">.</span><span class="n">wns</span><span class="p">:</span>
+                        <span class="kt">var</span> <span class="n">toast</span> <span class="p">=</span> <span class="s">@&quot;&lt;toast&gt;&lt;visual&gt;&lt;binding template=&quot;&quot;ToastText01&quot;&quot;&gt;&lt;text id=&quot;&quot;1&quot;&quot;&gt;&quot;</span>
+                         <span class="p">+</span> <span class="n">newNotification</span><span class="p">.</span><span class="n">Message</span> <span class="p">+</span> <span class="s">&quot;&lt;/text&gt;&lt;/binding&gt;&lt;/visual&gt;&lt;/toast&gt;&quot;</span><span class="p">;</span>
 
-                        if (newNotification.Tags == null)
-                            outcome = await hub.SendWindowsNativeNotificationAsync(toast);
-                        else
-                            outcome = await hub.SendWindowsNativeNotificationAsync(toast, newNotification.Tags);
-                        break;
-                    case MobilePlatform.apns:
-                        var alert = &quot;{\&quot;aps\&quot;:{\&quot;alert\&quot;:\&quot;&quot; + newNotification.Message + &quot;\&quot;}}&quot;;
+                        <span class="k">if</span> <span class="p">(</span><span class="n">newNotification</span><span class="p">.</span><span class="n">Tags</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+                            <span class="n">outcome</span> <span class="p">=</span> <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">SendWindowsNativeNotificationAsync</span><span class="p">(</span><span class="n">toast</span><span class="p">);</span>
+                        <span class="k">else</span>
+                            <span class="n">outcome</span> <span class="p">=</span> <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">SendWindowsNativeNotificationAsync</span><span class="p">(</span><span class="n">toast</span><span class="p">,</span> <span class="n">newNotification</span><span class="p">.</span><span class="n">Tags</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="n">MobilePlatform</span><span class="p">.</span><span class="n">apns</span><span class="p">:</span>
+                        <span class="kt">var</span> <span class="n">alert</span> <span class="p">=</span> <span class="s">&quot;{\&quot;aps\&quot;:{\&quot;alert\&quot;:\&quot;&quot;</span> <span class="p">+</span> <span class="n">newNotification</span><span class="p">.</span><span class="n">Message</span> <span class="p">+</span> <span class="s">&quot;\&quot;}}&quot;</span><span class="p">;</span>
 
-                        if (newNotification.Tags == null)
-                            outcome = await hub.SendAppleNativeNotificationAsync(alert);
-                        else
-                            outcome = await hub.SendAppleNativeNotificationAsync(alert, newNotification.Tags);
-                        break;
-                    case MobilePlatform.fcm:
-                        var notification = &quot;{ \&quot;data\&quot; : {\&quot;message\&quot;:\&quot;&quot; + newNotification.Message + &quot;\&quot;}}&quot;;
+                        <span class="k">if</span> <span class="p">(</span><span class="n">newNotification</span><span class="p">.</span><span class="n">Tags</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+                            <span class="n">outcome</span> <span class="p">=</span> <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">SendAppleNativeNotificationAsync</span><span class="p">(</span><span class="n">alert</span><span class="p">);</span>
+                        <span class="k">else</span>
+                            <span class="n">outcome</span> <span class="p">=</span> <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">SendAppleNativeNotificationAsync</span><span class="p">(</span><span class="n">alert</span><span class="p">,</span> <span class="n">newNotification</span><span class="p">.</span><span class="n">Tags</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="n">MobilePlatform</span><span class="p">.</span><span class="n">fcm</span><span class="p">:</span>
+                        <span class="kt">var</span> <span class="n">notification</span> <span class="p">=</span> <span class="s">&quot;{ \&quot;data\&quot; : {\&quot;message\&quot;:\&quot;&quot;</span> <span class="p">+</span> <span class="n">newNotification</span><span class="p">.</span><span class="n">Message</span> <span class="p">+</span> <span class="s">&quot;\&quot;}}&quot;</span><span class="p">;</span>
 
-                        if (newNotification.Tags == null)
-                            outcome = await hub.SendFcmNativeNotificationAsync(notification);
-                        else
-                            outcome = await hub.SendFcmNativeNotificationAsync(notification, newNotification.Tags);
-                        break;
-                }
+                        <span class="k">if</span> <span class="p">(</span><span class="n">newNotification</span><span class="p">.</span><span class="n">Tags</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+                            <span class="n">outcome</span> <span class="p">=</span> <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">SendFcmNativeNotificationAsync</span><span class="p">(</span><span class="n">notification</span><span class="p">);</span>
+                        <span class="k">else</span>
+                            <span class="n">outcome</span> <span class="p">=</span> <span class="k">await</span> <span class="n">hub</span><span class="p">.</span><span class="n">SendFcmNativeNotificationAsync</span><span class="p">(</span><span class="n">notification</span><span class="p">,</span> <span class="n">newNotification</span><span class="p">.</span><span class="n">Tags</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
 
-                if (outcome != null)
-                {
-                    if (!((outcome.State == NotificationOutcomeState.Abandoned) ||
-                        (outcome.State == NotificationOutcomeState.Unknown)))
-                    {
-                        return outcome;
-                    }
-                }
+                <span class="k">if</span> <span class="p">(</span><span class="n">outcome</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(!((</span><span class="n">outcome</span><span class="p">.</span><span class="n">State</span> <span class="p">==</span> <span class="n">NotificationOutcomeState</span><span class="p">.</span><span class="n">Abandoned</span><span class="p">)</span> <span class="p">||</span>
+                        <span class="p">(</span><span class="n">outcome</span><span class="p">.</span><span class="n">State</span> <span class="p">==</span> <span class="n">NotificationOutcomeState</span><span class="p">.</span><span class="n">Unknown</span><span class="p">)))</span>
+                    <span class="p">{</span>
+                        <span class="k">return</span> <span class="n">outcome</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
 
-                System.Diagnostics.Debug.WriteLine(&quot;Notification was not sent due to issue. Please send again.&quot;);
-                return null;
-            }
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Notification was not sent due to issue. Please send again.&quot;</span><span class="p">);</span>
+                <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+            <span class="p">}</span>
 
-            catch (MessagingException exception)
-            {
-                System.Diagnostics.Debug.WriteLine(&quot;Unhandled exception was thrown during sending notification with the Azure Notification Hub:&quot;);
-                System.Diagnostics.Debug.WriteLine(exception.Message);
-                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
-                return null;
-            }
+            <span class="k">catch</span> <span class="p">(</span><span class="n">MessagingException</span> <span class="n">exception</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Unhandled exception was thrown during sending notification with the Azure Notification Hub:&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+                <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+            <span class="p">}</span>
 
-            catch (ArgumentException exception)
-            {
-                System.Diagnostics.Debug.WriteLine(&quot;Unhandled exception was thrown during sending notification with the Azure Notification Hub:&quot;);
-                System.Diagnostics.Debug.WriteLine(exception.Message);
-                System.Diagnostics.Debug.WriteLine(exception.StackTrace);
-                return null;
-            }
-        }
-    }
-</code></pre>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">ArgumentException</span> <span class="n">exception</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Unhandled exception was thrown during sending notification with the Azure Notification Hub:&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+                <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

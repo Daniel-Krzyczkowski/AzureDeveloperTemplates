@@ -478,56 +478,57 @@
 <li><a href="https://www.nuget.org/packages/Azure.Security.KeyVault.Secrets/">Azure.Security.KeyVault.Secrets</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">        private static KeyVaultSecretClientClientFactory InitializeSecretClientInstanceAsync(IConfiguration configuration)
-        {
-            string keyVaultUrl = configuration[&quot;KeyVaultSettings:Url&quot;];
-            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
-            var keyVaultSecretClientClientFactory = new KeyVaultSecretClientClientFactory(secretClient);
-            return keyVaultSecretClientClientFactory;
-        }
-</code></pre>
+<div class="codehilite"><pre><span></span><code>        <span class="k">private</span> <span class="k">static</span> <span class="n">KeyVaultSecretClientClientFactory</span> <span class="nf">InitializeSecretClientInstanceAsync</span><span class="p">(</span><span class="n">IConfiguration</span> <span class="n">configuration</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">keyVaultUrl</span> <span class="p">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s">&quot;KeyVaultSettings:Url&quot;</span><span class="p">];</span>
+            <span class="kt">var</span> <span class="n">secretClient</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SecretClient</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="n">keyVaultUrl</span><span class="p">),</span> <span class="k">new</span> <span class="n">DefaultAzureCredential</span><span class="p">());</span>
+            <span class="kt">var</span> <span class="n">keyVaultSecretClientClientFactory</span> <span class="p">=</span> <span class="k">new</span> <span class="n">KeyVaultSecretClientClientFactory</span><span class="p">(</span><span class="n">secretClient</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">keyVaultSecretClientClientFactory</span><span class="p">;</span>
+        <span class="p">}</span>
+</code></pre></div>
 
-<pre><code class="csharp">    public class SecretManager : ISecretManager
-    {
-        protected readonly IKeyVaultSecretClientClientFactory _keyVaultSecretClientClientFactory;
-        private readonly SecretClient _secretClient;
 
-        public SecretManager(IKeyVaultSecretClientClientFactory keyVaultSecretClientClientFactory)
-        {
-            _keyVaultSecretClientClientFactory = keyVaultSecretClientClientFactory;
-            _secretClient = _keyVaultSecretClientClientFactory.SecretClient;
-        }
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">SecretManager</span> <span class="p">:</span> <span class="n">ISecretManager</span>
+    <span class="p">{</span>
+        <span class="k">protected</span> <span class="k">readonly</span> <span class="n">IKeyVaultSecretClientClientFactory</span> <span class="n">_keyVaultSecretClientClientFactory</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">SecretClient</span> <span class="n">_secretClient</span><span class="p">;</span>
 
-        public async Task&lt;string&gt; GetSecretAsync(string secretName)
-        {
-            KeyVaultSecret secret = await _secretClient.GetSecretAsync(secretName);
-            if (secret != null)
-            {
-                return secret.Value;
-            }
+        <span class="k">public</span> <span class="nf">SecretManager</span><span class="p">(</span><span class="n">IKeyVaultSecretClientClientFactory</span> <span class="n">keyVaultSecretClientClientFactory</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_keyVaultSecretClientClientFactory</span> <span class="p">=</span> <span class="n">keyVaultSecretClientClientFactory</span><span class="p">;</span>
+            <span class="n">_secretClient</span> <span class="p">=</span> <span class="n">_keyVaultSecretClientClientFactory</span><span class="p">.</span><span class="n">SecretClient</span><span class="p">;</span>
+        <span class="p">}</span>
 
-            else
-            {
-                return string.Empty;
-            }
-        }
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">GetSecretAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">secretName</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">KeyVaultSecret</span> <span class="n">secret</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_secretClient</span><span class="p">.</span><span class="n">GetSecretAsync</span><span class="p">(</span><span class="n">secretName</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">secret</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="n">secret</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+            <span class="p">}</span>
 
-        public async Task SetSecretAsync(string secretName, string secretValue)
-        {
-            await _secretClient.SetSecretAsync(secretName, secretValue);
-        }
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-        public async Task DeleteSecret(string secretName)
-        {
-            DeleteSecretOperation operation = await _secretClient.StartDeleteSecretAsync(secretName);
-        }
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">SetSecretAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">secretName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">secretValue</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="n">_secretClient</span><span class="p">.</span><span class="n">SetSecretAsync</span><span class="p">(</span><span class="n">secretName</span><span class="p">,</span> <span class="n">secretValue</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        public async Task UpdateSecret(string secretName, string secretValue)
-        {
-            await SetSecretAsync(secretName, secretValue);
-        }
-    }
-</code></pre>
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DeleteSecret</span><span class="p">(</span><span class="kt">string</span> <span class="n">secretName</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">DeleteSecretOperation</span> <span class="n">operation</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_secretClient</span><span class="p">.</span><span class="n">StartDeleteSecretAsync</span><span class="p">(</span><span class="n">secretName</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">UpdateSecret</span><span class="p">(</span><span class="kt">string</span> <span class="n">secretName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">secretValue</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="nf">SetSecretAsync</span><span class="p">(</span><span class="n">secretName</span><span class="p">,</span> <span class="n">secretValue</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

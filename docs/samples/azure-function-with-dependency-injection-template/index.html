@@ -478,37 +478,37 @@
 <li><a href="https://www.nuget.org/packages/Microsoft.NET.Sdk.Functions/">Microsoft.NET.Sdk.Functions</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]
-namespace AzureDeveloperTemplates.FunctionAppWithDependencyInjection
-{
-    class Startup : FunctionsStartup
-    {
-        private IConfiguration _configuration;
+<div class="codehilite"><pre><span></span><code><span class="na">[assembly: FunctionsStartup(typeof(AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Startup))]</span>
+<span class="k">namespace</span> <span class="nn">AzureDeveloperTemplates.FunctionAppWithDependencyInjection</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Startup</span> <span class="p">:</span> <span class="n">FunctionsStartup</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="n">IConfiguration</span> <span class="n">_configuration</span><span class="p">;</span>
 
-        public override void Configure(IFunctionsHostBuilder builder)
-        {
-            ConfigureSettings(builder);
-            builder.Services.AddSingleton&lt;IMailService, MailService&gt;();
-        }
+        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">(</span><span class="n">IFunctionsHostBuilder</span> <span class="n">builder</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">ConfigureSettings</span><span class="p">(</span><span class="n">builder</span><span class="p">);</span>
+            <span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="p">&lt;</span><span class="n">IMailService</span><span class="p">,</span> <span class="n">MailService</span><span class="p">&gt;();</span>
+        <span class="p">}</span>
 
-        private void ConfigureSettings(IFunctionsHostBuilder builder)
-        {
-            var config = new ConfigurationBuilder()
-               .SetBasePath(Environment.CurrentDirectory)
-               .AddJsonFile(&quot;local.settings.json&quot;, optional: true, reloadOnChange: true)
-               .AddEnvironmentVariables()
-               .Build();
-            _configuration = config;
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">ConfigureSettings</span><span class="p">(</span><span class="n">IFunctionsHostBuilder</span> <span class="n">builder</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ConfigurationBuilder</span><span class="p">()</span>
+               <span class="p">.</span><span class="n">SetBasePath</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">CurrentDirectory</span><span class="p">)</span>
+               <span class="p">.</span><span class="n">AddJsonFile</span><span class="p">(</span><span class="s">&quot;local.settings.json&quot;</span><span class="p">,</span> <span class="n">optional</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span> <span class="n">reloadOnChange</span><span class="p">:</span> <span class="k">true</span><span class="p">)</span>
+               <span class="p">.</span><span class="n">AddEnvironmentVariables</span><span class="p">()</span>
+               <span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+            <span class="n">_configuration</span> <span class="p">=</span> <span class="n">config</span><span class="p">;</span>
 
-            var mailServiceSettings = new MailServiceSettings()
-            {
-                SMTPFromAddress = _configuration[&quot;MailService:SMTPFromAddress&quot;]
-            };
-            builder.Services.AddSingleton(mailServiceSettings);
-        }
-    }
-}
-</code></pre>
+            <span class="kt">var</span> <span class="n">mailServiceSettings</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailServiceSettings</span><span class="p">()</span>
+            <span class="p">{</span>
+                <span class="n">SMTPFromAddress</span> <span class="p">=</span> <span class="n">_configuration</span><span class="p">[</span><span class="s">&quot;MailService:SMTPFromAddress&quot;</span><span class="p">]</span>
+            <span class="p">};</span>
+            <span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="p">(</span><span class="n">mailServiceSettings</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
                   
                 

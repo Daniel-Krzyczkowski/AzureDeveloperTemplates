@@ -478,55 +478,56 @@ Many thanks to <a href="https://twitter.com/HaraczPawel">@HaraczPawel</a> who he
 <li><a href="https://www.nuget.org/packages/Microsoft.Azure.ServiceBus/">Microsoft.Azure.ServiceBus</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    public class MessagesReceiverService : IMessagesReceiverService
-    {
-        private readonly ServiceBusSettings _serviceBusSettings;
-        private readonly IMessageReceiver _messageReceiver;
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">MessagesReceiverService</span> <span class="p">:</span> <span class="n">IMessagesReceiverService</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">ServiceBusSettings</span> <span class="n">_serviceBusSettings</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">IMessageReceiver</span> <span class="n">_messageReceiver</span><span class="p">;</span>
 
-        public MessagesReceiverService(ServiceBusSettings serviceBusSettings)
-        {
-            _serviceBusSettings = serviceBusSettings;
+        <span class="k">public</span> <span class="nf">MessagesReceiverService</span><span class="p">(</span><span class="n">ServiceBusSettings</span> <span class="n">serviceBusSettings</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_serviceBusSettings</span> <span class="p">=</span> <span class="n">serviceBusSettings</span><span class="p">;</span>
 
-            var connectionString = new ServiceBusConnectionStringBuilder(_serviceBusSettings.ConnectionString);
-            _messageReceiver = new MessageReceiver(connectionString.GetNamespaceConnectionString(),
-                EntityNameHelper.FormatSubscriptionPath(_serviceBusSettings.TopicName, _serviceBusSettings.Subscription),
-                ReceiveMode.ReceiveAndDelete, RetryPolicy.Default);
-        }
+            <span class="kt">var</span> <span class="n">connectionString</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ServiceBusConnectionStringBuilder</span><span class="p">(</span><span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">);</span>
+            <span class="n">_messageReceiver</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MessageReceiver</span><span class="p">(</span><span class="n">connectionString</span><span class="p">.</span><span class="n">GetNamespaceConnectionString</span><span class="p">(),</span>
+                <span class="n">EntityNameHelper</span><span class="p">.</span><span class="n">FormatSubscriptionPath</span><span class="p">(</span><span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">TopicName</span><span class="p">,</span> <span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">Subscription</span><span class="p">),</span>
+                <span class="n">ReceiveMode</span><span class="p">.</span><span class="n">ReceiveAndDelete</span><span class="p">,</span> <span class="n">RetryPolicy</span><span class="p">.</span><span class="n">Default</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        public Task&lt;Message&gt; ReceiveMessageAsync() =&gt; _messageReceiver.ReceiveAsync();
-        public Task&lt;Message&gt; ReceiveMessageAsync(TimeSpan operationTimeout) =&gt; _messageReceiver.ReceiveAsync(operationTimeout);
-        public Task&lt;IList&lt;Message&gt;&gt; ReceiveMessageAsync(int maxMessageCount) =&gt; _messageReceiver.ReceiveAsync(maxMessageCount);
-        public Task&lt;IList&lt;Message&gt;&gt; ReceiveMessageAsync(int maxMessageCount, TimeSpan operationTimeout) =&gt; _messageReceiver.ReceiveAsync(maxMessageCount, operationTimeout);
-    }
-</code></pre>
+        <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&gt;</span> <span class="n">ReceiveMessageAsync</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="n">_messageReceiver</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">();</span>
+        <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&gt;</span> <span class="n">ReceiveMessageAsync</span><span class="p">(</span><span class="n">TimeSpan</span> <span class="n">operationTimeout</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">_messageReceiver</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">operationTimeout</span><span class="p">);</span>
+        <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">IList</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&gt;&gt;</span> <span class="n">ReceiveMessageAsync</span><span class="p">(</span><span class="kt">int</span> <span class="n">maxMessageCount</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">_messageReceiver</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">maxMessageCount</span><span class="p">);</span>
+        <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">IList</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&gt;&gt;</span> <span class="n">ReceiveMessageAsync</span><span class="p">(</span><span class="kt">int</span> <span class="n">maxMessageCount</span><span class="p">,</span> <span class="n">TimeSpan</span> <span class="n">operationTimeout</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">_messageReceiver</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">maxMessageCount</span><span class="p">,</span> <span class="n">operationTimeout</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
 
-<pre><code class="csharp">    public class MessagesSenderService : IMessagesSenderService
-    {
-        private readonly ITopicClient _client;
-        private readonly ServiceBusSettings _serviceBusSettings;
 
-        public MessagesSenderService(ServiceBusSettings serviceBusSettings)
-        {
-            _serviceBusSettings = serviceBusSettings;
-            var token = TokenProvider.CreateSharedAccessSignatureTokenProvider(_serviceBusSettings.SharedAccessName,
-                                                                            _serviceBusSettings.SharedAccessKey, TokenScope.Entity);
-            _client = new TopicClient(_serviceBusSettings.ServiceBusNamespace, _serviceBusSettings.TopicName, token);
-        }
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">MessagesSenderService</span> <span class="p">:</span> <span class="n">IMessagesSenderService</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">ITopicClient</span> <span class="n">_client</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">ServiceBusSettings</span> <span class="n">_serviceBusSettings</span><span class="p">;</span>
 
-        public async Task&lt;string&gt; SendMessageAsync(string messageBody)
-        {
-            var correlationId = Guid.NewGuid().ToString(&quot;N&quot;);
-            var messageToSend = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messageBody));
-            var message = new Message(messageToSend)
-            {
-                ContentType = $&quot;{System.Net.Mime.MediaTypeNames.Application.Json};charset=utf-8&quot;,
-                CorrelationId = correlationId
-            };
-            await _client.SendAsync(message);
-            return correlationId;
-        }
-    }
-</code></pre>
+        <span class="k">public</span> <span class="nf">MessagesSenderService</span><span class="p">(</span><span class="n">ServiceBusSettings</span> <span class="n">serviceBusSettings</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_serviceBusSettings</span> <span class="p">=</span> <span class="n">serviceBusSettings</span><span class="p">;</span>
+            <span class="kt">var</span> <span class="n">token</span> <span class="p">=</span> <span class="n">TokenProvider</span><span class="p">.</span><span class="n">CreateSharedAccessSignatureTokenProvider</span><span class="p">(</span><span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">SharedAccessName</span><span class="p">,</span>
+                                                                            <span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">SharedAccessKey</span><span class="p">,</span> <span class="n">TokenScope</span><span class="p">.</span><span class="n">Entity</span><span class="p">);</span>
+            <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TopicClient</span><span class="p">(</span><span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">ServiceBusNamespace</span><span class="p">,</span> <span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">TopicName</span><span class="p">,</span> <span class="n">token</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">SendMessageAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">messageBody</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">correlationId</span> <span class="p">=</span> <span class="n">Guid</span><span class="p">.</span><span class="n">NewGuid</span><span class="p">().</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;N&quot;</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">messageToSend</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">messageBody</span><span class="p">));</span>
+            <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Message</span><span class="p">(</span><span class="n">messageToSend</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">ContentType</span> <span class="p">=</span> <span class="err">$</span><span class="s">&quot;{System.Net.Mime.MediaTypeNames.Application.Json};charset=utf-8&quot;</span><span class="p">,</span>
+                <span class="n">CorrelationId</span> <span class="p">=</span> <span class="n">correlationId</span>
+            <span class="p">};</span>
+            <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">correlationId</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

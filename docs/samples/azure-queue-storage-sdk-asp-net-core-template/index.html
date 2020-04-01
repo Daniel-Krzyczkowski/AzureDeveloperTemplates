@@ -477,52 +477,53 @@
 <li><a href="https://www.nuget.org/packages/Azure.Storage.Queues/">Azure.Storage.Queues</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    public class QueueMessagesReceiverService : IQueueMessagesReceiverService
-    {
-        public event EventHandler&lt;string&gt; NewQueueMessageReceived;
-        private readonly QueueClient _client;
-        private readonly QueueStorageSettings _queueStorageSettings;
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">QueueMessagesReceiverService</span> <span class="p">:</span> <span class="n">IQueueMessagesReceiverService</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">NewQueueMessageReceived</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">QueueClient</span> <span class="n">_client</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">QueueStorageSettings</span> <span class="n">_queueStorageSettings</span><span class="p">;</span>
 
-        public QueueMessagesReceiverService(QueueStorageSettings queueStorageSettings)
-        {
-            _queueStorageSettings = queueStorageSettings;
-            _client = new QueueClient(_queueStorageSettings.ConnectionString, _queueStorageSettings.QueueName);
-        }
+        <span class="k">public</span> <span class="nf">QueueMessagesReceiverService</span><span class="p">(</span><span class="n">QueueStorageSettings</span> <span class="n">queueStorageSettings</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_queueStorageSettings</span> <span class="p">=</span> <span class="n">queueStorageSettings</span><span class="p">;</span>
+            <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">QueueClient</span><span class="p">(</span><span class="n">_queueStorageSettings</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">,</span> <span class="n">_queueStorageSettings</span><span class="p">.</span><span class="n">QueueName</span><span class="p">);</span>
+        <span class="p">}</span>
 
 
-        public async Task ReceiveQueueMessagesAsync(CancellationToken cancellationToken)
-        {
-            var queueMessages = await _client.ReceiveMessagesAsync(cancellationToken);
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ReceiveQueueMessagesAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">queueMessages</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">ReceiveMessagesAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">);</span>
 
-            foreach (QueueMessage message in queueMessages.Value)
-            {
-                NewQueueMessageReceived?.Invoke(this, message.MessageText);
+            <span class="k">foreach</span> <span class="p">(</span><span class="n">QueueMessage</span> <span class="n">message</span> <span class="k">in</span> <span class="n">queueMessages</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">NewQueueMessageReceived</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">MessageText</span><span class="p">);</span>
 
-                _client.DeleteMessage(message.MessageId, message.PopReceipt);
-            }
-        }
-    }
-</code></pre>
+                <span class="n">_client</span><span class="p">.</span><span class="n">DeleteMessage</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">MessageId</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">PopReceipt</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
 
-<pre><code class="csharp">    public class QueueMessagesSenderService : IQueueMessagesSenderService
-    {
-        private readonly QueueClient _client;
-        private readonly QueueStorageSettings _queueStorageSettings;
 
-        public QueueMessagesSenderService(QueueStorageSettings queueStorageSettings)
-        {
-            _queueStorageSettings = queueStorageSettings;
-            _client = new QueueClient(_queueStorageSettings.ConnectionString, _queueStorageSettings.QueueName);
-        }
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">QueueMessagesSenderService</span> <span class="p">:</span> <span class="n">IQueueMessagesSenderService</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">QueueClient</span> <span class="n">_client</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">QueueStorageSettings</span> <span class="n">_queueStorageSettings</span><span class="p">;</span>
 
-        public async Task SendEventAsync(string queueMessageBody)
-        {
-            await _client.CreateIfNotExistsAsync();
+        <span class="k">public</span> <span class="nf">QueueMessagesSenderService</span><span class="p">(</span><span class="n">QueueStorageSettings</span> <span class="n">queueStorageSettings</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_queueStorageSettings</span> <span class="p">=</span> <span class="n">queueStorageSettings</span><span class="p">;</span>
+            <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">QueueClient</span><span class="p">(</span><span class="n">_queueStorageSettings</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">,</span> <span class="n">_queueStorageSettings</span><span class="p">.</span><span class="n">QueueName</span><span class="p">);</span>
+        <span class="p">}</span>
 
-            await _client.SendMessageAsync(queueMessageBody);
-        }
-    }
-</code></pre>
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">SendEventAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">queueMessageBody</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">CreateIfNotExistsAsync</span><span class="p">();</span>
+
+            <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">SendMessageAsync</span><span class="p">(</span><span class="n">queueMessageBody</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
                 
                   
                 

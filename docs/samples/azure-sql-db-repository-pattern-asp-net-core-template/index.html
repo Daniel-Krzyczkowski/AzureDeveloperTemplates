@@ -478,26 +478,27 @@
 <li><a href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools/">Microsoft.EntityFrameworkCore.Tools</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
-<pre><code class="csharp">    public class ApplicationDbContext : DbContext
-    {
-        public ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options)
-                                                                        : base(options)
-        {
-        }
+<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">ApplicationDbContext</span> <span class="p">:</span> <span class="n">DbContext</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">ApplicationDbContext</span><span class="p">(</span><span class="n">DbContextOptions</span><span class="p">&lt;</span><span class="n">ApplicationDbContext</span><span class="p">&gt;</span> <span class="n">options</span><span class="p">)</span>
+                                                                        <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+        <span class="p">{</span>
+        <span class="p">}</span>
 
-        public DbSet&lt;SampleEntity&gt; SampleEntities { get; set; }
+        <span class="k">public</span> <span class="n">DbSet</span><span class="p">&lt;</span><span class="n">SampleEntity</span><span class="p">&gt;</span> <span class="n">SampleEntities</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnModelCreating</span><span class="p">(</span><span class="n">ModelBuilder</span> <span class="n">modelBuilder</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">base</span><span class="p">.</span><span class="n">OnModelCreating</span><span class="p">(</span><span class="n">modelBuilder</span><span class="p">);</span>
 
-            modelBuilder.Entity&lt;SampleEntity&gt;().HasData(new SampleEntity
-            {
-                Id = Guid.NewGuid()
-            });
-        }
-    }
-</code></pre>
+            <span class="n">modelBuilder</span><span class="p">.</span><span class="n">Entity</span><span class="p">&lt;</span><span class="n">SampleEntity</span><span class="p">&gt;().</span><span class="n">HasData</span><span class="p">(</span><span class="k">new</span> <span class="n">SampleEntity</span>
+            <span class="p">{</span>
+                <span class="n">Id</span> <span class="p">=</span> <span class="n">Guid</span><span class="p">.</span><span class="n">NewGuid</span><span class="p">()</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+
 
 <p>```</p>
                 
