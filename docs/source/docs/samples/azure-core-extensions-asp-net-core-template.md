@@ -4,6 +4,7 @@ Sample project to present how to use Microsoft.Extensions.Azure.Core library to 
 
 #### Packages used:
 1. [Microsoft.Extensions.Azure](https://www.nuget.org/packages/Microsoft.Extensions.Azure/)
+2. [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs/)
 
 #### Code sample preview:
 
@@ -21,22 +22,15 @@ Sample project to present how to use Microsoft.Extensions.Azure.Core library to 
                                                         configuration["AZURE_CLIENT_SECRET"]);
 #endif
 
-                builder.AddSecretClient(new Uri(configuration.GetSection("KeyVaultSettings:Url").Value))
-                        .ConfigureOptions(options => options.Retry.MaxRetries = 3)
-                        .WithCredential(credential);
-
-                var secretClient = services.BuildServiceProvider().GetService<SecretClient>();
-                var secret = secretClient.GetSecret("BlobStorageConnectionString").Value;
-
-                builder.AddBlobServiceClient(secret.Value)
+                builder.AddBlobServiceClient(new Uri(configuration["BlobStorageSettings:BlobStorageUrl"]))
                        .ConfigureOptions((options, provider) =>
                         {
                             options.Retry.MaxRetries = 10;
                             options.Retry.Delay = TimeSpan.FromSeconds(3);
-                            options.Diagnostics.IsLoggingEnabled = true;
+                            options.Diagnostics.IsLoggingEnabled = false;
+                            options.Diagnostics.ApplicationId = "AzureDeveloperTemplates";
                             options.AddPolicy(provider.GetService<SimpleTracingPolicy>(), HttpPipelinePosition.PerCall);
                         });
-
             });
         }
 ```

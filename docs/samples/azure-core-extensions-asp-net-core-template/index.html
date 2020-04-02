@@ -475,6 +475,7 @@
 <h4 id="packages-used">Packages used:</h4>
 <ol>
 <li><a href="https://www.nuget.org/packages/Microsoft.Extensions.Azure/">Microsoft.Extensions.Azure</a></li>
+<li><a href="https://www.nuget.org/packages/Azure.Storage.Blobs/">Azure.Storage.Blobs</a></li>
 </ol>
 <h4 id="code-sample-preview">Code sample preview:</h4>
 <div class="codehilite"><pre><span></span><code>        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">RegisterDependencies</span><span class="p">(</span><span class="k">this</span> <span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">,</span> <span class="n">IConfiguration</span> <span class="n">configuration</span><span class="p">)</span>
@@ -490,22 +491,15 @@
                                                         <span class="n">configuration</span><span class="p">[</span><span class="s">&quot;AZURE_CLIENT_SECRET&quot;</span><span class="p">]);</span>
 <span class="cp">#endif</span>
 
-                <span class="n">builder</span><span class="p">.</span><span class="n">AddSecretClient</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="n">configuration</span><span class="p">.</span><span class="n">GetSection</span><span class="p">(</span><span class="s">&quot;KeyVaultSettings:Url&quot;</span><span class="p">).</span><span class="n">Value</span><span class="p">))</span>
-                        <span class="p">.</span><span class="n">ConfigureOptions</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span> <span class="n">options</span><span class="p">.</span><span class="n">Retry</span><span class="p">.</span><span class="n">MaxRetries</span> <span class="p">=</span> <span class="m">3</span><span class="p">)</span>
-                        <span class="p">.</span><span class="n">WithCredential</span><span class="p">(</span><span class="n">credential</span><span class="p">);</span>
-
-                <span class="kt">var</span> <span class="n">secretClient</span> <span class="p">=</span> <span class="n">services</span><span class="p">.</span><span class="n">BuildServiceProvider</span><span class="p">().</span><span class="n">GetService</span><span class="p">&lt;</span><span class="n">SecretClient</span><span class="p">&gt;();</span>
-                <span class="kt">var</span> <span class="n">secret</span> <span class="p">=</span> <span class="n">secretClient</span><span class="p">.</span><span class="n">GetSecret</span><span class="p">(</span><span class="s">&quot;BlobStorageConnectionString&quot;</span><span class="p">).</span><span class="n">Value</span><span class="p">;</span>
-
-                <span class="n">builder</span><span class="p">.</span><span class="n">AddBlobServiceClient</span><span class="p">(</span><span class="n">secret</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span>
+                <span class="n">builder</span><span class="p">.</span><span class="n">AddBlobServiceClient</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="n">configuration</span><span class="p">[</span><span class="s">&quot;BlobStorageSettings:BlobStorageUrl&quot;</span><span class="p">]))</span>
                        <span class="p">.</span><span class="n">ConfigureOptions</span><span class="p">((</span><span class="n">options</span><span class="p">,</span> <span class="n">provider</span><span class="p">)</span> <span class="p">=&gt;</span>
                         <span class="p">{</span>
                             <span class="n">options</span><span class="p">.</span><span class="n">Retry</span><span class="p">.</span><span class="n">MaxRetries</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span>
                             <span class="n">options</span><span class="p">.</span><span class="n">Retry</span><span class="p">.</span><span class="n">Delay</span> <span class="p">=</span> <span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromSeconds</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
-                            <span class="n">options</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">IsLoggingEnabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                            <span class="n">options</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">IsLoggingEnabled</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+                            <span class="n">options</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">ApplicationId</span> <span class="p">=</span> <span class="s">&quot;AzureDeveloperTemplates&quot;</span><span class="p">;</span>
                             <span class="n">options</span><span class="p">.</span><span class="n">AddPolicy</span><span class="p">(</span><span class="n">provider</span><span class="p">.</span><span class="n">GetService</span><span class="p">&lt;</span><span class="n">SimpleTracingPolicy</span><span class="p">&gt;(),</span> <span class="n">HttpPipelinePosition</span><span class="p">.</span><span class="n">PerCall</span><span class="p">);</span>
                         <span class="p">});</span>
-
             <span class="p">});</span>
         <span class="p">}</span>
 </code></pre></div>
