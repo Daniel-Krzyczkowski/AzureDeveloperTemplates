@@ -1,6 +1,5 @@
 ﻿using Azure.Core;
 using Azure.Identity;
-using Azure.Security.KeyVault.Secrets;
 using AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies;
 using AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Settings;
 using Microsoft.Extensions.Azure;
@@ -23,7 +22,8 @@ namespace AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions
 
             var blobStorageSettings = new BlobStorageSettings()
             {
-                ContainerName = configuration["BlobStorageSettings:ContainerName"]
+                ContainerName = configuration["BlobStorageSettings:ContainerName"],
+                BlobStorageUrl = configuration["BlobStorageSettings:BlobStorageUrl"]
             };
 
             services.AddSingleton(blobStorageSettings);
@@ -42,31 +42,15 @@ namespace AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions
                                                         configuration["AZURE_CLIENT_SECRET"]);
 #endif
 
-                builder.AddSecretClient(new Uri(configuration.GetSection("KeyVaultSettings:Url").Value))
-                        .ConfigureOptions(options => options.Retry.MaxRetries = 3)
-                        .WithCredential(credential);
-
-                var secretClient = services.BuildServiceProvider().GetService<SecretClient>();
-                var secret = secretClient.GetSecret("BlobStorageConnectionString").Value;
-
-                builder.AddBlobServiceClient(secret.Value)
+                builder.AddBlobServiceClient(new Uri(configuration["BlobStorageSettings:BlobStorageUrl"]))
                        .ConfigureOptions((options, provider) =>
                         {
                             options.Retry.MaxRetries = 10;
                             options.Retry.Delay = TimeSpan.FromSeconds(3);
-                            options.Diagnostics.IsLoggingEnabled = true;
+                            options.Diagnostics.IsLoggingEnabled = false;
                             options.Diagnostics.ApplicationId = "AzureDeveloperTemplates";
-                            //options.AddPolicy(provider.GetService<SimpleTracingPolicy>(), HttpPipelinePosition.PerCall);
+                            options.AddPolicy(provider.GetService<SimpleTracingPolicy>(), HttpPipelinePosition.PerCall);
                         });
-
-
-
-                //Set global configuration for all clients:
-                //builder.ConfigureDefaults(options =>
-                //{
-                //    options.Retry.Mode = RetryMode.Exponential;
-                //    options.Diagnostics.IsLoggingEnabled = true;
-                //});
             });
         }
     }
