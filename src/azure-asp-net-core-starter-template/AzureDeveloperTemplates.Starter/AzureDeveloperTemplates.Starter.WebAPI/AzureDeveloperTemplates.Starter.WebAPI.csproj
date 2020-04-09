@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>cb674816-1be4-44fd-b816-6ddb385a3a8f</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.13.1" />
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDeveloperTemplates.Starter.Core\AzureDeveloperTemplates.Starter.Core.csproj" />
+    <ProjectReference Include="..\AzureDeveloperTemplates.Starter.Infrastructure\AzureDeveloperTemplates.Starter.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+</Project>
