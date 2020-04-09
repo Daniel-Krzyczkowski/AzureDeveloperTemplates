@@ -1,4 +1,4 @@
-[Azure Storage Blobs SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-blob-storage-sdk-asp-net-core-template/AzureDeveloperTemplates.BlobStorage)
+[Azure Storage Blobs SDK with ASP .NET Core Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-blob-storage-sdk-asp-net-core-template)
 
 Sample project to present how to use Azure Storage Blobs SDK to upload and downlad files from the Azure Blob Storage.
 
