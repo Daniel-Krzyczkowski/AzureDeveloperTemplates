@@ -25,6 +25,7 @@ namespace AzureDeveloperTemplates.Starter.WebAPI
         {
             services.AddApplicationInsightsTelemetry();
             services.AddAppConfiguration(Configuration)
+                    .AddDataService()
                     .AddAzureServices()
                     .AddMessagingService();
 

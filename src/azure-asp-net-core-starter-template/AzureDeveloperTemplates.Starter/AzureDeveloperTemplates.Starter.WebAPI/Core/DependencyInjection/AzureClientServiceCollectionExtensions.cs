@@ -32,7 +32,6 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
                            options.Retry.MaxRetries = 3;
                            options.Retry.Delay = TimeSpan.FromSeconds(3);
                            options.Diagnostics.IsLoggingEnabled = false;
-                           options.Diagnostics.ApplicationId = "az-dev-templates";
                        });
 
                 builder.UseCredential(credential);

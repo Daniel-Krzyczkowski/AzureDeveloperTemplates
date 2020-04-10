@@ -23,8 +23,6 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
                     };
                 });
 
-            var test = services.BuildServiceProvider().GetRequiredService<IAzureAuthenticationConfiguration>();
-
             services.Configure<StorageServiceConfiguration>(config.GetSection("BlobStorageSettings"));
             services.TryAddSingleton<IStorageServiceConfiguration>(sp =>
                 sp.GetRequiredService<IOptions<StorageServiceConfiguration>>().Value);
@@ -32,6 +30,10 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
             services.Configure<MessagingServiceConfiguration>(config.GetSection("ServiceBusSettings"));
             services.TryAddSingleton<IMessagingServiceConfiguration>(sp =>
                 sp.GetRequiredService<IOptions<MessagingServiceConfiguration>>().Value);
+
+            services.Configure<DataServiceConfiguration>(config.GetSection("CosmosDbSettings"));
+            services.TryAddSingleton<IDataServiceConfiguration>(sp =>
+                sp.GetRequiredService<IOptions<DataServiceConfiguration>>().Value);
 
             return services;
         }
