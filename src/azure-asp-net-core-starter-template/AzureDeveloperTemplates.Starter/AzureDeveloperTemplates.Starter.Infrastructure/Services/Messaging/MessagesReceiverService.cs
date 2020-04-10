@@ -17,7 +17,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             _messagingServiceConfiguration = messagingServiceConfiguration;
 
-            var connectionString = new ServiceBusConnectionStringBuilder(_messagingServiceConfiguration.ConnectionString);
+            var connectionString = new ServiceBusConnectionStringBuilder(_messagingServiceConfiguration.ListenConnectionString);
             _messageReceiver = new MessageReceiver(connectionString.GetNamespaceConnectionString(),
                 EntityNameHelper.FormatSubscriptionPath(_messagingServiceConfiguration.TopicName, _messagingServiceConfiguration.Subscription),
                 ReceiveMode.ReceiveAndDelete, RetryPolicy.Default);

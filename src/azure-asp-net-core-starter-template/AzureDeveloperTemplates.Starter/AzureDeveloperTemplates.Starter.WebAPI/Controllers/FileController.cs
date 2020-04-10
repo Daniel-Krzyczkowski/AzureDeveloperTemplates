@@ -57,6 +57,7 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
 
                     if (!fileWritten)
                     {
+                        _logger.LogError($"An error occurred when processing file: {formFile.FileName}");
                         return StatusCode(500, $"An error occurred when processing file: {formFile.FileName}");
                     }
                 }

@@ -16,9 +16,6 @@ namespace AzureDeveloperTemplates.Starter.WebAPI
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                }).ConfigureServices(services =>
-                {
-                    services.AddApplicationInsightsTelemetry();
                 });
     }
 }

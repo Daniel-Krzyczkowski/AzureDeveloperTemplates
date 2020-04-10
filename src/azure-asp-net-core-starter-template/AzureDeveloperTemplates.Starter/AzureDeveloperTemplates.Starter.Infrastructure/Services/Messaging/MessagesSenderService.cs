@@ -1,7 +1,6 @@
 ﻿using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces;
 using Microsoft.Azure.ServiceBus;
-using Microsoft.Azure.ServiceBus.Primitives;
 using Newtonsoft.Json;
 using System;
 using System.Text;
@@ -17,9 +16,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         public MessagesSenderService(IMessagingServiceConfiguration messagingServiceConfiguration)
         {
             _messagingServiceConfiguration = messagingServiceConfiguration;
-            var token = TokenProvider.CreateSharedAccessSignatureTokenProvider(_messagingServiceConfiguration.SharedAccessName,
-                                                                            _messagingServiceConfiguration.SharedAccessKey, TokenScope.Entity);
-            _client = new TopicClient(_messagingServiceConfiguration.ServiceBusNamespace, _messagingServiceConfiguration.TopicName, token);
+            _client = new TopicClient(_messagingServiceConfiguration.SendConnectionString, _messagingServiceConfiguration.TopicName);
         }
 
         public async Task<string> SendMessageAsync(string messageBody)
