@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 {
-    public class DataService : IDataService<IEntity>
+    public class CosmosDbDataService : IDataService<IEntity>
     {
         private IDataServiceConfiguration _dataServiceConfiguration;
         private CosmosClient _client;
-        public DataService(IDataServiceConfiguration dataServiceConfiguration, CosmosClient client)
+        public CosmosDbDataService(IDataServiceConfiguration dataServiceConfiguration, CosmosClient client)
         {
             _dataServiceConfiguration = dataServiceConfiguration;
             _client = client;

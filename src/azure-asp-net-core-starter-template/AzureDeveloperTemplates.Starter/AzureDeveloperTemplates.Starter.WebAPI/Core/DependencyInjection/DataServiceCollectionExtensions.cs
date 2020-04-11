@@ -10,7 +10,7 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
     {
         public static IServiceCollection AddDataService(this IServiceCollection services)
         {
-            services.TryAddSingleton<IDataService<IEntity>, DataService>();
+            services.TryAddSingleton<IDataService<IEntity>, CosmosDbDataService>();
             return services;
         }
     }
