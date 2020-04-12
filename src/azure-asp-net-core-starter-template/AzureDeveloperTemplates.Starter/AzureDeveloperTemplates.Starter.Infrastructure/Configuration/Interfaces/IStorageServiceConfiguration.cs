@@ -3,6 +3,6 @@
     public interface IStorageServiceConfiguration
     {
         string ContainerName { get; set; }
-        string BlobStorageUrl { get; set; }
+        string ConnectionString { get; set; }
     }
 }
