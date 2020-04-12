@@ -8,9 +8,14 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
 {
     public static class DataServiceCollectionExtensions
     {
-        public static IServiceCollection AddDataService(this IServiceCollection services)
+        public static IServiceCollection AddDataServices(this IServiceCollection services)
         {
-            services.TryAddSingleton<IDataService<IEntity>, CosmosDbDataService>();
+            //Order of services registration is crucial - they will be retrievied in the specific order in the controllers:
+            services.TryAddEnumerable(new[]
+            {
+                ServiceDescriptor.Singleton<IDataService<IEntity>, CosmosDbDataService>(),
+                ServiceDescriptor.Scoped<IDataService<IEntity>, SqlDbDataService>()
+            });
             return services;
         }
     }

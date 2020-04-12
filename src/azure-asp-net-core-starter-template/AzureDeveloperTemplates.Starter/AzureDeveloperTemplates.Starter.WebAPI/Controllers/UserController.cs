@@ -1,9 +1,9 @@
-﻿using System;
+﻿using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
+using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 
 namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
 {
@@ -11,5 +11,12 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly IDataService<IEntity> dataService;
+
+        public UserController(IEnumerable<IDataService<IEntity>> dataServices)
+        {
+            dataService = dataServices.LastOrDefault()
+                          ?? throw new ArgumentNullException(nameof(dataService));
+        }
     }
 }

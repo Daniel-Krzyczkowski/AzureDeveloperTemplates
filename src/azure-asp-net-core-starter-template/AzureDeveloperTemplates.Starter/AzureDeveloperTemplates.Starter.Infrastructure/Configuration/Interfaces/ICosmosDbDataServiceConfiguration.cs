@@ -1,6 +1,6 @@
 ﻿namespace AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces
 {
-    public interface IDataServiceConfiguration
+    public interface ICosmosDbDataServiceConfiguration
     {
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }

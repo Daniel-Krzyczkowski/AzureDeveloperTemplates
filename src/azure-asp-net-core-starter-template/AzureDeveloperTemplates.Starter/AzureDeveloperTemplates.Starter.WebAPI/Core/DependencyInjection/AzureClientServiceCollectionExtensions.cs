@@ -1,9 +1,11 @@
 ﻿using Azure.Core;
+using Azure.Cosmos;
 using Azure.Identity;
 using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using AzureDeveloperTemplates.Starter.WebAPI.Configuration.Interfaces;
 using Microsoft.Extensions.Azure;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
 
 namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
@@ -36,6 +38,10 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
 
                 builder.UseCredential(credential);
             });
+
+            var cosmoDbConfiguration = serviceProvider.GetRequiredService<ICosmosDbDataServiceConfiguration>();
+            CosmosClient cosmosClient = new CosmosClient(cosmoDbConfiguration.ConnectionString);
+            services.TryAddSingleton(cosmosClient);
 
             return services;
         }

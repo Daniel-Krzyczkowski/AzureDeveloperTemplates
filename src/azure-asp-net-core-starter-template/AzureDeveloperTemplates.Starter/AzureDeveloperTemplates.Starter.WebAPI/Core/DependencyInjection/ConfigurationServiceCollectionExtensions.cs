@@ -31,9 +31,13 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
             services.TryAddSingleton<IMessagingServiceConfiguration>(sp =>
                 sp.GetRequiredService<IOptions<MessagingServiceConfiguration>>().Value);
 
-            services.Configure<DataServiceConfiguration>(config.GetSection("CosmosDbSettings"));
-            services.TryAddSingleton<IDataServiceConfiguration>(sp =>
-                sp.GetRequiredService<IOptions<DataServiceConfiguration>>().Value);
+            services.Configure<CosmosDbDataServiceConfiguration>(config.GetSection("CosmosDbSettings"));
+            services.TryAddSingleton<ICosmosDbDataServiceConfiguration>(sp =>
+                sp.GetRequiredService<IOptions<CosmosDbDataServiceConfiguration>>().Value);
+
+            services.Configure<SqlDbDataServiceConfiguration>(config.GetSection("SqlDbSettings"));
+            services.TryAddSingleton<ISqlDbDataServiceConfiguration>(sp =>
+                sp.GetRequiredService<IOptions<SqlDbDataServiceConfiguration>>().Value);
 
             return services;
         }

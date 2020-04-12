@@ -9,13 +9,14 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 {
     public class CosmosDbDataService : IDataService<IEntity>
     {
-        private IDataServiceConfiguration _dataServiceConfiguration;
+        private ICosmosDbDataServiceConfiguration _dataServiceConfiguration;
         private CosmosClient _client;
-        public CosmosDbDataService(IDataServiceConfiguration dataServiceConfiguration, CosmosClient client)
+        public CosmosDbDataService(ICosmosDbDataServiceConfiguration dataServiceConfiguration, CosmosClient client)
         {
             _dataServiceConfiguration = dataServiceConfiguration;
             _client = client;
         }
+
 
         public async Task Initialize()
         {

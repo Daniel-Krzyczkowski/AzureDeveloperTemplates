@@ -2,11 +2,8 @@
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Configuration
 {
-    public class DataServiceConfiguration : IDataServiceConfiguration
+    public class SqlDbDataServiceConfiguration : ISqlDbDataServiceConfiguration
     {
         public string ConnectionString { get; set; }
-        public string DatabaseName { get; set; }
-        public string ContainerName { get; set; }
-        public string PartitionKeyPath { get; set; }
     }
 }
