@@ -12,7 +12,6 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
         {
             var serviceProvider = services.BuildServiceProvider();
 
-
             var storageConfiguration = serviceProvider.GetRequiredService<IStorageServiceConfiguration>();
             BlobServiceClient blobServiceClient = new BlobServiceClient(storageConfiguration.ConnectionString);
             services.TryAddSingleton(blobServiceClient);

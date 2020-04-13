@@ -1,4 +1,5 @@
 ﻿using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
+using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -12,8 +13,11 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
     {
         public static IServiceCollection AddDataServices(this IServiceCollection services, IConfiguration config)
         {
+            var serviceProvider = services.BuildServiceProvider();
+            var sqlDbConfiguration = serviceProvider.GetRequiredService<ISqlDbDataServiceConfiguration>();
+
             services.AddDbContext<SqlDbContext>(c =>
-               c.UseSqlServer(config.GetConnectionString("SqlDbConnectionString")));
+               c.UseSqlServer(sqlDbConfiguration.ConnectionString));
 
             //Order of services registration is crucial - they will be retrievied in the specific order in the controllers:
             services.TryAddEnumerable(new[]

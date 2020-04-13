@@ -32,7 +32,7 @@ namespace AzureDeveloperTemplates.Starter.WebAPI
             services.AddSingleton<IStorageService, StorageService>();
             services.AddSingleton<FileProcessingChannel>();
             services.AddHostedService<FileProcessingBackgroundService>();
-
+            services.AddHealthChecks();
             services.AddControllers();
         }
 
@@ -50,6 +50,7 @@ namespace AzureDeveloperTemplates.Starter.WebAPI
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHealthChecks("/health");
                 endpoints.MapControllers();
             });
         }
