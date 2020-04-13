@@ -24,8 +24,14 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 
         public async Task Delete(IEntity entity)
         {
-            _sqlDbContext.Set<IEntity>().Remove(entity);
-            await _sqlDbContext.SaveChangesAsync();
+            var entityResult = await _sqlDbContext.Set<IEntity>()
+                   .Where(e => e.Id == entity.Id)
+                   .FirstOrDefaultAsync();
+            if (entityResult != null)
+            {
+                _sqlDbContext.Set<IEntity>().Remove(entity);
+                await _sqlDbContext.SaveChangesAsync();
+            }
         }
 
         public async Task<IEntity> Get(IEntity entity)
