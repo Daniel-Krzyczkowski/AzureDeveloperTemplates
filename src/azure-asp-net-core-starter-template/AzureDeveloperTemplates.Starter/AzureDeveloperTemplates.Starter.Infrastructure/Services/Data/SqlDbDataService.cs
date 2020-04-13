@@ -1,35 +1,53 @@
 ﻿using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.Interfaces;
-using System;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 {
     public class SqlDbDataService : IDataService<IEntity>
     {
-        public Task Add(IEntity newEntity)
+        private SqlDbContext _sqlDbContext;
+
+        public SqlDbDataService(SqlDbContext sqlDbContext)
         {
-            throw new NotImplementedException();
+            _sqlDbContext = sqlDbContext;
         }
 
-        public Task Delete(Guid entity)
+        public async Task<IEntity> Add(IEntity newEntity)
         {
-            throw new NotImplementedException();
+            var entityResult = _sqlDbContext.Add(newEntity);
+            await _sqlDbContext.SaveChangesAsync();
+            return entityResult.Entity;
         }
 
-        public Task Get(Guid entity)
+        public async Task Delete(IEntity entity)
         {
-            throw new NotImplementedException();
+            _sqlDbContext.Set<IEntity>().Remove(entity);
+            await _sqlDbContext.SaveChangesAsync();
         }
 
-        public Task Initialize()
+        public async Task<IEntity> Get(IEntity entity)
         {
-            throw new NotImplementedException();
+            var entityResult = await _sqlDbContext.Set<IEntity>()
+                                .Where(e => e.Id == entity.Id)
+                                .FirstOrDefaultAsync();
+            return entityResult;
         }
 
-        public Task Update(IEntity entity)
+        public async Task<IEntity> Update(IEntity entity)
         {
-            throw new NotImplementedException();
+            var entityResult = await _sqlDbContext.Set<IEntity>()
+                               .Where(e => e.Id == entity.Id)
+                               .FirstOrDefaultAsync();
+
+            if (entityResult.Id == entity.Id)
+            {
+                _sqlDbContext.Set<IEntity>().Update(entity);
+                await _sqlDbContext.SaveChangesAsync();
+            }
+            return entity;
         }
     }
 }

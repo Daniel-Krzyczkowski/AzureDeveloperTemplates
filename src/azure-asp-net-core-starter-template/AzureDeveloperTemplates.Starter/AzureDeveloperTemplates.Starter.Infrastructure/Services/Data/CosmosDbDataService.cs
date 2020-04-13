@@ -9,42 +9,53 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 {
     public class CosmosDbDataService : IDataService<IEntity>
     {
-        private ICosmosDbDataServiceConfiguration _dataServiceConfiguration;
-        private CosmosClient _client;
+        private readonly ICosmosDbDataServiceConfiguration _dataServiceConfiguration;
+        private readonly CosmosClient _client;
         public CosmosDbDataService(ICosmosDbDataServiceConfiguration dataServiceConfiguration, CosmosClient client)
         {
             _dataServiceConfiguration = dataServiceConfiguration;
             _client = client;
         }
 
-
-        public async Task Initialize()
+        public async Task<IEntity> Add(IEntity newEntity)
         {
-            CosmosDatabase database = await _client.CreateDatabaseIfNotExistsAsync(_dataServiceConfiguration.DatabaseName);
-            CosmosContainer container = await database.CreateContainerIfNotExistsAsync(
-                _dataServiceConfiguration.ContainerName,
-                _dataServiceConfiguration.PartitionKeyPath,
-                400);
+            var database = _client.GetDatabase(_dataServiceConfiguration.DatabaseName);
+            var container = database.GetContainer(_dataServiceConfiguration.ContainerName);
+            ItemResponse<IEntity> createResponse = await container.CreateItemAsync(newEntity);
+            return createResponse.Value;
         }
 
-        public Task Add(IEntity newEntity)
+        public async Task Delete(IEntity entity)
         {
-            throw new NotImplementedException();
+            var database = _client.GetDatabase(_dataServiceConfiguration.DatabaseName);
+            var container = database.GetContainer(_dataServiceConfiguration.ContainerName);
+            await container.DeleteItemAsync<IEntity>(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
         }
 
-        public Task Delete(Guid entity)
+        public async Task<IEntity> Get(IEntity entity)
         {
-            throw new NotImplementedException();
+            var database = _client.GetDatabase(_dataServiceConfiguration.DatabaseName);
+            var container = database.GetContainer(_dataServiceConfiguration.ContainerName);
+
+            ItemResponse<IEntity> entityResult = await container
+                                                       .ReadItemAsync<IEntity>(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
+            return entityResult.Value;
         }
 
-        public Task Get(Guid entity)
+        public async Task<IEntity> Update(IEntity entity)
         {
-            throw new NotImplementedException();
-        }
+            var database = _client.GetDatabase(_dataServiceConfiguration.DatabaseName);
+            var container = database.GetContainer(_dataServiceConfiguration.ContainerName);
 
-        public Task Update(IEntity entity)
-        {
-            throw new NotImplementedException();
+            ItemResponse<IEntity> entityResult = await container
+                                                       .ReadItemAsync<IEntity>(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
+
+            if (entityResult != null)
+            {
+                await container
+                      .ReplaceItemAsync(entity, entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
+            }
+            return entity;
         }
     }
 }

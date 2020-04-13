@@ -19,6 +19,16 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
 
             var cosmoDbConfiguration = serviceProvider.GetRequiredService<ICosmosDbDataServiceConfiguration>();
             CosmosClient cosmosClient = new CosmosClient(cosmoDbConfiguration.ConnectionString);
+            CosmosDatabase database = cosmosClient.CreateDatabaseIfNotExistsAsync(cosmoDbConfiguration.DatabaseName)
+                                                   .GetAwaiter()
+                                                   .GetResult();
+            CosmosContainer container = database.CreateContainerIfNotExistsAsync(
+                cosmoDbConfiguration.ContainerName,
+                cosmoDbConfiguration.PartitionKeyPath,
+                400)
+                .GetAwaiter()
+                .GetResult();
+
             services.TryAddSingleton(cosmosClient);
 
             return services;

@@ -21,7 +21,7 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
         public FileController(ILogger<FileController> logger, FileProcessingChannel fileProcessingChannel)
         {
             _logger = logger;
-            _fileProcessingChannel = fileProcessingChannel;
+            _fileProcessingChannel = fileProcessingChannel ?? throw new ArgumentNullException(nameof(fileProcessingChannel));
         }
 
         [HttpPost]
