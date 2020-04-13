@@ -26,6 +26,21 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Configuration
                 return ValidateOptionsResult.Fail($"{nameof(options.SendConnectionString)} configuration parameter for the Azure Service Bus is required");
             }
 
+            if (string.IsNullOrEmpty(options.ServiceBusNamespace))
+            {
+                return ValidateOptionsResult.Fail($"{nameof(options.ServiceBusNamespace)} configuration parameter for the Azure Service Bus is required");
+            }
+
+            if (string.IsNullOrEmpty(options.Subscription))
+            {
+                return ValidateOptionsResult.Fail($"{nameof(options.Subscription)} configuration parameter for the Azure Service Bus is required");
+            }
+
+            if (string.IsNullOrEmpty(options.TopicName))
+            {
+                return ValidateOptionsResult.Fail($"{nameof(options.TopicName)} configuration parameter for the Azure Service Bus is required");
+            }
+
             return ValidateOptionsResult.Success;
         }
     }

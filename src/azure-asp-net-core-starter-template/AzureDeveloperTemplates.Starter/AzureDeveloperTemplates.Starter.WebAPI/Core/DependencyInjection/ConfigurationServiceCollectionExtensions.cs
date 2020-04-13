@@ -2,7 +2,6 @@
 using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 
 namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
