@@ -9,11 +9,11 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class CustomerController : ControllerBase
     {
         private readonly IDataService<IEntity> dataService;
 
-        public UserController(IEnumerable<IDataService<IEntity>> dataServices)
+        public CustomerController(IEnumerable<IDataService<IEntity>> dataServices)
         {
             dataService = dataServices.LastOrDefault()
                           ?? throw new ArgumentNullException(nameof(dataService));
