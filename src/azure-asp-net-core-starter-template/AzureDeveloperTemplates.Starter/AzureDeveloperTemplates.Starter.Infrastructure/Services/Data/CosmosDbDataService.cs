@@ -2,7 +2,6 @@
 using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
 using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.Interfaces;
-using System;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data

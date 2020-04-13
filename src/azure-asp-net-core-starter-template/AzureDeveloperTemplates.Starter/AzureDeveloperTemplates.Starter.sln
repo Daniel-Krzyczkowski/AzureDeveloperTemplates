@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.Starter.WebAPI", "AzureDeveloperTemplates.Starter.WebAPI\AzureDeveloperTemplates.Starter.WebAPI.csproj", "{D02E94D4-22CE-414E-8A3D-36FCAB98C072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.Starter.WebAPI", "AzureDeveloperTemplates.Starter.WebAPI\AzureDeveloperTemplates.Starter.WebAPI.csproj", "{D02E94D4-22CE-414E-8A3D-36FCAB98C072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.Starter.Infrastructure", "AzureDeveloperTemplates.Starter.Infrastructure\AzureDeveloperTemplates.Starter.Infrastructure.csproj", "{618066BD-854B-4C7F-9B2B-4A74319AD807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.Starter.Infrastructure", "AzureDeveloperTemplates.Starter.Infrastructure\AzureDeveloperTemplates.Starter.Infrastructure.csproj", "{618066BD-854B-4C7F-9B2B-4A74319AD807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDeveloperTemplates.Starter.Core", "AzureDeveloperTemplates.Starter.Core\AzureDeveloperTemplates.Starter.Core.csproj", "{837F8137-AF9C-4BC6-89BD-50A3B91F110E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDeveloperTemplates.Starter.Core", "AzureDeveloperTemplates.Starter.Core\AzureDeveloperTemplates.Starter.Core.csproj", "{837F8137-AF9C-4BC6-89BD-50A3B91F110E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
