@@ -12,22 +12,24 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
         public static IServiceCollection AddAppConfiguration(this IServiceCollection services, IConfiguration config)
         {
             services.Configure<StorageServiceConfiguration>(config.GetSection("BlobStorageSettings"));
-            services.TryAddSingleton<IStorageServiceConfiguration>(sp =>
-                sp.GetRequiredService<IOptions<StorageServiceConfiguration>>().Value);
+            services.AddSingleton<IValidateOptions<StorageServiceConfiguration>, StorageServiceConfigurationValidation>();
+            var storageServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<StorageServiceConfiguration>>().Value;
+            services.AddSingleton<IStorageServiceConfiguration>(storageServiceConfiguration);
 
             services.Configure<MessagingServiceConfiguration>(config.GetSection("ServiceBusSettings"));
-            services.TryAddSingleton<IMessagingServiceConfiguration>(sp =>
-                sp.GetRequiredService<IOptions<MessagingServiceConfiguration>>().Value);
+            services.AddSingleton<IValidateOptions<MessagingServiceConfiguration>, MessagingServiceConfigurationValidation>();
+            var messagingServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<MessagingServiceConfiguration>>().Value;
+            services.AddSingleton<IMessagingServiceConfiguration>(messagingServiceConfiguration);
 
             services.Configure<CosmosDbDataServiceConfiguration>(config.GetSection("CosmosDbSettings"));
             services.AddSingleton<IValidateOptions<CosmosDbDataServiceConfiguration>, CosmosDbDataServiceConfigurationValidation>();
-
             var cosmosDbDataServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<CosmosDbDataServiceConfiguration>>().Value;
-            services.AddSingleton<ICosmosDbDataServiceConfiguration>(services.BuildServiceProvider().GetRequiredService<IOptions<CosmosDbDataServiceConfiguration>>().Value);
+            services.AddSingleton<ICosmosDbDataServiceConfiguration>(cosmosDbDataServiceConfiguration);
 
             services.Configure<SqlDbDataServiceConfiguration>(config.GetSection("SqlDbSettings"));
-            services.TryAddSingleton<ISqlDbDataServiceConfiguration>(sp =>
-                sp.GetRequiredService<IOptions<SqlDbDataServiceConfiguration>>().Value);
+            services.AddSingleton<IValidateOptions<SqlDbDataServiceConfiguration>, SqlDbDataServiceConfigurationValidation>();
+            var sqlDbDataServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<SqlDbDataServiceConfiguration>>().Value;
+            services.AddSingleton<ISqlDbDataServiceConfiguration>(sqlDbDataServiceConfiguration);
 
             return services;
         }

@@ -17,7 +17,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Configuration
         {
             if (string.IsNullOrEmpty(options.ConnectionString))
             {
-                return ValidateOptionsResult.Fail("A connection string for the Cosmos DB is required");
+                return ValidateOptionsResult.Fail($"{nameof(options.ConnectionString)} configuration parameter for the Azure Cosmos DB is required");
             }
 
             return ValidateOptionsResult.Success;
