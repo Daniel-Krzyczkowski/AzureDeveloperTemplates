@@ -1,4 +1,5 @@
 ﻿using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
+using Microsoft.Extensions.Options;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Configuration
 {
@@ -8,5 +9,18 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Configuration
         public string DatabaseName { get; set; }
         public string ContainerName { get; set; }
         public string PartitionKeyPath { get; set; }
+    }
+
+    public class CosmosDbDataServiceConfigurationValidation : IValidateOptions<CosmosDbDataServiceConfiguration>
+    {
+        public ValidateOptionsResult Validate(string name, CosmosDbDataServiceConfiguration options)
+        {
+            if (string.IsNullOrEmpty(options.ConnectionString))
+            {
+                return ValidateOptionsResult.Fail("A connection string for the Cosmos DB is required");
+            }
+
+            return ValidateOptionsResult.Success;
+        }
     }
 }
