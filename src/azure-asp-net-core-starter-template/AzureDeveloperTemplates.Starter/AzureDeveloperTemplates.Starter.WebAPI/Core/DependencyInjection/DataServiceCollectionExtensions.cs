@@ -1,7 +1,7 @@
 ﻿using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
+using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data;
-using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

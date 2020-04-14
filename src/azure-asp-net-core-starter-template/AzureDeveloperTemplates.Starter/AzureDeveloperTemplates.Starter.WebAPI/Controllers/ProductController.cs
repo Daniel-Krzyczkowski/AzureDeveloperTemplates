@@ -1,5 +1,5 @@
 ﻿using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
-using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.Interfaces;
+using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

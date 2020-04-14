@@ -15,11 +15,6 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            //modelBuilder.Entity<SampleEntity>().HasData(new SampleEntity
-            //{
-            //    Id = Guid.NewGuid()
-            //});
         }
     }
 }
