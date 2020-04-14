@@ -1,9 +1,7 @@
-﻿using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
-using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
+﻿using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
 {
@@ -11,18 +9,19 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly IDataService<IEntity> dataService;
+        private readonly IProductService _productService;
 
-        public ProductController(IEnumerable<IDataService<IEntity>> dataServices)
+        public ProductController(IProductService productService)
         {
-            dataService = dataServices.FirstOrDefault()
-                          ?? throw new ArgumentNullException(nameof(dataService));
+            _productService = productService
+                          ?? throw new ArgumentNullException(nameof(productService));
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAll()
         {
-            return Ok();
+            var allProducts = await _productService.GetAllAsync();
+            return Ok(allProducts);
         }
     }
 }

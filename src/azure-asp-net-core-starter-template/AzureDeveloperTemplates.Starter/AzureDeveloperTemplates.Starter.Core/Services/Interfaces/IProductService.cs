@@ -1,10 +1,11 @@
 ﻿using AzureDeveloperTemplates.Starter.Core.DomainModel;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Core.Services.Interfaces
 {
     public interface IProductService
     {
-        Task AddToBasket(Product product);
+        Task<IReadOnlyList<Product>> GetAllAsync();
     }
 }

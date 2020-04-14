@@ -25,6 +25,7 @@ namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
                 ServiceDescriptor.Singleton<IDataService<IEntity>, CosmosDbDataService>(),
                 ServiceDescriptor.Scoped<IDataService<IEntity>, SqlDbDataService>()
             });
+
             return services;
         }
     }

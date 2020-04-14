@@ -1,5 +1,6 @@
 ﻿using AzureDeveloperTemplates.Starter.Core.DomainModel;
 using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Core.Services
@@ -12,9 +13,10 @@ namespace AzureDeveloperTemplates.Starter.Core.Services
             _dataService = dataService;
         }
 
-        public Task AddToBasket(Product product)
+        public async Task<IReadOnlyList<Product>> GetAllAsync()
         {
-            throw new System.NotImplementedException();
+            var allProductsResult = await _dataService.GetAllAsync();
+            return allProductsResult;
         }
     }
 }
