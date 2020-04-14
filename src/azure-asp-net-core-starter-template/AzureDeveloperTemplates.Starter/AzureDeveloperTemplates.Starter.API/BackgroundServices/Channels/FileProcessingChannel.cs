@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.BackgroundServices.Channels
+namespace AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels
 {
     public class FileProcessingChannel
     {

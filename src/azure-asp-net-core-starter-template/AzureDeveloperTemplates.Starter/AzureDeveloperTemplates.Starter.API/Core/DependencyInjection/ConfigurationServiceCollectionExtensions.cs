@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
+namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 {
     public static class ConfigurationServiceCollectionExtensions
     {

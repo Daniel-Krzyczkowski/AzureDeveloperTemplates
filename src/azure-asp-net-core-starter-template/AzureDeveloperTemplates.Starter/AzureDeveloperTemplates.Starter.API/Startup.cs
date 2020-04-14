@@ -1,15 +1,15 @@
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces;
-using AzureDeveloperTemplates.Starter.WebAPI.BackgroundServices;
-using AzureDeveloperTemplates.Starter.WebAPI.BackgroundServices.Channels;
-using AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection;
+using AzureDeveloperTemplates.Starter.API.BackgroundServices;
+using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
+using AzureDeveloperTemplates.Starter.API.Core.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI
+namespace AzureDeveloperTemplates.Starter.API
 {
     public class Startup
     {

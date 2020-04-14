@@ -1,5 +1,5 @@
 ﻿using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces;
-using AzureDeveloperTemplates.Starter.WebAPI.BackgroundServices.Channels;
+using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.BackgroundServices
+namespace AzureDeveloperTemplates.Starter.API.BackgroundServices
 {
     public class FileProcessingBackgroundService : BackgroundService
     {

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI
+namespace AzureDeveloperTemplates.Starter.API
 {
     public class Program
     {

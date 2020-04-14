@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>cb674816-1be4-44fd-b816-6ddb385a3a8f</UserSecretsId>
+    <AssemblyName>AzureDeveloperTemplates.Starter.API</AssemblyName>
+    <RootNamespace>AzureDeveloperTemplates.Starter.API</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

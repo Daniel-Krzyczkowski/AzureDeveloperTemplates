@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.Dto
+namespace AzureDeveloperTemplates.Starter.API.Dto
 {
     public class FilesUpload
     {

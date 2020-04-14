@@ -1,11 +1,11 @@
 ﻿using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Contract;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces;
-using AzureDeveloperTemplates.Starter.WebAPI.BackgroundServices;
+using AzureDeveloperTemplates.Starter.API.BackgroundServices;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
+namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 {
     public static class MessagingServiceCollectionExtensions
     {

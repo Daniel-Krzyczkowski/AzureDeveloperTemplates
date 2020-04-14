@@ -3,7 +3,7 @@ using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.Core.DependencyInjection
+namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 {
     public static class DomainServiceCollectionExtensions
     {

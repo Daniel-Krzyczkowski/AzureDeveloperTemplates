@@ -1,5 +1,5 @@
-﻿using AzureDeveloperTemplates.Starter.WebAPI.BackgroundServices.Channels;
-using AzureDeveloperTemplates.Starter.WebAPI.Dto;
+﻿using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
+using AzureDeveloperTemplates.Starter.API.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
+namespace AzureDeveloperTemplates.Starter.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

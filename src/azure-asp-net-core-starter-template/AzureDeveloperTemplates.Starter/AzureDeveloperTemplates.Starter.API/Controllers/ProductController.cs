@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.Controllers
+namespace AzureDeveloperTemplates.Starter.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

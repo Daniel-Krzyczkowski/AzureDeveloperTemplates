@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AzureDeveloperTemplates.Starter.WebAPI.BackgroundServices
+namespace AzureDeveloperTemplates.Starter.API.BackgroundServices
 {
     internal class MessagingBackgroundService : BackgroundService
     {
