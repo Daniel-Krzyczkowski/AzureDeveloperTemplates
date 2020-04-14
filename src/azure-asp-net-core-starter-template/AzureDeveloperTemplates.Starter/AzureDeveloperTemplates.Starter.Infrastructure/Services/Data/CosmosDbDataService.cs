@@ -66,13 +66,24 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             var iterator = queryResultSetIterator.GetAsyncEnumerator();
             List<IEntity> entities = new List<IEntity>();
 
-            while (await iterator.MoveNextAsync())
+            try
             {
-                var entity = iterator.Current;
-                entities.Add(entity);
+                while (await iterator.MoveNextAsync())
+                {
+                    var entity = iterator.Current;
+                    entities.Add(entity);
+                }
             }
 
-            await iterator.DisposeAsync();
+            finally
+            {
+                if (iterator != null)
+                {
+
+                    await iterator.DisposeAsync();
+                }
+            }
+
             return entities;
         }
 
