@@ -1,6 +1,8 @@
 using AzureDeveloperTemplates.Starter.API.BackgroundServices;
 using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
+using AzureDeveloperTemplates.Starter.API.Core.Configuration;
 using AzureDeveloperTemplates.Starter.API.Core.DependencyInjection;
+using AzureDeveloperTemplates.Starter.API.Middleware;
 using AzureDeveloperTemplates.Starter.Core.Services;
 using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage;
@@ -36,7 +38,8 @@ namespace AzureDeveloperTemplates.Starter.API
             services.AddSingleton<FileProcessingChannel>();
             services.AddHostedService<FileProcessingBackgroundService>();
             services.AddHealthChecks();
-            services.AddControllers();
+            services.AddControllers()
+                    .ConfigureInvalidModelStateHandling();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +53,8 @@ namespace AzureDeveloperTemplates.Starter.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
