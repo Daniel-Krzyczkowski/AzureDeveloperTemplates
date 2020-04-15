@@ -1,4 +1,4 @@
-﻿using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
+﻿using AzureDeveloperTemplates.Starter.Core.DomainModel;
 using Microsoft.EntityFrameworkCore;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
@@ -10,7 +10,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
         {
         }
 
-        public DbSet<IEntity> SampleEntities { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

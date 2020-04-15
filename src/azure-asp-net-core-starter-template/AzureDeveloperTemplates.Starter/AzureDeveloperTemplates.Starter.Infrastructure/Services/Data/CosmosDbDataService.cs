@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 {
-    public class CosmosDbDataService : IDataService<IEntity>
+    public sealed class CosmosDbDataService : IDataService<IEntity>
     {
         private readonly ICosmosDbDataServiceConfiguration _dataServiceConfiguration;
         private readonly CosmosClient _client;

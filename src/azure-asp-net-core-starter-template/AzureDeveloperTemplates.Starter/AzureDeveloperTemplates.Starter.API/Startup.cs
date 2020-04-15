@@ -1,6 +1,8 @@
 using AzureDeveloperTemplates.Starter.API.BackgroundServices;
 using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
 using AzureDeveloperTemplates.Starter.API.Core.DependencyInjection;
+using AzureDeveloperTemplates.Starter.Core.Services;
+using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +32,7 @@ namespace AzureDeveloperTemplates.Starter.API
                     .AddMessagingService();
 
             services.AddSingleton<IStorageService, StorageService>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddSingleton<FileProcessingChannel>();
             services.AddHostedService<FileProcessingBackgroundService>();
             services.AddHealthChecks();

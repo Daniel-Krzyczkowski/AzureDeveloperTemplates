@@ -8,9 +8,9 @@ namespace AzureDeveloperTemplates.Starter.Core.Services
     public class ProductService : IProductService
     {
         private readonly IDataService<Product> _dataService;
-        public ProductService(IDataService<Product> dataService)
+        public ProductService(IDataService<Product> dataServices)
         {
-            _dataService = dataService;
+            _dataService = dataServices;
         }
 
         public async Task<IReadOnlyList<Product>> GetAllAsync()

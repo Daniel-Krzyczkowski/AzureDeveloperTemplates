@@ -9,23 +9,23 @@ using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 {
-    public class SqlDbDataService : IDataService<IEntity>
+    public sealed class SqlDbDataService<T> : IDataService<T> where T : class, IEntity
     {
         private SqlDbContext _sqlDbContext;
-        private readonly ILogger<SqlDbDataService> _logger;
+        private readonly ILogger<SqlDbDataService<T>> _logger;
 
-        public SqlDbDataService(SqlDbContext sqlDbContext, ILogger<SqlDbDataService> logger)
+        public SqlDbDataService(SqlDbContext sqlDbContext, ILogger<SqlDbDataService<T>> logger)
         {
             _sqlDbContext = sqlDbContext;
             _logger = logger;
         }
 
-        public async Task<IEntity> AddAsync(IEntity newEntity)
+        public async Task<T> AddAsync(T newEntity)
         {
             try
             {
                 newEntity.Id = Guid.NewGuid();
-                var entityResult = _sqlDbContext.Add(newEntity);
+                var entityResult = _sqlDbContext.Set<T>().Add(newEntity);
                 await _sqlDbContext.SaveChangesAsync();
                 return entityResult.Entity;
             }
@@ -36,16 +36,16 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             }
         }
 
-        public async Task DeleteAsync(IEntity entity)
+        public async Task DeleteAsync(T entity)
         {
             try
             {
-                var entityResult = await _sqlDbContext.Set<IEntity>()
+                var entityResult = await _sqlDbContext.Set<T>()
                                                        .Where(e => e.Id == entity.Id)
                                                        .FirstOrDefaultAsync();
                 if (entityResult != null)
                 {
-                    _sqlDbContext.Set<IEntity>().Remove(entity);
+                    _sqlDbContext.Set<T>().Remove(entity);
                     await _sqlDbContext.SaveChangesAsync();
                 }
             }
@@ -56,11 +56,11 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             }
         }
 
-        public async Task<IEntity> GetAsync(IEntity entity)
+        public async Task<T> GetAsync(T entity)
         {
             try
             {
-                var entityResult = await _sqlDbContext.Set<IEntity>()
+                var entityResult = await _sqlDbContext.Set<T>()
                     .Where(e => e.Id == entity.Id)
                     .FirstOrDefaultAsync();
                 return entityResult;
@@ -72,17 +72,17 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             }
         }
 
-        public async Task<IEntity> UpdateAsync(IEntity entity)
+        public async Task<T> UpdateAsync(T entity)
         {
             try
             {
-                var entityResult = await _sqlDbContext.Set<IEntity>()
+                var entityResult = await _sqlDbContext.Set<T>()
                    .Where(e => e.Id == entity.Id)
                    .FirstOrDefaultAsync();
 
                 if (entityResult.Id == entity.Id)
                 {
-                    _sqlDbContext.Set<IEntity>().Update(entity);
+                    _sqlDbContext.Set<T>().Update(entity);
                     await _sqlDbContext.SaveChangesAsync();
                 }
                 return entity;
@@ -94,11 +94,11 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             }
         }
 
-        public async Task<IReadOnlyList<IEntity>> GetAllAsync()
+        public async Task<IReadOnlyList<T>> GetAllAsync()
         {
             try
             {
-                var allProducts = await _sqlDbContext.Set<IEntity>()
+                var allProducts = await _sqlDbContext.Set<T>()
                                      .ToListAsync();
                 return allProducts;
             }

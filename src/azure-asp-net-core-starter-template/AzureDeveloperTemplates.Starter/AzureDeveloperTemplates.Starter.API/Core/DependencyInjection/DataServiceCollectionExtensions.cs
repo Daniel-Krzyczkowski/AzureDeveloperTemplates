@@ -1,10 +1,9 @@
-﻿using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
+﻿using AzureDeveloperTemplates.Starter.Core.DomainModel;
 using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 {
@@ -18,12 +17,10 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
             services.AddDbContext<SqlDbContext>(c =>
                c.UseSqlServer(sqlDbConfiguration.ConnectionString));
 
-            //Order of services registration is crucial - they will be retrievied in the specific order in the controllers:
-            services.TryAddEnumerable(new[]
-            {
-                ServiceDescriptor.Singleton<IDataService<IEntity>, CosmosDbDataService>(),
-                ServiceDescriptor.Scoped<IDataService<IEntity>, SqlDbDataService>()
-            });
+            services.AddScoped(typeof(IDataService<Product>), typeof(SqlDbDataService<Product>));
+
+            //TODO: Update implementation for CosmosDbDataService:
+            //services.AddScoped(typeof(IDataService<>), typeof(CosmosDbDataService<>));
 
             return services;
         }

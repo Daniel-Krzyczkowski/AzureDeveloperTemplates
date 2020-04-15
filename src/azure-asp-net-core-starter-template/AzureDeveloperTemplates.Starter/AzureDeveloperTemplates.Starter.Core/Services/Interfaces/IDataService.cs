@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Core.Services.Interfaces
 {
-    public interface IDataService<T> where T : IEntity
+    public interface IDataService<T> where T : class, IEntity
     {
         Task<T> AddAsync(T newEntity);
         Task<T> GetAsync(T entity);
