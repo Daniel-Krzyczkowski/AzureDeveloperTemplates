@@ -2,7 +2,6 @@
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
@@ -34,29 +33,13 @@ namespace AzureDeveloperTemplates.Starter.API.BackgroundServices
                     await using var stream = File.OpenRead(filePath);
 
                     await _storageService.UploadBlobAsync(stream, Path.GetFileName(filePath));
-                    Log.ProcessedMessage(_logger);
+                    _logger.LogInformation($"File {Path.GetFileName(filePath)} successfully processed");
                 }
                 finally
                 {
                     File.Delete(filePath);
                 }
             }
-        }
-
-        internal static class EventIds
-        {
-            public static readonly EventId StartedProcessing = new EventId(100, "StartedProcessing");
-            public static readonly EventId ProcessedMessage = new EventId(110, "ProcessedMessage");
-        }
-
-        private static class Log
-        {
-            private static readonly Action<ILogger, string, Exception> _processedMessage = LoggerMessage.Define<string>(
-                LogLevel.Debug,
-                EventIds.ProcessedMessage,
-                "Read and processed message with ID '{MessageId}' from the channel.");
-
-            public static void ProcessedMessage(ILogger logger) => logger.Log(LogLevel.Trace, EventIds.ProcessedMessage, "Processed message successfully");
         }
     }
 }

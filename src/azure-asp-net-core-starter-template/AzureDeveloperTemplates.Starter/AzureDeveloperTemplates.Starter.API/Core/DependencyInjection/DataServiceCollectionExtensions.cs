@@ -3,7 +3,6 @@ using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -11,7 +10,7 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 {
     public static class DataServiceCollectionExtensions
     {
-        public static IServiceCollection AddDataServices(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddDataServices(this IServiceCollection services)
         {
             var serviceProvider = services.BuildServiceProvider();
             var sqlDbConfiguration = serviceProvider.GetRequiredService<ISqlDbDataServiceConfiguration>();

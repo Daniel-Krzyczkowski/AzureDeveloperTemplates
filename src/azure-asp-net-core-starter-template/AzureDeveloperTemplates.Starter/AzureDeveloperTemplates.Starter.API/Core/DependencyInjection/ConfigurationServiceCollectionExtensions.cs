@@ -10,6 +10,11 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
     {
         public static IServiceCollection AddAppConfiguration(this IServiceCollection services, IConfiguration config)
         {
+            services.Configure<ApplicationInsightsServiceConfiguration>(config.GetSection("ApplicationInsights"));
+            services.AddSingleton<IValidateOptions<ApplicationInsightsServiceConfiguration>, ApplicationInsightsServiceConfigurationValidation>();
+            var applicationInsightsServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<ApplicationInsightsServiceConfiguration>>().Value;
+            services.AddSingleton<IApplicationInsightsServiceConfiguration>(applicationInsightsServiceConfiguration);
+
             services.Configure<StorageServiceConfiguration>(config.GetSection("BlobStorageSettings"));
             services.AddSingleton<IValidateOptions<StorageServiceConfiguration>, StorageServiceConfigurationValidation>();
             var storageServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<StorageServiceConfiguration>>().Value;
