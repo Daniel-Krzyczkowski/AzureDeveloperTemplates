@@ -1,5 +1,5 @@
-﻿using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces;
-using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
+﻿using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
+using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;

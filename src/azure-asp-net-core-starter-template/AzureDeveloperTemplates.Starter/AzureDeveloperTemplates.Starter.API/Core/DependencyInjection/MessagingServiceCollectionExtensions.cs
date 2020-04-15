@@ -1,7 +1,7 @@
-﻿using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging;
+﻿using AzureDeveloperTemplates.Starter.API.BackgroundServices;
+using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Contract;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces;
-using AzureDeveloperTemplates.Starter.API.BackgroundServices;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 

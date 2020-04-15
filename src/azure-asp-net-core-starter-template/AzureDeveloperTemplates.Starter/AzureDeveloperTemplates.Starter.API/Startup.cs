@@ -1,8 +1,8 @@
-using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage;
-using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces;
 using AzureDeveloperTemplates.Starter.API.BackgroundServices;
 using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
 using AzureDeveloperTemplates.Starter.API.Core.DependencyInjection;
+using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage;
+using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
