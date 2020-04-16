@@ -4,32 +4,33 @@ using AzureDeveloperTemplates.Starter.Core.DomainModel.Base;
 using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 {
-    public sealed class CosmosDbDataService : IDataService<IEntity>
+    public sealed class CosmosDbDataService<T> : IDataService<T> where T : class, IEntity
     {
         private readonly ICosmosDbDataServiceConfiguration _dataServiceConfiguration;
         private readonly CosmosClient _client;
-        private readonly ILogger<CosmosDbDataService> _logger;
+        private readonly ILogger<CosmosDbDataService<T>> _logger;
 
         public CosmosDbDataService(ICosmosDbDataServiceConfiguration dataServiceConfiguration, CosmosClient client,
-                                                                                               ILogger<CosmosDbDataService> logger)
+                                                                                               ILogger<CosmosDbDataService<T>> logger)
         {
             _dataServiceConfiguration = dataServiceConfiguration;
             _client = client;
             _logger = logger;
         }
 
-        public async Task<IEntity> AddAsync(IEntity newEntity)
+        public async Task<T> AddAsync(T newEntity)
         {
             try
             {
                 var container = GetContainer();
-
-                ItemResponse<IEntity> createResponse = await container.CreateItemAsync(newEntity);
+                newEntity.Id = Guid.NewGuid();
+                ItemResponse<T> createResponse = await container.CreateItemAsync(newEntity);
                 return createResponse.Value;
             }
             catch (CosmosException ex)
@@ -39,13 +40,13 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             }
         }
 
-        public async Task DeleteAsync(IEntity entity)
+        public async Task DeleteAsync(T entity)
         {
             try
             {
                 var container = GetContainer();
 
-                await container.DeleteItemAsync<IEntity>(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
+                await container.DeleteItemAsync<T>(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
             }
             catch (CosmosException ex)
             {
@@ -54,14 +55,14 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             }
         }
 
-        public async Task<IEntity> GetAsync(IEntity entity)
+        public async Task<T> GetAsync(T entity)
         {
             try
             {
                 var container = GetContainer();
 
-                ItemResponse<IEntity> entityResult = await container
-                                                           .ReadItemAsync<IEntity>(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
+                ItemResponse<T> entityResult = await container
+                                                           .ReadItemAsync<T>(entity.Id.ToString(), new PartitionKey(entity.Id.ToString()));
                 return entityResult.Value;
             }
             catch (CosmosException ex)
@@ -71,7 +72,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             }
         }
 
-        public async Task<IEntity> UpdateAsync(IEntity entity)
+        public async Task<T> UpdateAsync(T entity)
         {
             try
             {
@@ -94,16 +95,16 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
             }
         }
 
-        public async Task<IReadOnlyList<IEntity>> GetAllAsync()
+        public async Task<IReadOnlyList<T>> GetAllAsync()
         {
             try
             {
                 var container = GetContainer();
                 var sqlQueryText = "SELECT * FROM c";
                 QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
-                AsyncPageable<IEntity> queryResultSetIterator = container.GetItemQueryIterator<IEntity>(queryDefinition);
+                AsyncPageable<T> queryResultSetIterator = container.GetItemQueryIterator<T>(queryDefinition);
                 var iterator = queryResultSetIterator.GetAsyncEnumerator();
-                List<IEntity> entities = new List<IEntity>();
+                List<T> entities = new List<T>();
 
                 try
                 {

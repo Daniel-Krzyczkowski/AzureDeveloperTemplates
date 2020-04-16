@@ -18,5 +18,11 @@ namespace AzureDeveloperTemplates.Starter.Core.Services
             var allProductsResult = await _dataService.GetAllAsync();
             return allProductsResult;
         }
+
+        public async Task<Product> AddNewAsync(Product product)
+        {
+            var newProductResult = await _dataService.AddAsync(product);
+            return newProductResult;
+        }
     }
 }

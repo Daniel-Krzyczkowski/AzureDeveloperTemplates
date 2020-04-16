@@ -16,11 +16,8 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 
             services.AddDbContext<SqlDbContext>(c =>
                c.UseSqlServer(sqlDbConfiguration.ConnectionString));
-
             services.AddScoped(typeof(IDataService<Product>), typeof(SqlDbDataService<Product>));
-
-            //TODO: Update implementation for CosmosDbDataService:
-            //services.AddScoped(typeof(IDataService<>), typeof(CosmosDbDataService<>));
+            services.AddScoped(typeof(IDataService<ProductLocation>), typeof(CosmosDbDataService<ProductLocation>));
 
             return services;
         }

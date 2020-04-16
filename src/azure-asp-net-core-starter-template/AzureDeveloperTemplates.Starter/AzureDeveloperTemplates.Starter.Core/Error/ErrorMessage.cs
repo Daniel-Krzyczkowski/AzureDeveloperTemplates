@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AzureDeveloperTemplates.Starter.Core.Error
+﻿namespace AzureDeveloperTemplates.Starter.Core.Error
 {
     public class ErrorMessage
     {

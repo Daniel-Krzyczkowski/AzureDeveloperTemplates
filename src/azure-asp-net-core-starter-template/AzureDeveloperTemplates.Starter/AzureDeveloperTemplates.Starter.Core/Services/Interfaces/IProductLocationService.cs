@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Core.Services.Interfaces
 {
-    public interface IProductService
+    public interface IProductLocationService
     {
-        Task<IReadOnlyList<Product>> GetAllAsync();
-        Task<Product> AddNewAsync(Product product);
+        Task<IReadOnlyList<ProductLocation>> GetAllAsync();
+        Task<ProductLocation> AddNewAsync(ProductLocation product);
     }
 }

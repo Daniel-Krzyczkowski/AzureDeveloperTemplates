@@ -1,4 +1,5 @@
-﻿using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
+﻿using AzureDeveloperTemplates.Starter.Core.DomainModel;
+using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -18,10 +19,17 @@ namespace AzureDeveloperTemplates.Starter.API.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAllProducts()
         {
-            var allProducts = await _productService.GetAllAsync();
-            return Ok(allProducts);
+            var allProductsResult = await _productService.GetAllAsync();
+            return Ok(allProductsResult);
+        }
+
+        [HttpPost()]
+        public async Task<IActionResult> AddNewProduct([FromBody] Product product)
+        {
+            var newProductResult = await _productService.AddNewAsync(product);
+            return Ok(newProductResult);
         }
     }
 }
