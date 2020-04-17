@@ -42,7 +42,7 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
             services.AddDbContext<SqlDbContext>(c =>
                c.UseSqlServer(sqlDbConfiguration.ConnectionString));
             services.AddScoped(typeof(IDataService<Product>), typeof(SqlDbDataService<Product>));
-            services.AddScoped(typeof(IDataService<ProductLocation>), typeof(CosmosDbDataService<ProductLocation>));
+            services.AddSingleton(typeof(IDataService<ProductLocation>), typeof(CosmosDbDataService<ProductLocation>));
 
             return services;
         }
