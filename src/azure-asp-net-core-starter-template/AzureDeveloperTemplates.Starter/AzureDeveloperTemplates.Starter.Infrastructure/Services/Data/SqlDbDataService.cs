@@ -11,7 +11,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Data
 {
     public sealed class SqlDbDataService<T> : IDataService<T> where T : class, IEntity
     {
-        private SqlDbContext _sqlDbContext;
+        private readonly SqlDbContext _sqlDbContext;
         private readonly ILogger<SqlDbDataService<T>> _logger;
 
         public SqlDbDataService(SqlDbContext sqlDbContext, ILogger<SqlDbDataService<T>> logger)
