@@ -1,6 +1,5 @@
 ﻿using AzureDeveloperTemplates.Starter.Core.DomainModel;
 using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -14,14 +13,16 @@ namespace AzureDeveloperTemplates.Starter.Core.Services
             _dataService = dataServices;
         }
 
-        public Task<ProductLocation> AddNewAsync(ProductLocation product)
+        public async Task<IReadOnlyList<ProductLocation>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var allProductsLocationsResult = await _dataService.GetAllAsync();
+            return allProductsLocationsResult;
         }
 
-        public Task<IReadOnlyList<ProductLocation>> GetAllAsync()
+        public async Task<ProductLocation> AddNewAsync(ProductLocation productLocation)
         {
-            throw new NotImplementedException();
+            var newProductLocationResult = await _dataService.AddAsync(productLocation);
+            return newProductLocationResult;
         }
     }
 }

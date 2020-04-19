@@ -11,11 +11,14 @@ namespace AzureDeveloperTemplates.Starter.API.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
+        private readonly IProductLocationService _productLocationService;
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, IProductLocationService productLocationService)
         {
             _productService = productService
                           ?? throw new ArgumentNullException(nameof(productService));
+            _productLocationService = productLocationService
+                          ?? throw new ArgumentNullException(nameof(productLocationService));
         }
 
         [HttpGet("all")]
@@ -25,11 +28,25 @@ namespace AzureDeveloperTemplates.Starter.API.Controllers
             return Ok(allProductsResult);
         }
 
-        [HttpPost()]
+        [HttpPost("new")]
         public async Task<IActionResult> AddNewProduct([FromBody] Product product)
         {
             var newProductResult = await _productService.AddNewAsync(product);
             return Ok(newProductResult);
+        }
+
+        [HttpGet("location/all")]
+        public async Task<IActionResult> GetAllProductsLocations()
+        {
+            var allProductsLocationsResult = await _productLocationService.GetAllAsync();
+            return Ok(allProductsLocationsResult);
+        }
+
+        [HttpPost("location/new")]
+        public async Task<IActionResult> AddNewProductLocation([FromBody] ProductLocation productLocation)
+        {
+            var newProductLocationResult = await _productLocationService.AddNewAsync(productLocation);
+            return Ok(newProductLocationResult);
         }
     }
 }

@@ -8,5 +8,6 @@ namespace AzureDeveloperTemplates.Starter.Core.DomainModel
         public Guid Id { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
+        public Guid ProductId { get; set; }
     }
 }
