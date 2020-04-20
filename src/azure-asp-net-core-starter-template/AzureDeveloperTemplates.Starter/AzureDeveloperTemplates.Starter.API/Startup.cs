@@ -38,6 +38,7 @@ namespace AzureDeveloperTemplates.Starter.API
 
             services.AddSingleton<IStorageService, StorageService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddSingleton<IProductLocationService, ProductLocationService>();
             services.AddSingleton<FileProcessingChannel>();
             services.AddHostedService<FileProcessingBackgroundService>();
             services.AddHealthChecks();
