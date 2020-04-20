@@ -5,9 +5,9 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 {
-    public static class AzureClientServiceCollectionExtensions
+    public static class StorageServiceCollectionExtensions
     {
-        public static IServiceCollection AddAzureServices(this IServiceCollection services)
+        public static IServiceCollection AddStorageServices(this IServiceCollection services)
         {
             var serviceProvider = services.BuildServiceProvider();
 

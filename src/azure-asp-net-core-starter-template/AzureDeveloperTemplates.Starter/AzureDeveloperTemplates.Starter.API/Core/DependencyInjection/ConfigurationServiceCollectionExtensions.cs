@@ -35,6 +35,11 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
             var sqlDbDataServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<SqlDbDataServiceConfiguration>>().Value;
             services.AddSingleton<ISqlDbDataServiceConfiguration>(sqlDbDataServiceConfiguration);
 
+            services.Configure<AzureAdB2cServiceConfiguration>(config.GetSection("AzureAdB2C"));
+            services.AddSingleton<IValidateOptions<AzureAdB2cServiceConfiguration>, AzureAdB2cServiceConfigurationValidation>();
+            var azureAdB2cServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<AzureAdB2cServiceConfiguration>>().Value;
+            services.AddSingleton<IAzureAdB2cServiceConfiguration>(azureAdB2cServiceConfiguration);
+
             return services;
         }
     }

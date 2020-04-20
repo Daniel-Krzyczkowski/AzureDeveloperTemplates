@@ -1,8 +1,9 @@
 using AzureDeveloperTemplates.Starter.API.BackgroundServices;
 using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
+using AzureDeveloperTemplates.Starter.API.Core;
 using AzureDeveloperTemplates.Starter.API.Core.Configuration;
 using AzureDeveloperTemplates.Starter.API.Core.DependencyInjection;
-using AzureDeveloperTemplates.Starter.API.Middleware;
+using AzureDeveloperTemplates.Starter.API.Core.Middleware;
 using AzureDeveloperTemplates.Starter.Core.Services;
 using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage;
@@ -29,9 +30,11 @@ namespace AzureDeveloperTemplates.Starter.API
         {
             services.AddAppConfiguration(Configuration)
                     .AddLoggingServices()
+                    .AddIdentityService()
                     .AddDataServices()
-                    .AddAzureServices()
-                    .AddMessagingService();
+                    .AddStorageServices()
+                    .AddMessagingService()
+                    .AddSwagger();
 
             services.AddSingleton<IStorageService, StorageService>();
             services.AddScoped<IProductService, ProductService>();
@@ -50,11 +53,14 @@ namespace AzureDeveloperTemplates.Starter.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwaggerServices();
+
             app.UseRouting();
 
-            app.UseAuthorization();
-
             app.UseMiddleware<ExceptionHandlerMiddleware>();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

@@ -6,7 +6,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace AzureDeveloperTemplates.Starter.API.Middleware
+namespace AzureDeveloperTemplates.Starter.API.Core.Middleware
 {
     public class ExceptionHandlerMiddleware
     {

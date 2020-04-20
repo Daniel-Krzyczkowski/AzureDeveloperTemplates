@@ -1,5 +1,6 @@
 ﻿using AzureDeveloperTemplates.Starter.Core.DomainModel;
 using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 namespace AzureDeveloperTemplates.Starter.API.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class ProductController : ControllerBase
     {

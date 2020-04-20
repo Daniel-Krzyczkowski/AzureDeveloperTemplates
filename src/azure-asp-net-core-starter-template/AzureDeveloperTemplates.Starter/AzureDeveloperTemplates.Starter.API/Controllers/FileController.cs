@@ -1,5 +1,6 @@
 ﻿using AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels;
 using AzureDeveloperTemplates.Starter.API.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 namespace AzureDeveloperTemplates.Starter.API.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class FileController : ControllerBase
     {
