@@ -1,9 +1,9 @@
-﻿using Microsoft.Azure.ServiceBus;
+﻿using Azure.Messaging.ServiceBus;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces
 {
     public interface IServiceBusClientFactory
     {
-        public TopicClient TopicClient { get; }
+        public ServiceBusClient ServiceBusClient { get; }
     }
 }

@@ -44,8 +44,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
                     var message = await _messagesReceiverService.ReceiveMessageAsync();
                     if (message != null)
                     {
-                        var body = message.Body;
-
+                        var body = message.Body.ToArray();
                         callback(_deserializerFactory.Deserialize(message.ContentType, body));
                     }
                 }

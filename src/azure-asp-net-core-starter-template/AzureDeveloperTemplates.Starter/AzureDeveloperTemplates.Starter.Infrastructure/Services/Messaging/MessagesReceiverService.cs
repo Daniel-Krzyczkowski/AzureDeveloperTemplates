@@ -1,7 +1,7 @@
-﻿using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
+﻿using Azure.Messaging.ServiceBus;
+using AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces;
-using Microsoft.Azure.ServiceBus;
-using Microsoft.Azure.ServiceBus.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -11,21 +11,80 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
     public class MessagesReceiverService : IMessagesReceiverService
     {
         private readonly IMessagingServiceConfiguration _messagingServiceConfiguration;
-        private readonly IMessageReceiver _messageReceiver;
+        private readonly ILogger<MessagesReceiverService> _logger;
 
-        public MessagesReceiverService(IMessagingServiceConfiguration messagingServiceConfiguration)
+        public MessagesReceiverService(IMessagingServiceConfiguration messagingServiceConfiguration, ILogger<MessagesReceiverService> logger)
         {
             _messagingServiceConfiguration = messagingServiceConfiguration;
-
-            var connectionString = new ServiceBusConnectionStringBuilder(_messagingServiceConfiguration.ListenConnectionString);
-            _messageReceiver = new MessageReceiver(connectionString.GetNamespaceConnectionString(),
-                EntityNameHelper.FormatSubscriptionPath(_messagingServiceConfiguration.TopicName, _messagingServiceConfiguration.Subscription),
-                ReceiveMode.ReceiveAndDelete, RetryPolicy.Default);
+            _logger = logger;
         }
 
-        public Task<Message> ReceiveMessageAsync() => _messageReceiver.ReceiveAsync();
-        public Task<Message> ReceiveMessageAsync(TimeSpan operationTimeout) => _messageReceiver.ReceiveAsync(operationTimeout);
-        public Task<IList<Message>> ReceiveMessageAsync(int maxMessageCount) => _messageReceiver.ReceiveAsync(maxMessageCount);
-        public Task<IList<Message>> ReceiveMessageAsync(int maxMessageCount, TimeSpan operationTimeout) => _messageReceiver.ReceiveAsync(maxMessageCount, operationTimeout);
+        public async Task<ServiceBusReceivedMessage> ReceiveMessageAsync()
+        {
+            try
+            {
+                await using var client = new ServiceBusClient(_messagingServiceConfiguration.ListenConnectionString);
+                var receiver = client.CreateReceiver(_messagingServiceConfiguration.TopicName, _messagingServiceConfiguration.Subscription);
+                var message = await receiver.ReceiveAsync();
+                return message;
+            }
+
+            catch (ServiceBusException ex)
+            {
+                _logger.LogError($"{nameof(ServiceBusException)} - error details: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task<ServiceBusReceivedMessage> ReceiveMessageAsync(TimeSpan operationTimeout)
+        {
+            try
+            {
+                await using var client = new ServiceBusClient(_messagingServiceConfiguration.ListenConnectionString);
+                var receiver = client.CreateReceiver(_messagingServiceConfiguration.TopicName);
+                var message = await receiver.ReceiveAsync(operationTimeout);
+                return message;
+            }
+
+            catch (ServiceBusException ex)
+            {
+                _logger.LogError($"{nameof(ServiceBusException)} - error details: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task<IList<ServiceBusReceivedMessage>> ReceiveMessageAsync(int maxMessageCount)
+        {
+            try
+            {
+                await using var client = new ServiceBusClient(_messagingServiceConfiguration.ListenConnectionString);
+                var receiver = client.CreateReceiver(_messagingServiceConfiguration.TopicName);
+                var messages = await receiver.ReceiveBatchAsync(maxMessageCount);
+                return messages;
+            }
+
+            catch (ServiceBusException ex)
+            {
+                _logger.LogError($"{nameof(ServiceBusException)} - error details: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task<IList<ServiceBusReceivedMessage>> ReceiveMessageAsync(int maxMessageCount, TimeSpan operationTimeout)
+        {
+            try
+            {
+                await using var client = new ServiceBusClient(_messagingServiceConfiguration.ListenConnectionString);
+                var receiver = client.CreateReceiver(_messagingServiceConfiguration.TopicName);
+                var messages = await receiver.ReceiveBatchAsync(maxMessageCount, operationTimeout);
+                return messages;
+            }
+
+            catch (ServiceBusException ex)
+            {
+                _logger.LogError($"{nameof(ServiceBusException)} - error details: {ex.Message}");
+                throw;
+            }
+        }
     }
 }
