@@ -4,6 +4,7 @@ using AzureDeveloperTemplates.Starter.API.Core;
 using AzureDeveloperTemplates.Starter.API.Core.Configuration;
 using AzureDeveloperTemplates.Starter.API.Core.DependencyInjection;
 using AzureDeveloperTemplates.Starter.API.Core.Middleware;
+using AzureDeveloperTemplates.Starter.API.Hubs;
 using AzureDeveloperTemplates.Starter.Core.Services;
 using AzureDeveloperTemplates.Starter.Core.Services.Interfaces;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage;
@@ -44,6 +45,8 @@ namespace AzureDeveloperTemplates.Starter.API
             services.AddHealthChecks();
             services.AddControllers()
                     .ConfigureInvalidModelStateHandling();
+
+            services.AddSignalR().AddAzureSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,6 +70,7 @@ namespace AzureDeveloperTemplates.Starter.API
             {
                 endpoints.MapHealthChecks("/health");
                 endpoints.MapControllers();
+                endpoints.MapHub<RealTimeMessageHub>("/real-time-messages");
             });
         }
     }
