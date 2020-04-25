@@ -40,6 +40,16 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
             var azureAdB2cServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<AzureAdB2cServiceConfiguration>>().Value;
             services.AddSingleton<IAzureAdB2cServiceConfiguration>(azureAdB2cServiceConfiguration);
 
+            services.Configure<SignalRServiceConfiguration>(config.GetSection("Azure:SignalR"));
+            services.AddSingleton<IValidateOptions<SignalRServiceConfiguration>, SignalRServiceConfigurationValidation>();
+            var signalRServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<SignalRServiceConfiguration>>().Value;
+            services.AddSingleton<ISignalRServiceConfiguration>(signalRServiceConfiguration);
+
+            services.Configure<EventsServiceConfiguration>(config.GetSection("EventHub"));
+            services.AddSingleton<IValidateOptions<EventsServiceConfiguration>, EventsServiceConfigurationValidation>();
+            var eventsServiceConfiguration = services.BuildServiceProvider().GetRequiredService<IOptions<EventsServiceConfiguration>>().Value;
+            services.AddSingleton<IEventsServiceConfiguration>(eventsServiceConfiguration);
+
             return services;
         }
     }

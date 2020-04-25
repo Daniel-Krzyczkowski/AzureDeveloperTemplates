@@ -35,6 +35,7 @@ namespace AzureDeveloperTemplates.Starter.API
                     .AddDataServices()
                     .AddStorageServices()
                     .AddMessagingService()
+                    .AddEventsService()
                     .AddSwagger();
 
             services.AddSingleton<IStorageService, StorageService>();
