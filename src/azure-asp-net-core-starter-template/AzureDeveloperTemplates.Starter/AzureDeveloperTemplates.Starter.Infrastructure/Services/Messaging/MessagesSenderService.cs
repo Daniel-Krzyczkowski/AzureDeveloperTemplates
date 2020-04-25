@@ -12,11 +12,15 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
     public class MessagesSenderService : IMessagesSenderService
     {
         private readonly IMessagingServiceConfiguration _messagingServiceConfiguration;
+        private readonly ServiceBusClient _serviceBusClient;
         private readonly ILogger<MessagesSenderService> _logger;
 
-        public MessagesSenderService(IMessagingServiceConfiguration messagingServiceConfiguration, ILogger<MessagesSenderService> logger)
+        public MessagesSenderService(IMessagingServiceConfiguration messagingServiceConfiguration,
+                                     ServiceBusClient serviceBusClient,
+                                     ILogger<MessagesSenderService> logger)
         {
             _messagingServiceConfiguration = messagingServiceConfiguration;
+            _serviceBusClient = serviceBusClient;
             _logger = logger;
         }
 
@@ -24,8 +28,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                await using var client = new ServiceBusClient(_messagingServiceConfiguration.SendConnectionString);
-                var sender = client.CreateSender(_messagingServiceConfiguration.TopicName);
+                var sender = _serviceBusClient.CreateSender(_messagingServiceConfiguration.TopicName);
                 var correlationId = Guid.NewGuid().ToString("N");
                 var messageToSend = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messageBody));
                 var message = new ServiceBusMessage(messageToSend)

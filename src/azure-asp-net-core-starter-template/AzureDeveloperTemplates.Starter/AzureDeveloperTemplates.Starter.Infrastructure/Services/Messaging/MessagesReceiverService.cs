@@ -11,11 +11,15 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
     public class MessagesReceiverService : IMessagesReceiverService
     {
         private readonly IMessagingServiceConfiguration _messagingServiceConfiguration;
+        private readonly ServiceBusClient _serviceBusClient;
         private readonly ILogger<MessagesReceiverService> _logger;
 
-        public MessagesReceiverService(IMessagingServiceConfiguration messagingServiceConfiguration, ILogger<MessagesReceiverService> logger)
+        public MessagesReceiverService(IMessagingServiceConfiguration messagingServiceConfiguration,
+                                       ServiceBusClient serviceBusClient,
+                                       ILogger<MessagesReceiverService> logger)
         {
             _messagingServiceConfiguration = messagingServiceConfiguration;
+            _serviceBusClient = serviceBusClient;
             _logger = logger;
         }
 
@@ -23,8 +27,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                await using var client = new ServiceBusClient(_messagingServiceConfiguration.ListenConnectionString);
-                var receiver = client.CreateReceiver(_messagingServiceConfiguration.TopicName, _messagingServiceConfiguration.Subscription);
+                var receiver = _serviceBusClient.CreateReceiver(_messagingServiceConfiguration.TopicName, _messagingServiceConfiguration.Subscription);
                 var message = await receiver.ReceiveAsync();
                 return message;
             }
@@ -40,8 +43,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                await using var client = new ServiceBusClient(_messagingServiceConfiguration.ListenConnectionString);
-                var receiver = client.CreateReceiver(_messagingServiceConfiguration.TopicName);
+                var receiver = _serviceBusClient.CreateReceiver(_messagingServiceConfiguration.TopicName);
                 var message = await receiver.ReceiveAsync(operationTimeout);
                 return message;
             }
@@ -57,8 +59,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                await using var client = new ServiceBusClient(_messagingServiceConfiguration.ListenConnectionString);
-                var receiver = client.CreateReceiver(_messagingServiceConfiguration.TopicName);
+                var receiver = _serviceBusClient.CreateReceiver(_messagingServiceConfiguration.TopicName);
                 var messages = await receiver.ReceiveBatchAsync(maxMessageCount);
                 return messages;
             }
@@ -74,8 +75,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                await using var client = new ServiceBusClient(_messagingServiceConfiguration.ListenConnectionString);
-                var receiver = client.CreateReceiver(_messagingServiceConfiguration.TopicName);
+                var receiver = _serviceBusClient.CreateReceiver(_messagingServiceConfiguration.TopicName);
                 var messages = await receiver.ReceiveBatchAsync(maxMessageCount, operationTimeout);
                 return messages;
             }

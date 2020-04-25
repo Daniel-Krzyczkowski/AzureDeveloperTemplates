@@ -2,8 +2,7 @@
 {
     public interface IMessagingServiceConfiguration
     {
-        string ListenConnectionString { get; set; }
-        string SendConnectionString { get; set; }
+        string ListenAndSendConnectionString { get; set; }
         string TopicName { get; set; }
         string Subscription { get; set; }
         string ServiceBusNamespace { get; set; }
