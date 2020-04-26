@@ -40,7 +40,6 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
                 }
             }
             _logger.LogInformation(stoppingToken.IsCancellationRequested.ToString());
-            _logger.LogInformation($"{nameof(ReceivedEventsProcessor)} background task is stopping.");
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
@@ -48,14 +47,16 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
             return Task.CompletedTask;
         }
 
-        public async Task StopAsync(CancellationToken cancellationToken)
+        public Task StopAsync(CancellationToken cancellationToken)
         {
+            _logger.LogInformation($"{nameof(ReceivedEventsProcessor)} background task is stopping.");
+
             if (_exceptions.Any())
             {
                 _logger.LogCritical(new AggregateException(_exceptions), "The host threw exceptions unexpectedly");
             }
 
-            await _eventsReceiverService.DisposeAsync();
+            return Task.CompletedTask;
         }
     }
 }

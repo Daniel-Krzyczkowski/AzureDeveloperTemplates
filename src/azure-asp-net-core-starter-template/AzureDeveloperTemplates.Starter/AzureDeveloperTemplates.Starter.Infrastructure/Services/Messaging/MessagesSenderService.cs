@@ -45,10 +45,5 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
                 throw;
             }
         }
-
-        public async ValueTask DisposeAsync()
-        {
-            await _serviceBusSender.DisposeAsync();
-        }
     }
 }

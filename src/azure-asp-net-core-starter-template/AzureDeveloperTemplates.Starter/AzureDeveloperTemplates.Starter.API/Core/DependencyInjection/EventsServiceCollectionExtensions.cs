@@ -6,6 +6,7 @@ using AzureDeveloperTemplates.Starter.Infrastructure.Services.Events;
 using AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Hosting;
 
 namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 {
@@ -30,6 +31,12 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
             services.TryAddSingleton<IEventsSenderService, EventsSenderService>();
             services.TryAddSingleton<IReceivedEventsProcessor, ReceivedEventsProcessor>();
             services.TryAddSingleton<EventsBackgroundService>();
+
+            var applicationLifetime = serviceProvider.GetService<IHostApplicationLifetime>();
+            applicationLifetime.ApplicationStopping.Register(async () =>
+            {
+                await eventHubProducerClient.DisposeAsync();
+            });
             return services;
         }
     }

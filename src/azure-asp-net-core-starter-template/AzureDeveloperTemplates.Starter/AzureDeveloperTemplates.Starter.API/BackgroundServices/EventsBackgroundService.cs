@@ -22,14 +22,14 @@ namespace AzureDeveloperTemplates.Starter.API.BackgroundServices
 
         public override async Task StartAsync(CancellationToken cancellationToken)
         {
-            await _receivedEventsProcessor.StartAsync(cancellationToken).ConfigureAwait(false);
-            await base.StartAsync(cancellationToken).ConfigureAwait(false);
+            await _receivedEventsProcessor.StartAsync(cancellationToken);
+            await base.StartAsync(cancellationToken);
         }
 
         public override async Task StopAsync(CancellationToken cancellationToken)
         {
             await _receivedEventsProcessor.StopAsync(cancellationToken);
-            await base.StopAsync(cancellationToken).ConfigureAwait(false);
+            await base.StopAsync(cancellationToken);
         }
     }
 }

@@ -41,13 +41,14 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
             {
                 try
                 {
-                    var message = await _messagesReceiverService.ReceiveMessageAsync();
+                    var message = await _messagesReceiverService.ReceiveMessageAsync(stoppingToken);
                     if (message != null)
                     {
                         var body = message.Body.ToArray();
                         callback(_deserializerFactory.Deserialize(message.ContentType, body));
                     }
                 }
+
                 catch (Exception ex)
                 {
                     _logger.LogError(ex, "A problem occurred while invoking a callback method");
@@ -57,7 +58,6 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
                 await Task.Delay(5000);
             }
             _logger.LogInformation(stoppingToken.IsCancellationRequested.ToString());
-            _logger.LogInformation($"{nameof(ReceivedMessagesProcessor<T>)} background task is stopping.");
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
@@ -65,13 +65,16 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
             return Task.CompletedTask;
         }
 
-        public async Task StopAsync(CancellationToken cancellationToken)
+        public Task StopAsync(CancellationToken cancellationToken)
         {
+            _logger.LogInformation($"{nameof(ReceivedMessagesProcessor<T>)} background task is stopping.");
+
             if (_exceptions.Any())
             {
                 _logger.LogCritical(new AggregateException(_exceptions), "The host threw exceptions unexpectedly");
             }
-            await _messagesReceiverService.DisposeAsync();
+
+            return Task.CompletedTask;
         }
     }
 }
