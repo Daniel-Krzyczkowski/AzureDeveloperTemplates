@@ -43,11 +43,6 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
             _logger.LogInformation($"{nameof(ReceivedEventsProcessor)} background task is stopping.");
         }
 
-        private void _eventsReceiverService_NewEventMessageReceived(object sender, string e)
-        {
-            _logger.LogInformation(e);
-        }
-
         public Task StartAsync(CancellationToken cancellationToken)
         {
             return Task.CompletedTask;
