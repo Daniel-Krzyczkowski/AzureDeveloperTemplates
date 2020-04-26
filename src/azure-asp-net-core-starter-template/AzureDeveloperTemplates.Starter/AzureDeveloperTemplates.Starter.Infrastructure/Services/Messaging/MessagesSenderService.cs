@@ -12,15 +12,15 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
     public class MessagesSenderService : IMessagesSenderService
     {
         private readonly IMessagingServiceConfiguration _messagingServiceConfiguration;
-        private readonly ServiceBusClient _serviceBusClient;
+        private readonly ServiceBusSender _serviceBusSender;
         private readonly ILogger<MessagesSenderService> _logger;
 
         public MessagesSenderService(IMessagingServiceConfiguration messagingServiceConfiguration,
-                                     ServiceBusClient serviceBusClient,
+                                     ServiceBusSender serviceBusSender,
                                      ILogger<MessagesSenderService> logger)
         {
             _messagingServiceConfiguration = messagingServiceConfiguration;
-            _serviceBusClient = serviceBusClient;
+            _serviceBusSender = serviceBusSender;
             _logger = logger;
         }
 
@@ -28,7 +28,6 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                var sender = _serviceBusClient.CreateSender(_messagingServiceConfiguration.TopicName);
                 var correlationId = Guid.NewGuid().ToString("N");
                 var messageToSend = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messageBody));
                 var message = new ServiceBusMessage(messageToSend)
@@ -36,7 +35,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
                     ContentType = $"{System.Net.Mime.MediaTypeNames.Application.Json};charset=utf-8",
                     CorrelationId = correlationId
                 };
-                await sender.SendAsync(message);
+                await _serviceBusSender.SendAsync(message);
                 return correlationId;
             }
 
@@ -45,6 +44,11 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
                 _logger.LogError($"{nameof(ServiceBusException)} - error details: {ex.Message}");
                 throw;
             }
+        }
+
+        public async ValueTask DisposeAsync()
+        {
+            await _serviceBusSender.DisposeAsync();
         }
     }
 }

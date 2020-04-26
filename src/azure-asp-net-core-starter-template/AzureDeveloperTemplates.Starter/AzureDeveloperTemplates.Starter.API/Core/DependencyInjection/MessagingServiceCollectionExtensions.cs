@@ -20,6 +20,12 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
             var serviceBusClient = new ServiceBusClient(serviceBusConfiguration.ListenAndSendConnectionString);
             services.TryAddSingleton(serviceBusClient);
 
+            var serviceBusReceiver = serviceBusClient.CreateReceiver(serviceBusConfiguration.TopicName, serviceBusConfiguration.Subscription);
+            services.TryAddSingleton(serviceBusReceiver);
+
+            var serviceBusSender = serviceBusClient.CreateSender(serviceBusConfiguration.TopicName);
+            services.TryAddSingleton(serviceBusSender);
+
             services.TryAddSingleton<IDeserializerFactory<object>, DeserializerFactory<object>>();
             services.TryAddSingleton<IMessagesReceiverService, MessagesReceiverService>();
             services.TryAddSingleton<IMessagesSenderService, MessagesSenderService>();

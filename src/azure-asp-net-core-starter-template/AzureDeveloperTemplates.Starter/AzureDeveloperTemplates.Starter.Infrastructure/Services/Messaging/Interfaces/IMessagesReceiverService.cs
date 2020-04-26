@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces
 {
-    public interface IMessagesReceiverService
+    public interface IMessagesReceiverService : IAsyncDisposable
     {
         Task<ServiceBusReceivedMessage> ReceiveMessageAsync();
         Task<ServiceBusReceivedMessage> ReceiveMessageAsync(TimeSpan operationTimeout);

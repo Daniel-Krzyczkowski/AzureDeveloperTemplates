@@ -48,13 +48,14 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
             return Task.CompletedTask;
         }
 
-        public Task StopAsync(CancellationToken cancellationToken)
+        public async Task StopAsync(CancellationToken cancellationToken)
         {
             if (_exceptions.Any())
             {
                 _logger.LogCritical(new AggregateException(_exceptions), "The host threw exceptions unexpectedly");
             }
-            return Task.CompletedTask;
+
+            await _eventsReceiverService.DisposeAsync();
         }
     }
 }

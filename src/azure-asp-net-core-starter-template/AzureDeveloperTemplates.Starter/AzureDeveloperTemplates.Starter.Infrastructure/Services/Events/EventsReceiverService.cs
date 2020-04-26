@@ -40,5 +40,10 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
                 throw;
             }
         }
+
+        public async ValueTask DisposeAsync()
+        {
+            await _client.DisposeAsync();
+        }
     }
 }

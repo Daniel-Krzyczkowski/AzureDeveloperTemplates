@@ -11,15 +11,15 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
     public class MessagesReceiverService : IMessagesReceiverService
     {
         private readonly IMessagingServiceConfiguration _messagingServiceConfiguration;
-        private readonly ServiceBusClient _serviceBusClient;
+        private readonly ServiceBusReceiver _serviceBusReceiver;
         private readonly ILogger<MessagesReceiverService> _logger;
 
         public MessagesReceiverService(IMessagingServiceConfiguration messagingServiceConfiguration,
-                                       ServiceBusClient serviceBusClient,
+                                       ServiceBusReceiver serviceBusReceiver,
                                        ILogger<MessagesReceiverService> logger)
         {
             _messagingServiceConfiguration = messagingServiceConfiguration;
-            _serviceBusClient = serviceBusClient;
+            _serviceBusReceiver = serviceBusReceiver;
             _logger = logger;
         }
 
@@ -27,8 +27,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                var receiver = _serviceBusClient.CreateReceiver(_messagingServiceConfiguration.TopicName, _messagingServiceConfiguration.Subscription);
-                var message = await receiver.ReceiveAsync();
+                var message = await _serviceBusReceiver.ReceiveAsync();
                 return message;
             }
 
@@ -43,8 +42,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                var receiver = _serviceBusClient.CreateReceiver(_messagingServiceConfiguration.TopicName);
-                var message = await receiver.ReceiveAsync(operationTimeout);
+                var message = await _serviceBusReceiver.ReceiveAsync(operationTimeout);
                 return message;
             }
 
@@ -59,8 +57,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                var receiver = _serviceBusClient.CreateReceiver(_messagingServiceConfiguration.TopicName);
-                var messages = await receiver.ReceiveBatchAsync(maxMessageCount);
+                var messages = await _serviceBusReceiver.ReceiveBatchAsync(maxMessageCount);
                 return messages;
             }
 
@@ -75,8 +72,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         {
             try
             {
-                var receiver = _serviceBusClient.CreateReceiver(_messagingServiceConfiguration.TopicName);
-                var messages = await receiver.ReceiveBatchAsync(maxMessageCount, operationTimeout);
+                var messages = await _serviceBusReceiver.ReceiveBatchAsync(maxMessageCount, operationTimeout);
                 return messages;
             }
 
@@ -85,6 +81,11 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
                 _logger.LogError($"{nameof(ServiceBusException)} - error details: {ex.Message}");
                 throw;
             }
+        }
+
+        public async ValueTask DisposeAsync()
+        {
+            await _serviceBusReceiver.DisposeAsync();
         }
     }
 }
