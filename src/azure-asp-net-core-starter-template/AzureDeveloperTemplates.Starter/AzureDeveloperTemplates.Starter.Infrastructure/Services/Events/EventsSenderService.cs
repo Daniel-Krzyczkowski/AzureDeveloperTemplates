@@ -10,16 +10,16 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
 {
     public class EventsSenderService : IEventsSenderService
     {
-        private readonly EventHubProducerClient _client;
         private readonly IEventsServiceConfiguration _eventHubServiceConfiguration;
+        private readonly EventHubProducerClient _client;
         private readonly ILogger<EventsSenderService> _logger;
 
-        public EventsSenderService(IEventsServiceConfiguration eventHubServiceConfiguration, ILogger<EventsSenderService> logger)
+        public EventsSenderService(IEventsServiceConfiguration eventHubServiceConfiguration,
+                                   EventHubProducerClient client,
+                                   ILogger<EventsSenderService> logger)
         {
             _eventHubServiceConfiguration = eventHubServiceConfiguration;
-            _client = new EventHubProducerClient(_eventHubServiceConfiguration.ListenAndSendConnectionString,
-                                                 _eventHubServiceConfiguration.EventHubName);
-
+            _client = client;
             _logger = logger;
         }
 

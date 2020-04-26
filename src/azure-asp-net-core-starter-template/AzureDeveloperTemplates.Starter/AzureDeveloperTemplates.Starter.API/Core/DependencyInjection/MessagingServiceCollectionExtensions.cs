@@ -18,7 +18,7 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
             var serviceBusConfiguration = serviceProvider.GetRequiredService<IMessagingServiceConfiguration>();
 
             var serviceBusClient = new ServiceBusClient(serviceBusConfiguration.ListenAndSendConnectionString);
-            services.AddSingleton(serviceBusClient);
+            services.TryAddSingleton(serviceBusClient);
 
             services.TryAddSingleton<IDeserializerFactory<object>, DeserializerFactory<object>>();
             services.TryAddSingleton<IMessagesReceiverService, MessagesReceiverService>();
