@@ -28,6 +28,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
                 try
                 {
                     await _eventsReceiverService.ReceiveEventsAsync(stoppingToken);
+
                 }
                 catch (Exception ex)
                 {
