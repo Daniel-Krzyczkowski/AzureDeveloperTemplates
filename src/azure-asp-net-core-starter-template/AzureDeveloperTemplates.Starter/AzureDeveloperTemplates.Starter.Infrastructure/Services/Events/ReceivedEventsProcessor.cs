@@ -35,7 +35,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
                     _logger.LogError(ex, "A problem occurred while invoking a callback method");
                 }
             }
-            _logger.LogInformation(stoppingToken.IsCancellationRequested.ToString());
+            _logger.LogInformation($"Cancellation token was requested, service will stop soon...");
         }
     }
 }

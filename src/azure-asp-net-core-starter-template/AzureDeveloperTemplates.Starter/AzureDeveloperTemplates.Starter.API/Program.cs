@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
 
 namespace AzureDeveloperTemplates.Starter.API
 {
@@ -7,7 +10,17 @@ namespace AzureDeveloperTemplates.Starter.API
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+            var logger = host.Services.GetRequiredService<ILogger<Program>>();
+            try
+            {
+                host.Run();
+            }
+
+            catch (OperationCanceledException ex)
+            {
+                logger.LogInformation(ex, "");
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
