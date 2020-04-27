@@ -11,6 +11,7 @@ namespace AzureDeveloperTemplates.Starter.API.BackgroundServices
     {
         private readonly IReceivedMessagesProcessor<object> _receivedMessagesProcessor;
         private readonly ILogger<MessagingBackgroundService> _logger;
+
         public MessagingBackgroundService(IReceivedMessagesProcessor<object> receivedMessagesProcessor,
                                                                     ILogger<MessagingBackgroundService> logger)
         {
@@ -18,20 +19,9 @@ namespace AzureDeveloperTemplates.Starter.API.BackgroundServices
             _logger = logger;
         }
 
-        protected override Task ExecuteAsync(CancellationToken stoppingToken) =>
-            _receivedMessagesProcessor.ExecuteAsync(stoppingToken, (obj) => _logger.LogInformation((JsonConvert.SerializeObject(obj))));
-
-        public override async Task StartAsync(CancellationToken cancellationToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            await _receivedMessagesProcessor.StartAsync(cancellationToken).ConfigureAwait(false);
-            await base.StartAsync(cancellationToken);
-        }
-
-        public override async Task StopAsync(CancellationToken cancellationToken)
-        {
-            await _receivedMessagesProcessor.StopAsync(cancellationToken);
-
-            await base.StopAsync(cancellationToken);
+            await _receivedMessagesProcessor.ExecuteAsync(stoppingToken, (obj) => _logger.LogInformation((JsonConvert.SerializeObject(obj))));
         }
     }
 }

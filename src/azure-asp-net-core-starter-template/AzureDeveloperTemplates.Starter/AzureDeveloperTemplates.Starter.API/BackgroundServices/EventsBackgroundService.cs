@@ -19,17 +19,5 @@ namespace AzureDeveloperTemplates.Starter.API.BackgroundServices
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken) =>
             _receivedEventsProcessor.ExecuteAsync(stoppingToken, (obj) => _logger.LogInformation(obj));
-
-        public override async Task StartAsync(CancellationToken cancellationToken)
-        {
-            await _receivedEventsProcessor.StartAsync(cancellationToken);
-            await base.StartAsync(cancellationToken);
-        }
-
-        public override async Task StopAsync(CancellationToken cancellationToken)
-        {
-            await _receivedEventsProcessor.StopAsync(cancellationToken);
-            await base.StopAsync(cancellationToken);
-        }
     }
 }

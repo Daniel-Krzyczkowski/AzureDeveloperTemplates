@@ -7,7 +7,5 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfa
     public interface IReceivedEventsProcessor
     {
         public Task ExecuteAsync(CancellationToken stoppingToken, Action<string> callback = null);
-        Task StartAsync(CancellationToken cancellationToken);
-        Task StopAsync(CancellationToken cancellationToken);
     }
 }

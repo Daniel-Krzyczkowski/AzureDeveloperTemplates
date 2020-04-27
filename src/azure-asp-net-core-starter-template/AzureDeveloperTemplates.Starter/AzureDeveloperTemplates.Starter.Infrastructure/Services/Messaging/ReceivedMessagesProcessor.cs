@@ -3,8 +3,6 @@ using AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfac
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -15,7 +13,6 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
         private readonly IMessagesReceiverService _messagesReceiverService;
         private readonly IDeserializerFactory<T> _deserializerFactory;
         private readonly ILogger<ReceivedMessagesProcessor<T>> _logger;
-        private readonly IList<Exception> _exceptions;
 
         public ReceivedMessagesProcessor(IMessagesReceiverService messagesReceiverService,
                                                                     IDeserializerFactory<T> deserializerFactory,
@@ -24,7 +21,6 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
             _messagesReceiverService = messagesReceiverService;
             _deserializerFactory = deserializerFactory;
             _logger = logger;
-            _exceptions = new List<Exception>();
         }
 
         public async Task ExecuteAsync(CancellationToken stoppingToken, Action<T> callback = null)
@@ -41,7 +37,7 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
             {
                 try
                 {
-                    var message = await _messagesReceiverService.ReceiveMessageAsync(stoppingToken);
+                    var message = await _messagesReceiverService.ReceiveMessageAsync(TimeSpan.FromSeconds(5), stoppingToken);
                     if (message != null)
                     {
                         var body = message.Body.ToArray();
@@ -52,29 +48,10 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
                 catch (Exception ex)
                 {
                     _logger.LogError(ex, "A problem occurred while invoking a callback method");
-                    _exceptions.Add(ex);
                 }
-
-                await Task.Delay(5000);
-            }
-            _logger.LogInformation(stoppingToken.IsCancellationRequested.ToString());
-        }
-
-        public Task StartAsync(CancellationToken cancellationToken)
-        {
-            return Task.CompletedTask;
-        }
-
-        public Task StopAsync(CancellationToken cancellationToken)
-        {
-            _logger.LogInformation($"{nameof(ReceivedMessagesProcessor<T>)} background task is stopping.");
-
-            if (_exceptions.Any())
-            {
-                _logger.LogCritical(new AggregateException(_exceptions), "The host threw exceptions unexpectedly");
             }
 
-            return Task.CompletedTask;
+            _logger.LogInformation($"Cancellation token was requested");
         }
     }
 }
