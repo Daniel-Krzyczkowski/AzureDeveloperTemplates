@@ -1,5 +1,7 @@
 ## Azure Application Insights SDK with ASP .NET Core
 
+![application-insights.png](/images/application-insights.png?raw=true)
+
 #### Packages used:
 1. [Microsoft.ApplicationInsights.AspNetCore](https://www.nuget.org/packages/Microsoft.ApplicationInsights.AspNetCore)
 
