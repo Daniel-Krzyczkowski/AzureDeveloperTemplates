@@ -1,5 +1,7 @@
 ## Azure clients integration with ASP .NET Core using Microsoft.Extensions.Azure.Core Library Template
 
+![app-service.png](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/blob/master/images/app-service.png?raw=true)
+
 #### Packages used:
 1. [Microsoft.Extensions.Azure](https://www.nuget.org/packages/Microsoft.Extensions.Azure/)
 2. [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs/)
