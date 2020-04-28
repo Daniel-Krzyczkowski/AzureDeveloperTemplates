@@ -17,14 +17,25 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 
             var serviceBusConfiguration = serviceProvider.GetRequiredService<IMessagingServiceConfiguration>();
 
-            var serviceBusClient = new ServiceBusClient(serviceBusConfiguration.ListenAndSendConnectionString);
-            services.TryAddSingleton(serviceBusClient);
+            services.TryAddSingleton(implementationFactory =>
+            {
+                var serviceBusClient = new ServiceBusClient(serviceBusConfiguration.ListenAndSendConnectionString);
+                return serviceBusClient;
+            });
 
-            var serviceBusReceiver = serviceBusClient.CreateReceiver(serviceBusConfiguration.TopicName, serviceBusConfiguration.Subscription);
-            services.TryAddSingleton(serviceBusReceiver);
+            services.TryAddSingleton(implementationFactory =>
+            {
+                var serviceBusClient = implementationFactory.GetRequiredService<ServiceBusClient>();
+                var serviceBusReceiver = serviceBusClient.CreateReceiver(serviceBusConfiguration.TopicName, serviceBusConfiguration.Subscription);
+                return serviceBusReceiver;
+            });
 
-            var serviceBusSender = serviceBusClient.CreateSender(serviceBusConfiguration.TopicName);
-            services.TryAddSingleton(serviceBusSender);
+            services.TryAddSingleton(implementationFactory =>
+            {
+                var serviceBusClient = implementationFactory.GetRequiredService<ServiceBusClient>();
+                var serviceBusSender = serviceBusClient.CreateSender(serviceBusConfiguration.TopicName);
+                return serviceBusSender;
+            });
 
             services.TryAddSingleton<IDeserializerFactory<object>, DeserializerFactory<object>>();
             services.TryAddSingleton<IMessagesReceiverService, MessagesReceiverService>();

@@ -17,14 +17,20 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
 
             var eventHubConfiguration = serviceProvider.GetRequiredService<IEventsServiceConfiguration>();
 
-            var eventHubProducerClient = new EventHubProducerClient(eventHubConfiguration.ListenAndSendConnectionString,
-                                                eventHubConfiguration.EventHubName);
-            services.TryAddSingleton(eventHubProducerClient);
+            services.TryAddSingleton(implementationFactory =>
+            {
+                var eventHubProducerClient = new EventHubProducerClient(eventHubConfiguration.ListenAndSendConnectionString,
+                                                                        eventHubConfiguration.EventHubName);
+                return eventHubProducerClient;
+            });
 
-            var eventHubConsumerClient = new EventHubConsumerClient(EventHubConsumerClient.DefaultConsumerGroupName,
-                                                 eventHubConfiguration.ListenAndSendConnectionString,
-                                                 eventHubConfiguration.EventHubName);
-            services.TryAddSingleton(eventHubConsumerClient);
+            services.TryAddSingleton(implementationFactory =>
+            {
+                var eventHubConsumerClient = new EventHubConsumerClient(EventHubConsumerClient.DefaultConsumerGroupName,
+                                                                        eventHubConfiguration.ListenAndSendConnectionString,
+                                                                        eventHubConfiguration.EventHubName);
+                return eventHubConsumerClient;
+            });
 
             services.TryAddSingleton<IEventsReceiverService, EventsReceiverService>();
             services.TryAddSingleton<IEventsSenderService, EventsSenderService>();
