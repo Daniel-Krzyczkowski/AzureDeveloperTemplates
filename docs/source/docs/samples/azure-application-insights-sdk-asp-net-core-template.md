@@ -7,5 +7,5 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/feature/azure-web-api-starter-project/src/azure-asp-net-core-starter-template/AzureDeveloperTemplates.Starter)
+[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
 
