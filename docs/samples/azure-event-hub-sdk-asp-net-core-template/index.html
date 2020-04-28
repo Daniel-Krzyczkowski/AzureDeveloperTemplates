@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#packages-used" tabindex="0" class="md-skip">
+      <a href="#azure-event-hub-sdk-with-asp-net-core" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -247,30 +247,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../azure-key-vault-sdk-asp-net-core-template/" title="Azure Key Vault SDK with ASP .NET Core" class="md-nav__link">
-      Azure Key Vault SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-nav__link">
-      Azure Notification Hub SDK with ASP .NET Core Template
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link">
       Azure SignalR Service SDK with ASP .NET Core
     </a>
@@ -342,16 +318,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#azure-event-hub-sdk-with-asp-net-core" class="md-nav__link">
+    Azure Event Hub SDK with ASP .NET Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#packages-used" class="md-nav__link">
     Packages used:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
+        
+          <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -363,30 +352,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-queue-storage-sdk-asp-net-core-template/" title="Azure Storage Queues SDK with ASP .NET Core" class="md-nav__link">
-      Azure Storage Queues SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-cognitive-search-sdk-asp-net-core-template/" title="Azure Cognitive Search SDK with ASP .NET Core" class="md-nav__link">
-      Azure Cognitive Search SDK with ASP .NET Core
-    </a>
   </li>
 
         
@@ -438,16 +403,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#azure-event-hub-sdk-with-asp-net-core" class="md-nav__link">
+    Azure Event Hub SDK with ASP .NET Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#packages-used" class="md-nav__link">
     Packages used:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
+        
+          <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -470,59 +448,14 @@
                 
                   <h1>Azure Event Hub SDK with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-event-hub-sdk-asp-net-core-template/">Azure Event Hub SDK with ASP .NET Core Template</a></p>
-<p>Sample project to present how to use Azure Event Hub SDK to send and receive events using Azure Event Hub.</p>
+                <h2 id="azure-event-hub-sdk-with-asp-net-core">Azure Event Hub SDK with ASP .NET Core</h2>
+<p><img alt="event-hub.png" src="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/blob/master/images/event-hub.png?raw=true" /></p>
 <h4 id="packages-used">Packages used:</h4>
 <ol>
 <li><a href="https://www.nuget.org/packages/Azure.Messaging.EventHubs/">Azure.Messaging.EventHubs</a></li>
 </ol>
-<h4 id="code-sample-preview">Code sample preview:</h4>
-<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">EventsReceiverService</span> <span class="p">:</span> <span class="n">IEventsReceiverService</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">EventHubConsumerClient</span> <span class="n">_client</span><span class="p">;</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">EventHubSettings</span> <span class="n">_eventHubSettings</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">NewEventMessageReceived</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="nf">EventsReceiverService</span><span class="p">(</span><span class="n">EventHubSettings</span> <span class="n">eventHubSettings</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">_eventHubSettings</span> <span class="p">=</span> <span class="n">eventHubSettings</span><span class="p">;</span>
-            <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EventHubConsumerClient</span><span class="p">(</span><span class="n">EventHubConsumerClient</span><span class="p">.</span><span class="n">DefaultConsumerGroupName</span><span class="p">,</span>
-                                                 <span class="n">_eventHubSettings</span><span class="p">.</span><span class="n">ListenConnectionString</span><span class="p">,</span>
-                                                 <span class="n">_eventHubSettings</span><span class="p">.</span><span class="n">EventHubName</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ReceiveEventsAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">await</span> <span class="nf">foreach</span> <span class="p">(</span><span class="n">PartitionEvent</span> <span class="n">partitionEvent</span> <span class="k">in</span> <span class="n">_client</span><span class="p">.</span><span class="n">ReadEventsAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">))</span>
-            <span class="p">{</span>
-                <span class="kt">var</span> <span class="n">eventMessage</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetString</span><span class="p">(</span><span class="n">partitionEvent</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Body</span><span class="p">.</span><span class="n">ToArray</span><span class="p">());</span>
-                <span class="n">NewEventMessageReceived</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">eventMessage</span><span class="p">);</span>
-            <span class="p">};</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">EventsSenderService</span> <span class="p">:</span> <span class="n">IEventsSenderService</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">EventHubProducerClient</span> <span class="n">_client</span><span class="p">;</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">EventHubSettings</span> <span class="n">_eventHubSettings</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="nf">EventsSenderService</span><span class="p">(</span><span class="n">EventHubSettings</span> <span class="n">eventHubSettings</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">_eventHubSettings</span> <span class="p">=</span> <span class="n">eventHubSettings</span><span class="p">;</span>
-            <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EventHubProducerClient</span><span class="p">(</span><span class="n">_eventHubSettings</span><span class="p">.</span><span class="n">SendConnectionString</span><span class="p">,</span>
-                                                 <span class="n">_eventHubSettings</span><span class="p">.</span><span class="n">EventHubName</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">SendEventAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">eventBody</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">EventDataBatch</span> <span class="n">eventBatch</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">CreateBatchAsync</span><span class="p">();</span>
-            <span class="n">eventBatch</span><span class="p">.</span><span class="n">TryAdd</span><span class="p">(</span><span class="k">new</span> <span class="n">EventData</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">eventBody</span><span class="p">)));</span>
-            <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">eventBatch</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
+<h4 id="source-code">Source code:</h4>
+<p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/feature/azure-web-api-starter-project/src/azure-asp-net-core-starter-template/AzureDeveloperTemplates.Starter">Azure Developer Templates Starter project on GitHub</a></p>
                 
                   
                 
@@ -559,13 +492,13 @@
           </a>
         
         
-          <a href="../azure-queue-storage-sdk-asp-net-core-template/" title="Azure Storage Queues SDK with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../azure-core-extensions-asp-net-core-template/" title="Azure Clients integration with ASP .NET Core DI" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Azure Storage Queues SDK with ASP .NET Core
+                Azure Clients integration with ASP .NET Core DI
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

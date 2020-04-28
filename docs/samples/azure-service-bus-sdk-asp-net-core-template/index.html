@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#packages-used" tabindex="0" class="md-skip">
+      <a href="#azure-service-bus-sdk-with-asp-net-core" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -247,30 +247,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../azure-key-vault-sdk-asp-net-core-template/" title="Azure Key Vault SDK with ASP .NET Core" class="md-nav__link">
-      Azure Key Vault SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-nav__link">
-      Azure Notification Hub SDK with ASP .NET Core Template
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link">
       Azure SignalR Service SDK with ASP .NET Core
     </a>
@@ -318,16 +294,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#azure-service-bus-sdk-with-asp-net-core" class="md-nav__link">
+    Azure Service Bus SDK with ASP .NET Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#packages-used" class="md-nav__link">
     Packages used:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
+        
+          <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -362,30 +351,6 @@
   <li class="md-nav__item">
     <a href="../azure-event-hub-sdk-asp-net-core-template/" title="Azure Event Hub SDK with ASP .NET Core" class="md-nav__link">
       Azure Event Hub SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-queue-storage-sdk-asp-net-core-template/" title="Azure Storage Queues SDK with ASP .NET Core" class="md-nav__link">
-      Azure Storage Queues SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-cognitive-search-sdk-asp-net-core-template/" title="Azure Cognitive Search SDK with ASP .NET Core" class="md-nav__link">
-      Azure Cognitive Search SDK with ASP .NET Core
     </a>
   </li>
 
@@ -438,16 +403,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#azure-service-bus-sdk-with-asp-net-core" class="md-nav__link">
+    Azure Service Bus SDK with ASP .NET Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#packages-used" class="md-nav__link">
     Packages used:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
+        
+          <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -470,64 +448,14 @@
                 
                   <h1>Azure Service Bus SDK with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-service-bus-sdk-asp-net-core-template">Azure Service Bus SDK with ASP .NET Core Template</a></p>
-<p>Sample project to present how to use Azure Service Bus SDK to send and receive messages.
-Many thanks to <a href="https://twitter.com/HaraczPawel">@HaraczPawel</a> who helped create this sample basing on the sample from his original <a href="https://github.com/PawelHaracz/pawelharacz.com">repository</a>!</p>
+                <h2 id="azure-service-bus-sdk-with-asp-net-core">Azure Service Bus SDK with ASP .NET Core</h2>
+<p><img alt="service-bus.png" src="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/blob/master/images/service-bus.png?raw=true" /></p>
 <h4 id="packages-used">Packages used:</h4>
 <ol>
-<li><a href="https://www.nuget.org/packages/Microsoft.Azure.ServiceBus/">Microsoft.Azure.ServiceBus</a></li>
+<li><a href="https://www.nuget.org/packages/Azure.Messaging.ServiceBus/">Azure.Messaging.ServiceBus</a></li>
 </ol>
-<h4 id="code-sample-preview">Code sample preview:</h4>
-<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">MessagesReceiverService</span> <span class="p">:</span> <span class="n">IMessagesReceiverService</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">ServiceBusSettings</span> <span class="n">_serviceBusSettings</span><span class="p">;</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">IMessageReceiver</span> <span class="n">_messageReceiver</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="nf">MessagesReceiverService</span><span class="p">(</span><span class="n">ServiceBusSettings</span> <span class="n">serviceBusSettings</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">_serviceBusSettings</span> <span class="p">=</span> <span class="n">serviceBusSettings</span><span class="p">;</span>
-
-            <span class="kt">var</span> <span class="n">connectionString</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ServiceBusConnectionStringBuilder</span><span class="p">(</span><span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">);</span>
-            <span class="n">_messageReceiver</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MessageReceiver</span><span class="p">(</span><span class="n">connectionString</span><span class="p">.</span><span class="n">GetNamespaceConnectionString</span><span class="p">(),</span>
-                <span class="n">EntityNameHelper</span><span class="p">.</span><span class="n">FormatSubscriptionPath</span><span class="p">(</span><span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">TopicName</span><span class="p">,</span> <span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">Subscription</span><span class="p">),</span>
-                <span class="n">ReceiveMode</span><span class="p">.</span><span class="n">ReceiveAndDelete</span><span class="p">,</span> <span class="n">RetryPolicy</span><span class="p">.</span><span class="n">Default</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&gt;</span> <span class="n">ReceiveMessageAsync</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="n">_messageReceiver</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">();</span>
-        <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&gt;</span> <span class="n">ReceiveMessageAsync</span><span class="p">(</span><span class="n">TimeSpan</span> <span class="n">operationTimeout</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">_messageReceiver</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">operationTimeout</span><span class="p">);</span>
-        <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">IList</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&gt;&gt;</span> <span class="n">ReceiveMessageAsync</span><span class="p">(</span><span class="kt">int</span> <span class="n">maxMessageCount</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">_messageReceiver</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">maxMessageCount</span><span class="p">);</span>
-        <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">IList</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&gt;&gt;</span> <span class="n">ReceiveMessageAsync</span><span class="p">(</span><span class="kt">int</span> <span class="n">maxMessageCount</span><span class="p">,</span> <span class="n">TimeSpan</span> <span class="n">operationTimeout</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">_messageReceiver</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">maxMessageCount</span><span class="p">,</span> <span class="n">operationTimeout</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">MessagesSenderService</span> <span class="p">:</span> <span class="n">IMessagesSenderService</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">ITopicClient</span> <span class="n">_client</span><span class="p">;</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">ServiceBusSettings</span> <span class="n">_serviceBusSettings</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="nf">MessagesSenderService</span><span class="p">(</span><span class="n">ServiceBusSettings</span> <span class="n">serviceBusSettings</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">_serviceBusSettings</span> <span class="p">=</span> <span class="n">serviceBusSettings</span><span class="p">;</span>
-            <span class="kt">var</span> <span class="n">token</span> <span class="p">=</span> <span class="n">TokenProvider</span><span class="p">.</span><span class="n">CreateSharedAccessSignatureTokenProvider</span><span class="p">(</span><span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">SharedAccessName</span><span class="p">,</span>
-                                                                            <span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">SharedAccessKey</span><span class="p">,</span> <span class="n">TokenScope</span><span class="p">.</span><span class="n">Entity</span><span class="p">);</span>
-            <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TopicClient</span><span class="p">(</span><span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">ServiceBusNamespace</span><span class="p">,</span> <span class="n">_serviceBusSettings</span><span class="p">.</span><span class="n">TopicName</span><span class="p">,</span> <span class="n">token</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">SendMessageAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">messageBody</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">correlationId</span> <span class="p">=</span> <span class="n">Guid</span><span class="p">.</span><span class="n">NewGuid</span><span class="p">().</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;N&quot;</span><span class="p">);</span>
-            <span class="kt">var</span> <span class="n">messageToSend</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">messageBody</span><span class="p">));</span>
-            <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Message</span><span class="p">(</span><span class="n">messageToSend</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">ContentType</span> <span class="p">=</span> <span class="err">$</span><span class="s">&quot;{System.Net.Mime.MediaTypeNames.Application.Json};charset=utf-8&quot;</span><span class="p">,</span>
-                <span class="n">CorrelationId</span> <span class="p">=</span> <span class="n">correlationId</span>
-            <span class="p">};</span>
-            <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-            <span class="k">return</span> <span class="n">correlationId</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
+<h4 id="source-code">Source code:</h4>
+<p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/feature/azure-web-api-starter-project/src/azure-asp-net-core-starter-template/AzureDeveloperTemplates.Starter">Azure Developer Templates Starter project on GitHub</a></p>
                 
                   
                 

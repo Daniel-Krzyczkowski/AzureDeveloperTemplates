@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Cosmos" Version="4.0.0-preview3" />
+    <PackageReference Include="Azure.Messaging.EventHubs" Version="5.0.1" />
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.0.0-preview.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.4.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDeveloperTemplates.Starter.Core\AzureDeveloperTemplates.Starter.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\Messaging\Interfaces\" />
+    <Folder Include="Services\Messaging\Contract\" />
+  </ItemGroup>
+
+</Project>

@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#packages-used" tabindex="0" class="md-skip">
+      <a href="#azure-signalr-service-sdk-with-asp-net-core" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -245,30 +245,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../azure-key-vault-sdk-asp-net-core-template/" title="Azure Key Vault SDK with ASP .NET Core" class="md-nav__link">
-      Azure Key Vault SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-nav__link">
-      Azure Notification Hub SDK with ASP .NET Core Template
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -294,16 +270,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#azure-signalr-service-sdk-with-asp-net-core" class="md-nav__link">
+    Azure SignalR Service SDK with ASP .NET Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#packages-used" class="md-nav__link">
     Packages used:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
+        
+          <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -372,30 +361,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../azure-queue-storage-sdk-asp-net-core-template/" title="Azure Storage Queues SDK with ASP .NET Core" class="md-nav__link">
-      Azure Storage Queues SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-cognitive-search-sdk-asp-net-core-template/" title="Azure Cognitive Search SDK with ASP .NET Core" class="md-nav__link">
-      Azure Cognitive Search SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../azure-core-extensions-asp-net-core-template/" title="Azure Clients integration with ASP .NET Core DI" class="md-nav__link">
       Azure Clients integration with ASP .NET Core DI
     </a>
@@ -438,16 +403,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#azure-signalr-service-sdk-with-asp-net-core" class="md-nav__link">
+    Azure SignalR Service SDK with ASP .NET Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#packages-used" class="md-nav__link">
     Packages used:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
+        
+          <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -470,28 +448,14 @@
                 
                   <h1>Azure SignalR Service SDK with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-signalr-service-sdk-asp-net-core-template">Azure SignalR Service SDK with ASP .NET Core Template</a></p>
-<p>Sample project to present how to use SignalR Service to send real time messages.</p>
+                <h2 id="azure-signalr-service-sdk-with-asp-net-core">Azure SignalR Service SDK with ASP .NET Core</h2>
+<p><img alt="signalr.png" src="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/blob/master/images/signalr.png?raw=true" /></p>
 <h4 id="packages-used">Packages used:</h4>
 <ol>
 <li><a href="https://www.nuget.org/packages/Microsoft.Azure.SignalR/">Microsoft.Azure.SignalR</a></li>
 </ol>
-<h4 id="code-sample-preview">Code sample preview:</h4>
-<div class="codehilite"><pre><span></span><code><span class="na">    [Authorize]</span>
-    <span class="k">public</span> <span class="k">class</span> <span class="nc">SampleHub</span> <span class="p">:</span> <span class="n">Hub</span>
-    <span class="p">{</span>
-<span class="na">        [HubMethodName(&quot;SendDirectMessageToUser&quot;)]</span>
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">SendDirectMessageToUser</span><span class="p">(</span><span class="kt">string</span> <span class="n">sampleMessageAsJson</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">sampleMessage</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="n">SampleMessage</span><span class="p">&gt;(</span><span class="n">sampleMessageAsJson</span><span class="p">);</span>
-
-            <span class="n">sampleMessage</span><span class="p">.</span><span class="n">SenderId</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Guid</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="n">User</span><span class="p">.</span><span class="n">FindFirst</span><span class="p">(</span><span class="n">ClaimTypes</span><span class="p">.</span><span class="n">NameIdentifier</span><span class="p">).</span><span class="n">Value</span><span class="p">);</span>
-            <span class="kt">var</span> <span class="n">messageAsJson</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">sampleMessage</span><span class="p">);</span>
-
-            <span class="k">await</span> <span class="n">Clients</span><span class="p">.</span><span class="n">User</span><span class="p">(</span><span class="n">sampleMessage</span><span class="p">.</span><span class="n">ReceiverId</span><span class="p">.</span><span class="n">ToString</span><span class="p">()).</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">messageAsJson</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
+<h4 id="source-code">Source code:</h4>
+<p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/feature/azure-web-api-starter-project/src/azure-asp-net-core-starter-template/AzureDeveloperTemplates.Starter">Azure Developer Templates Starter project on GitHub</a></p>
                 
                   
                 
@@ -513,7 +477,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../azure-cosmos-db-sdk-repository-pattern-asp-net-core-template/" title="Azure Cosmos DB SDK Repository Pattern with ASP .NET Core" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -522,7 +486,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Azure Notification Hub SDK with ASP .NET Core Template
+                Azure Cosmos DB SDK Repository Pattern with ASP .NET Core
               </span>
             </div>
           </a>

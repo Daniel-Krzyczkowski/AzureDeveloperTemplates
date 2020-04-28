@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#packages-used" tabindex="0" class="md-skip">
+      <a href="#azure-storage-blobs-sdk-with-asp-net-core" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -247,30 +247,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../azure-key-vault-sdk-asp-net-core-template/" title="Azure Key Vault SDK with ASP .NET Core" class="md-nav__link">
-      Azure Key Vault SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-notification-hub-sdk-asp-net-core-template/" title="Azure Notification Hub SDK with ASP .NET Core Template" class="md-nav__link">
-      Azure Notification Hub SDK with ASP .NET Core Template
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../azure-signalr-service-sdk-asp-net-core-template/" title="Azure SignalR Service SDK with ASP .NET Core" class="md-nav__link">
       Azure SignalR Service SDK with ASP .NET Core
     </a>
@@ -330,16 +306,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#azure-storage-blobs-sdk-with-asp-net-core" class="md-nav__link">
+    Azure Storage Blobs SDK with ASP .NET Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#packages-used" class="md-nav__link">
     Packages used:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
+        
+          <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -362,30 +351,6 @@
   <li class="md-nav__item">
     <a href="../azure-event-hub-sdk-asp-net-core-template/" title="Azure Event Hub SDK with ASP .NET Core" class="md-nav__link">
       Azure Event Hub SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-queue-storage-sdk-asp-net-core-template/" title="Azure Storage Queues SDK with ASP .NET Core" class="md-nav__link">
-      Azure Storage Queues SDK with ASP .NET Core
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../azure-cognitive-search-sdk-asp-net-core-template/" title="Azure Cognitive Search SDK with ASP .NET Core" class="md-nav__link">
-      Azure Cognitive Search SDK with ASP .NET Core
     </a>
   </li>
 
@@ -438,16 +403,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#azure-storage-blobs-sdk-with-asp-net-core" class="md-nav__link">
+    Azure Storage Blobs SDK with ASP .NET Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#packages-used" class="md-nav__link">
     Packages used:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-sample-preview" class="md-nav__link">
-    Code sample preview:
+        
+          <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -470,87 +448,15 @@
                 
                   <h1>Azure Storage Blobs SDK with ASP .NET Core</h1>
                 
-                <p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-blob-storage-sdk-asp-net-core-template">Azure Storage Blobs SDK with ASP .NET Core Template</a></p>
-<p>Sample project to present how to use Azure Storage Blobs SDK to upload and downlad files from the Azure Blob Storage.</p>
+
+                <h2 id="azure-storage-blobs-sdk-with-asp-net-core">Azure Storage Blobs SDK with ASP .NET Core</h2>
+<p><img alt="storage-account.png" src="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/blob/master/images/storage-account.png?raw=true" /></p>
 <h4 id="packages-used">Packages used:</h4>
 <ol>
 <li><a href="https://www.nuget.org/packages/Azure.Storage.Blobs/">Azure.Storage.Blobs</a></li>
 </ol>
-<h4 id="code-sample-preview">Code sample preview:</h4>
-<div class="codehilite"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">StorageService</span> <span class="p">:</span> <span class="n">IStorageService</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="k">readonly</span> <span class="n">BlobStorageSettings</span> <span class="n">_blobStorageSettings</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="nf">StorageService</span><span class="p">(</span><span class="n">BlobStorageSettings</span> <span class="n">blobStorageSettings</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">_blobStorageSettings</span> <span class="p">=</span> <span class="n">blobStorageSettings</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DeleteBlobIfExistsAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
-            <span class="kt">var</span> <span class="n">blockBlob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
-            <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">DeleteIfExistsAsync</span><span class="p">();</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">DoesBlobExistAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
-            <span class="kt">var</span> <span class="n">blockBlob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
-            <span class="kt">var</span> <span class="n">doesBlobExist</span> <span class="p">=</span> <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">ExistsAsync</span><span class="p">();</span>
-            <span class="k">return</span> <span class="n">doesBlobExist</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">DownloadBlobIfExistsAsync</span><span class="p">(</span><span class="n">Stream</span> <span class="n">stream</span><span class="p">,</span> <span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
-            <span class="kt">var</span> <span class="n">blockBlob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
-
-            <span class="kt">var</span> <span class="n">doesBlobExist</span> <span class="p">=</span> <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">ExistsAsync</span><span class="p">();</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="n">doesBlobExist</span><span class="p">.</span><span class="n">Value</span> <span class="p">==</span> <span class="k">true</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">DownloadToAsync</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">GetBlobUrl</span><span class="p">(</span><span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
-            <span class="kt">var</span> <span class="n">blockBlob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
-
-            <span class="kt">var</span> <span class="n">exists</span> <span class="p">=</span> <span class="k">await</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">ExistsAsync</span><span class="p">();</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="n">exists</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="k">return</span> <span class="n">blockBlob</span><span class="p">.</span><span class="n">Uri</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
-            <span class="p">}</span>
-            <span class="k">else</span>
-            <span class="p">{</span>
-                <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">UploadBlobAsync</span><span class="p">(</span><span class="n">Stream</span> <span class="n">stream</span><span class="p">,</span> <span class="kt">string</span> <span class="n">blobName</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">stream</span><span class="p">.</span><span class="n">Seek</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">SeekOrigin</span><span class="p">.</span><span class="n">Begin</span><span class="p">);</span>
-            <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="k">await</span> <span class="n">GetBlobContainer</span><span class="p">();</span>
-
-            <span class="n">BlobClient</span> <span class="n">blob</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">GetBlobClient</span><span class="p">(</span><span class="n">blobName</span><span class="p">);</span>
-            <span class="k">await</span> <span class="n">blob</span><span class="p">.</span><span class="n">UploadAsync</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">private</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">BlobContainerClient</span><span class="p">&gt;</span> <span class="n">GetBlobContainer</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="n">BlobContainerClient</span> <span class="n">container</span> <span class="p">=</span> <span class="k">new</span> <span class="n">BlobContainerClient</span><span class="p">(</span><span class="n">_blobStorageSettings</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">,</span>
-                                                                            <span class="n">_blobStorageSettings</span><span class="p">.</span><span class="n">ContainerName</span><span class="p">);</span>
-
-            <span class="k">await</span> <span class="n">container</span><span class="p">.</span><span class="n">CreateIfNotExistsAsync</span><span class="p">();</span>
-
-            <span class="k">return</span> <span class="n">container</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
+<h4 id="source-code">Source code:</h4>
+<p><a href="https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/feature/azure-web-api-starter-project/src/azure-asp-net-core-starter-template/AzureDeveloperTemplates.Starter">Azure Developer Templates Starter project on GitHub</a></p>
                 
                   
                 
