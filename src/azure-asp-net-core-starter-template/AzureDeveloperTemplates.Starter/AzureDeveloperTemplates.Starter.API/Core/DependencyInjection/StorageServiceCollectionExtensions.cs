@@ -12,8 +12,12 @@ namespace AzureDeveloperTemplates.Starter.API.Core.DependencyInjection
             var serviceProvider = services.BuildServiceProvider();
 
             var storageConfiguration = serviceProvider.GetRequiredService<IStorageServiceConfiguration>();
-            BlobServiceClient blobServiceClient = new BlobServiceClient(storageConfiguration.ConnectionString);
-            services.TryAddSingleton(blobServiceClient);
+
+            services.TryAddSingleton(implementationFactory =>
+            {
+                BlobServiceClient blobServiceClient = new BlobServiceClient(storageConfiguration.ConnectionString);
+                return blobServiceClient;
+            });
 
             return services;
         }
