@@ -30,8 +30,8 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging
                 callback = (obj) => _logger.LogInformation(JsonConvert.SerializeObject(obj));
             }
 
-            stoppingToken.Register(() =>
-                _logger.LogInformation($"{nameof(ReceivedMessagesProcessor<T>)} background task is stopping."));
+            using (stoppingToken.Register(() =>
+                  _logger.LogInformation($"{nameof(ReceivedMessagesProcessor<T>)} background task is stopping."))) ;
 
             while (!stoppingToken.IsCancellationRequested)
             {

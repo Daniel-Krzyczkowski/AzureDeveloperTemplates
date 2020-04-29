@@ -20,8 +20,8 @@ namespace AzureDeveloperTemplates.Starter.Infrastructure.Services.Events
 
         public async Task ExecuteAsync(CancellationToken stoppingToken, Action<string> callback = null)
         {
-            stoppingToken.Register(() =>
-                _logger.LogInformation($"{nameof(ReceivedEventsProcessor)} background task is stopping."));
+            using (stoppingToken.Register(() =>
+                 _logger.LogInformation($"{nameof(ReceivedEventsProcessor)} background task is stopping."))) ;
 
             while (!stoppingToken.IsCancellationRequested)
             {
