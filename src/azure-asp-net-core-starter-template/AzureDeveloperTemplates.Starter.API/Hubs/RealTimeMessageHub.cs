@@ -1,4 +1,5 @@
 ﻿using AzureDeveloperTemplates.Starter.Infrastructure.Services.RealTimeMessaging.Contract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
 using System;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AzureDeveloperTemplates.Starter.API.Hubs
 {
+    [Authorize]
     public class RealTimeMessageHub : Hub
     {
         [HubMethodName("direct-message")]
