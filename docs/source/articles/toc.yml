@@ -1,0 +1,16 @@
+- name: Azure Function With Dependency Injection
+  href: azure-function-with-dependency-injection-template.md
+- name: Azure Application Insights SDK with ASP .NET Core
+  href: azure-application-insights-sdk-asp-net-core-template.md
+- name: Azure SignalR Service SDK with ASP .NET Core
+  href: azure-signalr-service-sdk-asp-net-core-template.md
+- name: Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
+  href: azure-sql-db-repository-pattern-asp-net-core-template.md
+- name: Azure Service Bus SDK with ASP .NET Core
+  href: azure-service-bus-sdk-asp-net-core-template.md
+- name: Azure Storage Blobs SDK with ASP .NET Core
+  href: azure-blob-storage-sdk-asp-net-core-template.md
+- name: Azure Event Hub SDK with ASP .NET Core
+  href: azure-event-hub-sdk-asp-net-core-template.md
+- name: Azure Clients integration with ASP .NET Core DI
+  href: azure-core-extensions-asp-net-core-template.md

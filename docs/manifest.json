@@ -1,0 +1,1710 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/github-repos/docs/source",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "about.md",
+      "output": {
+        ".html": {
+          "relative_path": "about.html",
+          "hash": "owZ5c+WwNkiuk7IaG1HSaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Controllers.FileController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Controllers.FileController.html",
+          "hash": "dQLFTFwE1ZQ3yKKOiVBxUg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Controllers.html",
+          "hash": "TADxYPusJ66iz3kPx80Xmg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.html",
+          "hash": "zNrmIooKrBO8etIbi2wY1w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.html",
+          "hash": "0pQEuTb5cUw29ROgQaWIbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.html",
+          "hash": "bST2udZAQPW/5/wiBTBPHg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.html",
+          "hash": "/9aGYHpMddW/iV7AtUG6Ew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Program.html",
+          "hash": "r2irAmL4saeb4mksiRXLxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Settings.BlobStorageSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Settings.BlobStorageSettings.html",
+          "hash": "5Iz9FjULZYl95yq9MUSffg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Settings.html",
+          "hash": "S8o1y1tPG1p57ZYmHt3Z8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.html",
+          "hash": "Cbxhspb2Wua8J/ys3dIEOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Utils.FilesUpload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Utils.FilesUpload.html",
+          "hash": "yGVLE8mCU8k1KNG7qpGZiA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Utils.html",
+          "hash": "CwrvDXWatW+1J/8KP+yjhg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.html",
+          "hash": "tXRbr0P7oz4dfShR0YQG7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.FunctionAppWithDependencyInjection.MailTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.FunctionAppWithDependencyInjection.MailTrigger.html",
+          "hash": "5IyRLblDcNpQJef7jDPAtQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Services.IMailService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Services.IMailService.html",
+          "hash": "C+Wua6rg5GGXK09pXQUEZg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.FunctionAppWithDependencyInjection.Services.html",
+          "hash": "bM25+QBA6nF6j+JG+Pwmcg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.FunctionAppWithDependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.FunctionAppWithDependencyInjection.html",
+          "hash": "a8hOBATXc/e/mbhmvYAQqQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.html",
+          "hash": "4s6WT6sBsLELCEC7Llg+1w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.html",
+          "hash": "mXrRpEDTOxvpHY6PvgxyKA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.html",
+          "hash": "jV/SkNKWbpu8tDg7pNNdvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.html",
+          "hash": "mgqLHq8HCB93mHMHpU0dBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.BackgroundServices.html",
+          "hash": "6s9gXX0wFUlUpMkAOcgJrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Controllers.FileController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Controllers.FileController.html",
+          "hash": "aBbaUPDomOM/pkN+7K7O5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Controllers.ProductController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Controllers.ProductController.html",
+          "hash": "uaeuXSUKfDJOxKA1QcMOQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Controllers.html",
+          "hash": "nWhyj+7Bj8dPTN2x9jD0fA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.html",
+          "hash": "8FQeP9P6CLI5wS06W74zPg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.html",
+          "hash": "QiYhRN/u1hf69dkkXp0OUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.Configuration.html",
+          "hash": "RnnNGeVFTnlgA4Izs0gHlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.html",
+          "hash": "2UhDT61OyYRRmbYgMCGRXA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.html",
+          "hash": "3FzRIkOdSGFsOmiPFhE3Hg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.html",
+          "hash": "TmvTtdnXV9B2N6xusli2OA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.html",
+          "hash": "INFAIAuNGKYz2luBV0UnFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.html",
+          "hash": "TJ0RmYKwWbPX7jslXyUymA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.html",
+          "hash": "HWXZunloCs2xWetIj7GAew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.html",
+          "hash": "o8+p0AzKjaKHjmurdfue7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.html",
+          "hash": "bC0Gcr50DN9Bmr2oCZgAfw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.html",
+          "hash": "pHB8rYib7AFjtjxkzDj7fw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.html",
+          "hash": "01TuyBKvGRNJp/p+GfhjeA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.html",
+          "hash": "ARRjg6Cg0b9+XknSW5ZHtQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.Middleware.html",
+          "hash": "HDsuXz9xKrv/oPFm6o9Yxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Core.html",
+          "hash": "nfPQklvuxCo6MvVIzn20VQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Dto.FilesUpload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Dto.FilesUpload.html",
+          "hash": "s3apeywMLVqKLD+ZJ9p0SQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Dto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Dto.html",
+          "hash": "zjDhHaTjgDw/VaClY69IaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Hubs.RealTimeMessageHub.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Hubs.RealTimeMessageHub.html",
+          "hash": "6tlE5POUQqV7eAIBgSXcTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Hubs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Hubs.html",
+          "hash": "sT6H8gq2AEbcbmwXCJhd+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Program.html",
+          "hash": "S6uZgmf+981azTqcsSmx/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.Startup.html",
+          "hash": "5vJqwt7liYqedpM34/iZWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.API.html",
+          "hash": "khgobXLkqEz/WCftVjfcRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.Base.IEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.Base.IEntity.html",
+          "hash": "ISrRUkLbmkgXkrmmt27yKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.Base.html",
+          "hash": "QITzxw64ibtAtLnAkkh+uw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.Product.html",
+          "hash": "sjm6tbzv9hgdCCscMJWaew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.ProductLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.ProductLocation.html",
+          "hash": "B/bo1Z/d/PszdMWgez4sdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.DomainModel.html",
+          "hash": "Tpk/9pZYnpef7TMeiJYzpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Error.ErrorMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Error.ErrorMessage.html",
+          "hash": "3uJqdp7Lh+1dQ/CtlVrsYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Error.html",
+          "hash": "NYfURKfwiFrBIGJvnQGq6Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.Interfaces.IDataService-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.Interfaces.IDataService-1.html",
+          "hash": "xpU/rDgdxr+GczitWPAf8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.Interfaces.IProductLocationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.Interfaces.IProductLocationService.html",
+          "hash": "4gfLnsFe+1oMeGh7ncY8dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.Interfaces.IProductService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.Interfaces.IProductService.html",
+          "hash": "cfX50q9rzZ0hcTILKnOKew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.Interfaces.html",
+          "hash": "yo3x7fkU8W44wP6UpczA7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.ProductLocationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.ProductLocationService.html",
+          "hash": "TE9G0aRczwTxGd83uTnApQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.ProductService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.ProductService.html",
+          "hash": "ejhUNndk7i7lQO6ly1kWrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Core.Services.html",
+          "hash": "jLvu94K/E1m/iJcuOZUfPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.ApplicationInsightsServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.ApplicationInsightsServiceConfiguration.html",
+          "hash": "TEnEtYDqnULwRN8qVlMRag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.ApplicationInsightsServiceConfigurationValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.ApplicationInsightsServiceConfigurationValidation.html",
+          "hash": "ho1jQt7155JZS8NXQIgdYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.AzureAdB2cServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.AzureAdB2cServiceConfiguration.html",
+          "hash": "olVCS3YQtIu5NFGXabDC8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.AzureAdB2cServiceConfigurationValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.AzureAdB2cServiceConfigurationValidation.html",
+          "hash": "Vx18ospyeS5lpu26lHfZtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.CosmosDbDataServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.CosmosDbDataServiceConfiguration.html",
+          "hash": "agjPs9T2QHN6ULu8rTx8gQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.CosmosDbDataServiceConfigurationValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.CosmosDbDataServiceConfigurationValidation.html",
+          "hash": "6DqQwKOHjye3q+gBo/cSow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.EventsServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.EventsServiceConfiguration.html",
+          "hash": "xfE2UcBKsuZqsDj5t7NzGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.EventsServiceConfigurationValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.EventsServiceConfigurationValidation.html",
+          "hash": "0o/vrSby5ddeGKl5C17TAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IApplicationInsightsServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IApplicationInsightsServiceConfiguration.html",
+          "hash": "1KVu5NE7met4v2l5gt3OpA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html",
+          "hash": "qWF2PeBiwbTOXoIfISLWuw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.ICosmosDbDataServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.ICosmosDbDataServiceConfiguration.html",
+          "hash": "1zYZkCVD48zt2F93EsWPog=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IEventsServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IEventsServiceConfiguration.html",
+          "hash": "fWWg+EWjb2/gbajJiIXYUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IMessagingServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IMessagingServiceConfiguration.html",
+          "hash": "6ziZEr7y5ERZYM0cEAUeUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.ISignalRServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.ISignalRServiceConfiguration.html",
+          "hash": "vQLAupKXj3hAhnDl8UmllQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.ISqlDbDataServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.ISqlDbDataServiceConfiguration.html",
+          "hash": "80GeZYc120tbfv08/7x+CQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IStorageServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.IStorageServiceConfiguration.html",
+          "hash": "/8SfkPL0RPUbpt7UfVWcow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.Interfaces.html",
+          "hash": "h+jRsTtq6SWFbbe0CQPicw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.MessagingServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.MessagingServiceConfiguration.html",
+          "hash": "PxhADqoNzg+2GAeb0yCJ5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.MessagingServiceConfigurationValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.MessagingServiceConfigurationValidation.html",
+          "hash": "oIWzolH4HOAQcOgLNVo2KA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SignalRServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SignalRServiceConfiguration.html",
+          "hash": "d/saIM2OlJUamFhTRyfHEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SignalRServiceConfigurationValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SignalRServiceConfigurationValidation.html",
+          "hash": "x3OFl/MPKOBZI3d7hmcU8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SqlDbDataServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SqlDbDataServiceConfiguration.html",
+          "hash": "Cc8i+6kLY78phmN4xdm73g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SqlDbDataServiceConfigurationValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SqlDbDataServiceConfigurationValidation.html",
+          "hash": "yfAiTjRjf34DhAhZdDmgTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.StorageServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.StorageServiceConfiguration.html",
+          "hash": "D9ZukpTph8LlyXaFIBp/9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.StorageServiceConfigurationValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.StorageServiceConfigurationValidation.html",
+          "hash": "PBBOM7Q73Q5298W+Gnh8YA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.html",
+          "hash": "NAk8RX5D+dqdaWhB5ir3Pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Migrations.initialmigration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Migrations.initialmigration.html",
+          "hash": "NpvQqpLru7Grwi9uzhEv5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Migrations.html",
+          "hash": "jBhafn2HY+urnzG1Chj6gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.CosmosDbDataService-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.CosmosDbDataService-1.html",
+          "hash": "3Q9l96ArlCLy4AvBtHOucw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbContext.html",
+          "hash": "M1GkUFiSPUPkUGby47Pzwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbContextFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbContextFactory.html",
+          "hash": "r7uzMC+4dQdwCTzDTZ1+WQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbDataService-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbDataService-1.html",
+          "hash": "Q/hB5W0Fxoctc9mKZS+HGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.html",
+          "hash": "yoShV3UqnSTIpN7xQq7NbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.EventsReceiverService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.EventsReceiverService.html",
+          "hash": "vI+Z/jAiGegAW1tJCCddrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.EventsSenderService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.EventsSenderService.html",
+          "hash": "pagfGKXELTnK2wS4TPH4Zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IEventsReceiverService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IEventsReceiverService.html",
+          "hash": "QBJ3+r998TC50W/nj5rmqg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IEventsSenderService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IEventsSenderService.html",
+          "hash": "hc8Xd32HxQNukkQdepEVBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor.html",
+          "hash": "jjaSiya4kgUicF2q/cjrEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.html",
+          "hash": "A/2aYY7McLB1zURvDXSVog=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.ReceivedEventsProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.ReceivedEventsProcessor.html",
+          "hash": "ahXAb6VJoqy8uu+xwvyA0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.html",
+          "hash": "ibBAv3XopJBbCuvt/qYQXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Contract.IDeserializer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Contract.IDeserializer-1.html",
+          "hash": "RHA1MLcPA94YVEmUK0q2+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Contract.IDeserializerFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Contract.IDeserializerFactory-1.html",
+          "hash": "e+FiNqdUuwXj36MWonTtsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Contract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Contract.html",
+          "hash": "ixf2R4nw4ZLDwJzsIWEy6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.DeserializerFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.DeserializerFactory-1.html",
+          "hash": "4QKLXl9qmjP89gqnX84/0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IMessagesReceiverService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IMessagesReceiverService.html",
+          "hash": "32kW9vJM0LbVdYNa7RNxEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IMessagesSenderService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IMessagesSenderService.html",
+          "hash": "1TgTb/UdzXtc+eT5QfyzNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IReceivedMessagesProcessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IReceivedMessagesProcessor-1.html",
+          "hash": "ecRKMEFBkMYPoDABUg0uKA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IServiceBusClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IServiceBusClientFactory.html",
+          "hash": "iXvX2VMQXWzam2Mak7wJtg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.html",
+          "hash": "q2IkZ241yQtCawHIdcq4/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.JsonUtf8Deserializer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.JsonUtf8Deserializer-1.html",
+          "hash": "Tpw4eLM+u5lqG6j0r/XCDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.MessagesReceiverService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.MessagesReceiverService.html",
+          "hash": "zlkodtHhOmEH/pel5ZIrrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.MessagesSenderService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.MessagesSenderService.html",
+          "hash": "C0PTICZfQuVbuBrYqnbGdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.ReceivedMessagesProcessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.ReceivedMessagesProcessor-1.html",
+          "hash": "pTTm1BMOUhn2HhYoVP/ASw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.html",
+          "hash": "pGOyFQzfYmw7wKLTAsHPZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.RealTimeMessaging.Contract.RealTimeMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.RealTimeMessaging.Contract.RealTimeMessage.html",
+          "hash": "bDRU1bfMoLYS19ZMfyOQhg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.RealTimeMessaging.Contract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.RealTimeMessaging.Contract.html",
+          "hash": "f3+2ob/eq2OQHEtJGHaU6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService.html",
+          "hash": "7EHCCT3jxxKqFsTQ+wipeg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.html",
+          "hash": "synGP3DkQcZTa8INEwqCpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.StorageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.StorageService.html",
+          "hash": "HZLcB0bWrrFgN4bcuc677w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.html",
+          "hash": "D9U+/1BHYAMVHyzy6siwvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "SVszNqeZa6T0lCB4l9Sv1g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "bTNA5tj5jjgPEndnc2L0Bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-application-insights-sdk-asp-net-core-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-application-insights-sdk-asp-net-core-template.html",
+          "hash": "N6+z+DL1BGlS1vhGCpzYkA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-blob-storage-sdk-asp-net-core-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-blob-storage-sdk-asp-net-core-template.html",
+          "hash": "BHBrXh4QepYsZ5yeOwcb3A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-core-extensions-asp-net-core-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-core-extensions-asp-net-core-template.html",
+          "hash": "Ht5Sdg4dcrjKK1/bZHzI8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-cosmos-db-sdk-repository-pattern-asp-net-core-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-cosmos-db-sdk-repository-pattern-asp-net-core-template.html",
+          "hash": "IhPV6FCmwaVR8sKMGZQiPQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-event-hub-sdk-asp-net-core-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-event-hub-sdk-asp-net-core-template.html",
+          "hash": "9uxcDs9LAr294gr/qlmtlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-function-with-dependency-injection-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-function-with-dependency-injection-template.html",
+          "hash": "tN2poQMczOiZfBSAc1jVhQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-service-bus-sdk-asp-net-core-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-service-bus-sdk-asp-net-core-template.html",
+          "hash": "/wDK+V8O3PLhAm6bzA4bfg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-signalr-service-sdk-asp-net-core-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-signalr-service-sdk-asp-net-core-template.html",
+          "hash": "dG5aVPNgloy6riVvgTGWmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure-sql-db-repository-pattern-asp-net-core-template.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure-sql-db-repository-pattern-asp-net-core-template.html",
+          "hash": "gLDsNcDvoShIbGLiv4y+OQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "L92KFuA1kU4f6yza5oH+/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Hfg6sMAn31pPcIZT9BFOjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "yJsYK2tFSymPg1J6c+fO+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 12,
+          "skipped_file_count": 12
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 123,
+          "skipped_file_count": 83
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
