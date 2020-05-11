@@ -8,7 +8,7 @@ namespace AzureDeveloperTemplates.AdB2C.WebAPI.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> _logger;
