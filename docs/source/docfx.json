@@ -8,7 +8,10 @@
             "src/azure-asp-net-core-starter-template/AzureDeveloperTemplates.Starter.Core/**.csproj",
             "src/azure-asp-net-core-starter-template/AzureDeveloperTemplates.Starter.Infrastructure/**.csproj",
             "src/azure-core-extensions-asp-net-core-template/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI/**.csproj",
-            "src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates.FunctionAppWithDependencyInjection/**.csproj"
+            "src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates.FunctionAppWithDependencyInjection/**.csproj",
+            "src/azure-ad-b2c-asp-net-core-and-uwp/AzureDeveloperTemplates.AdB2C.UWP/**.csproj",
+            "src/azure-ad-b2c-asp-net-core-and-uwp/AzureDeveloperTemplates.AdB2C.WebAPI/**.csproj",
+            "src/azure-ad-b2c-asp-net-core-and-uwp/AzureDeveloperTemplates.AdB2C.WebApp/**.csproj"
           ]
         }
       ],
