@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/github/docs/source",
+  "source_base_path": "C:/github-repos/docs/source",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -12,7 +12,7 @@
           "hash": "rLdJtB5O+nGGvlrEDFzztw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.UWP.App.html",
-          "hash": "4s4/TAv9WE+MxShXuXxgbQ=="
+          "hash": "JYWr+t/k36JwccegS+G98g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.UWP.MainPage.html",
-          "hash": "G/ebB3j5HlcDF23LNfqGSA=="
+          "hash": "pQrHv7On6x/ZE/6GA8cbuw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.UWP.Program.html",
-          "hash": "gFrSpZOmjzuQR+WANN+uQw=="
+          "hash": "4qomMXG9HpCvoS95+F5RnA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.html",
-          "hash": "oHtK19YuY73XbgGhb0iJVQ=="
+          "hash": "FK31CpPczyLYThzugo46mA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.html",
-          "hash": "dz5V1zneZmcNqIpulUp80g=="
+          "hash": "NkwNiTSOHe+6Ico6nEyZAw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -84,7 +84,7 @@
           "hash": "lNOBdCz/shb/JAi3IDvAxQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.html",
-          "hash": "72DCF2WAWZer2E4eR+OSzA=="
+          "hash": "WOmDZvjkcAdUOkOZ7mlJ6w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "drsm8Od3H7P4GkltpQ+2YQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "gYMhlz5dvFnGydm/V2RkVA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -132,7 +132,7 @@
           "hash": "yHLpuqQqyr8YY4gnSRCGCw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.html",
-          "hash": "lwSbHtRTXB6Bh9QxtgBX2w=="
+          "hash": "8sTKC9z4fVPpwqhdvxRz/A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -156,7 +156,7 @@
           "hash": "SMVEoS5t9qX5dg2AmL601A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.html",
-          "hash": "nTDhMfShlY1wAG0z4ZdZVw=="
+          "hash": "Z5h+r4aeFYzOn+ipDo3edQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.html",
-          "hash": "uHudHen9Ri1o3yKcvS0EIQ=="
+          "hash": "slDRjfAUfvuKXyBGtk+ULQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html",
-          "hash": "LwtlmTgl5a9ZKn/9mUioRg=="
+          "hash": "EuuqBJEVCRoUb7PKtkfG+A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -204,7 +204,7 @@
           "hash": "qkLojES6jI1RhzLWQhlkqw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -216,7 +216,7 @@
           "hash": "De9imVilO3njgw6F9Fb+2g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.html",
-          "hash": "ptKnbk1aIT4MkupQgxLeWA=="
+          "hash": "lBe65rdGqDC4z8NkmDG69Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.html",
-          "hash": "CFZ9ubhREle6AXUyLqjGrg=="
+          "hash": "HD9F/89RIY5P/iL/pKqsxA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -252,7 +252,7 @@
           "hash": "er5ZPVJ+haPopVE3S0C7uQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebAPI.Program.html",
-          "hash": "OabS8T82a7WQe8u1kr+ZEg=="
+          "hash": "Lcjof54NqWEh5tGoEokDGQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html",
-          "hash": "2ucdxmsspNXTF1X5o1+R5w=="
+          "hash": "O/oB7wlORQqwPAubR9N21A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -288,7 +288,7 @@
           "hash": "V5qqYLm89K5nYNTiZpH+pQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html",
-          "hash": "rk9uUedulGQZGIICmmdFFw=="
+          "hash": "u4IyfHCAiLh+EhhhjtgLog=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.html",
-          "hash": "STmzLuD7B95AE9KDO7gJvQ=="
+          "hash": "h123h2X9VB6+ksu/n52IGw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.html",
-          "hash": "gh9lDJObc8MIrfoMIuqBbg=="
+          "hash": "kD9LBFuzX52SGxF2TzziaQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -333,10 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.html",
-          "hash": "+ylAIhzZJC/ojqx7ssDjmw=="
+          "hash": "iE+wVkxWa+4tn25N+YihbA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -348,7 +348,7 @@
           "hash": "itGmHil1XHel6Q7+if0M1g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +357,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebApp.Program.html",
-          "hash": "eVfcYli3g7lq2d8GclImCg=="
+          "hash": "lCAU9qvovN9PUkIZ3AtHbA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -369,10 +369,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html",
-          "hash": "tJsYX7xOrLuFJcs5Fmr2fQ=="
+          "hash": "m6s4Y3i/T9LsVgj01uGoVA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -384,7 +384,7 @@
           "hash": "KmMzc+3hxDydieTxNKBOOw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -420,7 +420,7 @@
           "hash": "kQdC3oHFb3DCBflIes+SYw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -432,7 +432,7 @@
           "hash": "lzz+cDuqcNoH1WX6Bp2EOw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -468,7 +468,7 @@
           "hash": "kQc56siXh8LFKcX/eg3/ow=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -480,7 +480,7 @@
           "hash": "ghaaWtFGif6o/i5kzaQxYA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -492,7 +492,7 @@
           "hash": "QYpQqYU86T7UeUWSTVTrCw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -504,7 +504,7 @@
           "hash": "lnnoKIbFfiOyIKUVRZIAMw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -516,7 +516,7 @@
           "hash": "lW5eSfMR71ahdPaiZAg7Gw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -528,7 +528,7 @@
           "hash": "sznY1gNfBPpc1JHcCMz0Gw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -540,7 +540,7 @@
           "hash": "dxp8uXbgAVjQCpAGVRB4Lg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -564,7 +564,7 @@
           "hash": "0dYLLua4klbm4Afu4sPoVw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -576,7 +576,7 @@
           "hash": "ikq9Fn/GJyNTsskYzpO5MA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -600,7 +600,7 @@
           "hash": "/ZxKQMqQodcHdlVEhnFGHA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -612,7 +612,7 @@
           "hash": "GbEpzfFYbwISKktLguk0/w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -696,7 +696,7 @@
           "hash": "CghIiYciXi4u+Xn0fDzxUQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -708,7 +708,7 @@
           "hash": "HbtwwZRsVYkTiiwRiKdvJg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -720,7 +720,7 @@
           "hash": "I3NpzV3tXK0e0V/7i+1a4A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -732,7 +732,7 @@
           "hash": "7FPlFMvwhYW0n+HfTwk2XQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -744,7 +744,7 @@
           "hash": "0kKU78M51F1k5NQ/h/+Wcw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -756,7 +756,7 @@
           "hash": "5pDQ284eAwwf53wlULAVxg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -768,7 +768,7 @@
           "hash": "Kz6NVmWLyg8VzvgAbHcTJQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -780,7 +780,7 @@
           "hash": "1YKZ9/EZqIREaQgJBkKgKQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -792,7 +792,7 @@
           "hash": "Kz+Zdye682ZPBLcbrBqziw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -804,7 +804,7 @@
           "hash": "MI4TjmM23lfYTpk4xvvGWg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -816,7 +816,7 @@
           "hash": "Nvn3juBiPrLseGX1D5IBeA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -828,7 +828,7 @@
           "hash": "h9RreyLuMzJKE2aCq6UP7w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -840,7 +840,7 @@
           "hash": "KlBxNI8LoQe07WejZoJcuA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -852,7 +852,7 @@
           "hash": "8DSNMG9uinp51famkbsVrQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -864,7 +864,7 @@
           "hash": "1dJWW/B60NWRabq5COd4Rw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -876,7 +876,7 @@
           "hash": "JRDpryyFNcXNxzhNE+Cyiw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -888,7 +888,7 @@
           "hash": "xPPBm7/KiNeWug0Gkp8Vlw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -900,7 +900,7 @@
           "hash": "SCWGIpHPVHDFYspWByTA8w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -936,7 +936,7 @@
           "hash": "DqnAAdvJCu4ct32R+MES5w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -948,7 +948,7 @@
           "hash": "OrZQOVdSixIgTyhYgIYJwA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -960,7 +960,7 @@
           "hash": "5QTTk8sJfhvskn7t4Pso0Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -972,7 +972,7 @@
           "hash": "v6Mdz8vIge+Z/k89LCvKYw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -984,7 +984,7 @@
           "hash": "n2tl1Qk3b1l/TOLLo0AdYw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1032,7 +1032,7 @@
           "hash": "UEDdO0LNOuhv1tuxjhD8Cw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1044,7 +1044,7 @@
           "hash": "JIK50jnjlGImCUfeSpEj5A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1149,7 +1149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.ApplicationInsightsServiceConfigurationValidation.html",
-          "hash": "Lk/k9ubyaKPOhb/uPdB+jw=="
+          "hash": "PJuvcAI5ly2K9UE4vsXEFQ=="
         }
       },
       "is_incremental": false,
@@ -1173,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.AzureAdB2cServiceConfigurationValidation.html",
-          "hash": "VTr7Y68NKjss4DbuhcTkIQ=="
+          "hash": "lj11PW8+rYTvZzSvaQdifg=="
         }
       },
       "is_incremental": false,
@@ -1197,7 +1197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.CosmosDbDataServiceConfigurationValidation.html",
-          "hash": "j7RzmQ11yVBWkwxCgJNc3g=="
+          "hash": "QsgWma6BSaht/efiu7We6w=="
         }
       },
       "is_incremental": false,
@@ -1221,7 +1221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.EventsServiceConfigurationValidation.html",
-          "hash": "adQY6TnVcFKLE5DN0FYfYg=="
+          "hash": "sBv8q4DMdEAJ0I40/roKag=="
         }
       },
       "is_incremental": false,
@@ -1236,7 +1236,7 @@
           "hash": "9iMIUceSwh4tyBkjuoM0qA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1248,7 +1248,7 @@
           "hash": "O6HJGoZMNFFvIwagKoyrEQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1260,7 +1260,7 @@
           "hash": "wBWzw3Z4QKqmJR9nhUawjQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1272,7 +1272,7 @@
           "hash": "nyFQbfpr5NNbTXBayDvUWw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1284,7 +1284,7 @@
           "hash": "llqAFOBDA70wenkbe02I1w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1296,7 +1296,7 @@
           "hash": "sd3VXf9x1RV4DCpqdROVsQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1308,7 +1308,7 @@
           "hash": "2r3nMAIATaJrz09BkY49GQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1320,7 +1320,7 @@
           "hash": "ZUupnU1kAonL5MoZLOqK8A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1332,7 +1332,7 @@
           "hash": "7XOEImsdeRptOaiZY8Mb4Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1353,7 +1353,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.MessagingServiceConfigurationValidation.html",
-          "hash": "5bHPmtgBke7vYt8YHFfD0w=="
+          "hash": "6g7v+wVWHSVbdUHxJXg5Rw=="
         }
       },
       "is_incremental": false,
@@ -1377,7 +1377,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SignalRServiceConfigurationValidation.html",
-          "hash": "KVJiWLyBdOgph2iRsakg5g=="
+          "hash": "NK5ifhvr2NsnkzBFHhFB3g=="
         }
       },
       "is_incremental": false,
@@ -1401,7 +1401,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.SqlDbDataServiceConfigurationValidation.html",
-          "hash": "C23Pv1CglaKO+79JHoKuRA=="
+          "hash": "xKr9oLzXnY0yj/W6qjadLA=="
         }
       },
       "is_incremental": false,
@@ -1425,7 +1425,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Configuration.StorageServiceConfigurationValidation.html",
-          "hash": "PeVnCmWxyBwR3d7qv5Mv2A=="
+          "hash": "LcMjT8Fg6aqs/OQVLDB3dQ=="
         }
       },
       "is_incremental": false,
@@ -1449,7 +1449,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Migrations.initialmigration.html",
-          "hash": "pNCctVaqmwUMr0YDtapVJQ=="
+          "hash": "tSLdqWlB/NHd/jo9ZRyxyg=="
         }
       },
       "is_incremental": false,
@@ -1473,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.CosmosDbDataService-1.html",
-          "hash": "hlMe4gY0O3TXcJtLwcEVsg=="
+          "hash": "gukpgAU9/udrrnPJ0r/ftg=="
         }
       },
       "is_incremental": false,
@@ -1485,7 +1485,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbContext.html",
-          "hash": "3AtkQaYIs9Ip2c+fDmspOQ=="
+          "hash": "EZR4HhB129bimxINAwxAwQ=="
         }
       },
       "is_incremental": false,
@@ -1497,7 +1497,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbContextFactory.html",
-          "hash": "vgAWW0h9V4qDUcylwuon6A=="
+          "hash": "MJeKNxMJnBYfduZUeIZv1g=="
         }
       },
       "is_incremental": false,
@@ -1509,7 +1509,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Data.SqlDbDataService-1.html",
-          "hash": "iQUT1i3eX6d4fYQQ7FggxQ=="
+          "hash": "MzsIdkoWbYsFwY5a8p9lHg=="
         }
       },
       "is_incremental": false,
@@ -1533,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.EventsReceiverService.html",
-          "hash": "5Pd1T18+L2pbkzVGiLHmbA=="
+          "hash": "G7VIbDic44bAiWEjeYs3Sw=="
         }
       },
       "is_incremental": false,
@@ -1545,7 +1545,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.EventsSenderService.html",
-          "hash": "+uOSmLZqsaxXL4wLr3DsJg=="
+          "hash": "5Oy+ouQYLAxnbsDNMIVvcQ=="
         }
       },
       "is_incremental": false,
@@ -1560,7 +1560,7 @@
           "hash": "7rt0+wFakW5aqEO+3woZzA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1572,7 +1572,7 @@
           "hash": "lepwLpaCnujJnAyYD9R4bw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1584,7 +1584,7 @@
           "hash": "pfb9p0lD2Dem4JpD7Ic40A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1596,7 +1596,7 @@
           "hash": "EfYk+B94y0knFmY4CSxEPg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1605,7 +1605,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.ReceivedEventsProcessor.html",
-          "hash": "LnaHi33aSYtXfpDav+9Dwg=="
+          "hash": "DWDSyHOAYmXKafxgurd4vg=="
         }
       },
       "is_incremental": false,
@@ -1632,7 +1632,7 @@
           "hash": "l09Eper/6HvKFC7btauPhg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1644,7 +1644,7 @@
           "hash": "rL576o7zssUl5gFZ4kd6jQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1656,7 +1656,7 @@
           "hash": "Ob37aFq7l6C+9MFjioNnAg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1665,7 +1665,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.DeserializerFactory-1.html",
-          "hash": "iI9qzYwq8borvj/IRS2IiQ=="
+          "hash": "6hbPMkpuEilh6uTwb6tUfA=="
         }
       },
       "is_incremental": false,
@@ -1677,10 +1677,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IMessagesReceiverService.html",
-          "hash": "t4HxNGoFFdK1KFnvfcUkSA=="
+          "hash": "Ge9v8IGhaJ908vqj+Wjyqg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1692,7 +1692,7 @@
           "hash": "6jK2IdzEJBIwdZ5Aw7KvGA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1704,7 +1704,7 @@
           "hash": "X5D6O8HSebfPJJ3ESG6TsA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1713,10 +1713,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.Interfaces.IServiceBusClientFactory.html",
-          "hash": "VEIZPnstU6CwnuH0rS90bA=="
+          "hash": "bXQmAR7axvTBhI3eZONtAQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1728,7 +1728,7 @@
           "hash": "Nkxw2akw46TavKOBXde1UA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1749,7 +1749,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.MessagesReceiverService.html",
-          "hash": "JckBX8dGRcjTFjKzO8rx/g=="
+          "hash": "WT1RHq3gW5GHiF0m4JJtnw=="
         }
       },
       "is_incremental": false,
@@ -1761,7 +1761,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.MessagesSenderService.html",
-          "hash": "1TNSLxG2FTWwwz30PEcj5Q=="
+          "hash": "8kRlY2l1/wDDKSwpkeDVYg=="
         }
       },
       "is_incremental": false,
@@ -1773,7 +1773,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Messaging.ReceivedMessagesProcessor-1.html",
-          "hash": "I10TY6tcY9lNmhHFIBJPNQ=="
+          "hash": "UUfRimrp3FhBLUmzyJuGIQ=="
         }
       },
       "is_incremental": false,
@@ -1800,7 +1800,7 @@
           "hash": "IkDBgtHBFIa3CjNexpkd/g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1812,7 +1812,7 @@
           "hash": "UxLOnaaEObPwWpqOzCW0rg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1824,7 +1824,7 @@
           "hash": "wADTd4AQ+E1hl9JTxGRccg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1836,7 +1836,7 @@
           "hash": "9rpDTOUk2EkWH2a7DwfrUg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1845,7 +1845,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.StorageService.html",
-          "hash": "kIWd3dj+XFg1L0WLhU9/Pg=="
+          "hash": "+/v9g2RFaDfVDViWMkISRQ=="
         }
       },
       "is_incremental": false,
@@ -1872,7 +1872,7 @@
           "hash": "nYxgAMlyH6XVu2HVTfI/KQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1896,7 +1896,7 @@
           "hash": "NjU4MD1VaVDu0j60Z6CPdA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1908,7 +1908,7 @@
           "hash": "gUgTXXugz8FY1rh2QqKVwg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1920,7 +1920,7 @@
           "hash": "nblPx3ubWHKbqLLsFj/UVQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1932,7 +1932,7 @@
           "hash": "SzjgSDFaSN8jlmLrE5v9bg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1944,7 +1944,7 @@
           "hash": "v0gZMApegFmW/yx4MOvCVg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1956,7 +1956,7 @@
           "hash": "7Z9hVjWC5DXqpEj8LkSIKw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1968,7 +1968,7 @@
           "hash": "+39xDPesUAP7tSRi6bmfDw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1980,7 +1980,7 @@
           "hash": "lTxr8K1+y4wa0rlAaC8xYA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1992,7 +1992,7 @@
           "hash": "qS3my7qMxTOkirnVmfWigQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -2004,7 +2004,7 @@
           "hash": "4AAjDw4hzIwesPhiKUdJ5g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -2028,7 +2028,7 @@
           "hash": "fRvwGG7/kbx//AYMbK4Wsg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -2047,23 +2047,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 13,
-          "skipped_file_count": 13
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 154,
-          "skipped_file_count": 111
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -2076,8 +2078,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
