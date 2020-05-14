@@ -8,4 +8,4 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-ad-b2c-asp-net-core-and-uwp)
+[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-ad-b2c-asp-net-core-and-uwp-template)
