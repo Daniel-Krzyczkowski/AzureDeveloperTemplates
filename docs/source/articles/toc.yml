@@ -14,5 +14,3 @@
   href: azure-event-hub-sdk-asp-net-core-template.md
 - name: Azure Clients integration with ASP .NET Core DI
   href: azure-core-extensions-asp-net-core-template.md
-- name: Azure Active Directory B2C integration with ASP .NET Core and UWP
-  href: azure-ad-b2c-asp-net-core-and-uwp-template.md

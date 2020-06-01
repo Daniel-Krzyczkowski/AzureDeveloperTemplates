@@ -1,762 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: AzureDeveloperTemplates.AdB2C.UWP
-  name: AzureDeveloperTemplates.AdB2C.UWP
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.UWP
-  fullName: AzureDeveloperTemplates.AdB2C.UWP
-  nameWithType: AzureDeveloperTemplates.AdB2C.UWP
-- uid: AzureDeveloperTemplates.AdB2C.UWP.App
-  name: App
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.App.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.UWP.App
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.App
-  nameWithType: App
-- uid: AzureDeveloperTemplates.AdB2C.UWP.App.#ctor
-  name: App()
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.App.html#AzureDeveloperTemplates_AdB2C_UWP_App__ctor
-  commentId: M:AzureDeveloperTemplates.AdB2C.UWP.App.#ctor
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.App.App()
-  nameWithType: App.App()
-- uid: AzureDeveloperTemplates.AdB2C.UWP.App.#ctor*
-  name: App
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.App.html#AzureDeveloperTemplates_AdB2C_UWP_App__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.App.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.App.App
-  nameWithType: App.App
-- uid: AzureDeveloperTemplates.AdB2C.UWP.App.InitializeComponent
-  name: InitializeComponent()
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.App.html#AzureDeveloperTemplates_AdB2C_UWP_App_InitializeComponent
-  commentId: M:AzureDeveloperTemplates.AdB2C.UWP.App.InitializeComponent
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.App.InitializeComponent()
-  nameWithType: App.InitializeComponent()
-- uid: AzureDeveloperTemplates.AdB2C.UWP.App.InitializeComponent*
-  name: InitializeComponent
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.App.html#AzureDeveloperTemplates_AdB2C_UWP_App_InitializeComponent_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.App.InitializeComponent
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.App.InitializeComponent
-  nameWithType: App.InitializeComponent
-- uid: AzureDeveloperTemplates.AdB2C.UWP.App.OnLaunched(Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
-  name: OnLaunched(LaunchActivatedEventArgs)
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.App.html#AzureDeveloperTemplates_AdB2C_UWP_App_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_
-  commentId: M:AzureDeveloperTemplates.AdB2C.UWP.App.OnLaunched(Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.App.OnLaunched(Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
-  nameWithType: App.OnLaunched(LaunchActivatedEventArgs)
-- uid: AzureDeveloperTemplates.AdB2C.UWP.App.OnLaunched*
-  name: OnLaunched
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.App.html#AzureDeveloperTemplates_AdB2C_UWP_App_OnLaunched_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.App.OnLaunched
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.App.OnLaunched
-  nameWithType: App.OnLaunched
-- uid: AzureDeveloperTemplates.AdB2C.UWP.MainPage
-  name: MainPage
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.MainPage.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.UWP.MainPage
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.MainPage
-  nameWithType: MainPage
-- uid: AzureDeveloperTemplates.AdB2C.UWP.MainPage.#ctor
-  name: MainPage()
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.MainPage.html#AzureDeveloperTemplates_AdB2C_UWP_MainPage__ctor
-  commentId: M:AzureDeveloperTemplates.AdB2C.UWP.MainPage.#ctor
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.MainPage.MainPage()
-  nameWithType: MainPage.MainPage()
-- uid: AzureDeveloperTemplates.AdB2C.UWP.MainPage.#ctor*
-  name: MainPage
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.MainPage.html#AzureDeveloperTemplates_AdB2C_UWP_MainPage__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.MainPage.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.MainPage.MainPage
-  nameWithType: MainPage.MainPage
-- uid: AzureDeveloperTemplates.AdB2C.UWP.MainPage.InitializeComponent
-  name: InitializeComponent()
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.MainPage.html#AzureDeveloperTemplates_AdB2C_UWP_MainPage_InitializeComponent
-  commentId: M:AzureDeveloperTemplates.AdB2C.UWP.MainPage.InitializeComponent
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.MainPage.InitializeComponent()
-  nameWithType: MainPage.InitializeComponent()
-- uid: AzureDeveloperTemplates.AdB2C.UWP.MainPage.InitializeComponent*
-  name: InitializeComponent
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.MainPage.html#AzureDeveloperTemplates_AdB2C_UWP_MainPage_InitializeComponent_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.MainPage.InitializeComponent
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.MainPage.InitializeComponent
-  nameWithType: MainPage.InitializeComponent
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Program
-  name: Program
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Program.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.UWP.Program
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Program
-  nameWithType: Program
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services
-  name: AzureDeveloperTemplates.AdB2C.UWP.Services
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.UWP.Services
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services
-  nameWithType: AzureDeveloperTemplates.AdB2C.UWP.Services
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService
-  name: AuthenticationService
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService
-  nameWithType: AuthenticationService
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.#ctor
-  name: AuthenticationService()
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.html#AzureDeveloperTemplates_AdB2C_UWP_Services_AuthenticationService__ctor
-  commentId: M:AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.#ctor
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.AuthenticationService()
-  nameWithType: AuthenticationService.AuthenticationService()
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.#ctor*
-  name: AuthenticationService
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.html#AzureDeveloperTemplates_AdB2C_UWP_Services_AuthenticationService__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.AuthenticationService
-  nameWithType: AuthenticationService.AuthenticationService
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.Authenticate
-  name: Authenticate()
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.html#AzureDeveloperTemplates_AdB2C_UWP_Services_AuthenticationService_Authenticate
-  commentId: M:AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.Authenticate
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.Authenticate()
-  nameWithType: AuthenticationService.Authenticate()
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.Authenticate*
-  name: Authenticate
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.html#AzureDeveloperTemplates_AdB2C_UWP_Services_AuthenticationService_Authenticate_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.Authenticate
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.AuthenticationService.Authenticate
-  nameWithType: AuthenticationService.Authenticate
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract
-  name: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.UWP.Services.Contract
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract
-  nameWithType: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData
-  name: AuthenticationData
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData
-  nameWithType: AuthenticationData
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.AccessToken
-  name: AccessToken
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.html#AzureDeveloperTemplates_AdB2C_UWP_Services_Contract_AuthenticationData_AccessToken
-  commentId: P:AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.AccessToken
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.AccessToken
-  nameWithType: AuthenticationData.AccessToken
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.AccessToken*
-  name: AccessToken
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.html#AzureDeveloperTemplates_AdB2C_UWP_Services_Contract_AuthenticationData_AccessToken_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.AccessToken
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.Contract.AuthenticationData.AccessToken
-  nameWithType: AuthenticationData.AccessToken
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces
-  name: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces
-  nameWithType: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService
-  name: IAuthenticationService
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService
-  nameWithType: IAuthenticationService
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.Authenticate
-  name: Authenticate()
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.html#AzureDeveloperTemplates_AdB2C_UWP_Services_Interfaces_IAuthenticationService_Authenticate
-  commentId: M:AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.Authenticate
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.Authenticate()
-  nameWithType: IAuthenticationService.Authenticate()
-- uid: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.Authenticate*
-  name: Authenticate
-  href: api/AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.html#AzureDeveloperTemplates_AdB2C_UWP_Services_Interfaces_IAuthenticationService_Authenticate_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.Authenticate
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.UWP.Services.Interfaces.IAuthenticationService.Authenticate
-  nameWithType: IAuthenticationService.Authenticate
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI
-  name: AzureDeveloperTemplates.AdB2C.WebAPI
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.WebAPI
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI
-  nameWithType: AzureDeveloperTemplates.AdB2C.WebAPI
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers
-  name: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.WebAPI.Controllers
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers
-  nameWithType: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController
-  name: UserController
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController
-  nameWithType: UserController
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController})
-  name: UserController(ILogger<UserController>)
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.html#AzureDeveloperTemplates_AdB2C_WebAPI_Controllers_UserController__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_AdB2C_WebAPI_Controllers_UserController__
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController})
-  name.vb: UserController(ILogger(Of UserController))
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.UserController(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController>)
-  fullName.vb: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.UserController(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController))
-  nameWithType: UserController.UserController(ILogger<UserController>)
-  nameWithType.vb: UserController.UserController(ILogger(Of UserController))
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.#ctor*
-  name: UserController
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.html#AzureDeveloperTemplates_AdB2C_WebAPI_Controllers_UserController__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.UserController
-  nameWithType: UserController.UserController
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.Get
-  name: Get()
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.html#AzureDeveloperTemplates_AdB2C_WebAPI_Controllers_UserController_Get
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.Get
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.Get()
-  nameWithType: UserController.Get()
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.Get*
-  name: Get
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.html#AzureDeveloperTemplates_AdB2C_WebAPI_Controllers_UserController_Get_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.Get
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Controllers.UserController.Get
-  nameWithType: UserController.Get
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration
-  name: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration
-  nameWithType: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration
-  name: AzureAdB2cServiceConfiguration
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration
-  nameWithType: AzureAdB2cServiceConfiguration
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.ClientId
-  name: ClientId
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfiguration_ClientId
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.ClientId
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.ClientId
-  nameWithType: AzureAdB2cServiceConfiguration.ClientId
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.ClientId*
-  name: ClientId
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfiguration_ClientId_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.ClientId
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.ClientId
-  nameWithType: AzureAdB2cServiceConfiguration.ClientId
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Policy
-  name: Policy
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfiguration_Policy
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Policy
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Policy
-  nameWithType: AzureAdB2cServiceConfiguration.Policy
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Policy*
-  name: Policy
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfiguration_Policy_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Policy
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Policy
-  nameWithType: AzureAdB2cServiceConfiguration.Policy
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Tenant
-  name: Tenant
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfiguration_Tenant
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Tenant
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Tenant
-  nameWithType: AzureAdB2cServiceConfiguration.Tenant
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Tenant*
-  name: Tenant
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfiguration_Tenant_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Tenant
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration.Tenant
-  nameWithType: AzureAdB2cServiceConfiguration.Tenant
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation
-  name: AzureAdB2cServiceConfigurationValidation
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation
-  nameWithType: AzureAdB2cServiceConfigurationValidation
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.Validate(System.String,AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration)
-  name: Validate(String, AzureAdB2cServiceConfiguration)
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfigurationValidation_Validate_System_String_AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfiguration_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.Validate(System.String,AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration)
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.Validate(System.String, AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfiguration)
-  nameWithType: AzureAdB2cServiceConfigurationValidation.Validate(String, AzureAdB2cServiceConfiguration)
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.Validate*
-  name: Validate
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_AzureAdB2cServiceConfigurationValidation_Validate_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.Validate
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.AzureAdB2cServiceConfigurationValidation.Validate
-  nameWithType: AzureAdB2cServiceConfigurationValidation.Validate
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces
-  name: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces
-  nameWithType: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration
-  name: IAzureAdB2cServiceConfiguration
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration
-  nameWithType: IAzureAdB2cServiceConfiguration
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.ClientId
-  name: ClientId
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_Interfaces_IAzureAdB2cServiceConfiguration_ClientId
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.ClientId
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.ClientId
-  nameWithType: IAzureAdB2cServiceConfiguration.ClientId
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.ClientId*
-  name: ClientId
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_Interfaces_IAzureAdB2cServiceConfiguration_ClientId_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.ClientId
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.ClientId
-  nameWithType: IAzureAdB2cServiceConfiguration.ClientId
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Policy
-  name: Policy
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_Interfaces_IAzureAdB2cServiceConfiguration_Policy
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Policy
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Policy
-  nameWithType: IAzureAdB2cServiceConfiguration.Policy
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Policy*
-  name: Policy
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_Interfaces_IAzureAdB2cServiceConfiguration_Policy_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Policy
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Policy
-  nameWithType: IAzureAdB2cServiceConfiguration.Policy
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Tenant
-  name: Tenant
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_Interfaces_IAzureAdB2cServiceConfiguration_Tenant
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Tenant
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Tenant
-  nameWithType: IAzureAdB2cServiceConfiguration.Tenant
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Tenant*
-  name: Tenant
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_Configuration_Interfaces_IAzureAdB2cServiceConfiguration_Tenant_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Tenant
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.Configuration.Interfaces.IAzureAdB2cServiceConfiguration.Tenant
-  nameWithType: IAzureAdB2cServiceConfiguration.Tenant
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection
-  name: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection
-  nameWithType: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions
-  name: ConfigurationServiceCollectionExtensions
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions
-  nameWithType: ConfigurationServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  name: AddAppConfiguration(IServiceCollection, IConfiguration)
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_DependencyInjection_ConfigurationServiceCollectionExtensions_AddAppConfiguration_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: ConfigurationServiceCollectionExtensions.AddAppConfiguration(IServiceCollection, IConfiguration)
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration*
-  name: AddAppConfiguration
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_DependencyInjection_ConfigurationServiceCollectionExtensions_AddAppConfiguration_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration
-  nameWithType: ConfigurationServiceCollectionExtensions.AddAppConfiguration
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions
-  name: IdentityServiceCollectionExtensions
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions
-  nameWithType: IdentityServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: AddIdentityService(IServiceCollection)
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_DependencyInjection_IdentityServiceCollectionExtensions_AddIdentityService_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: IdentityServiceCollectionExtensions.AddIdentityService(IServiceCollection)
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService*
-  name: AddIdentityService
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.html#AzureDeveloperTemplates_AdB2C_WebAPI_Core_DependencyInjection_IdentityServiceCollectionExtensions_AddIdentityService_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService
-  nameWithType: IdentityServiceCollectionExtensions.AddIdentityService
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Program
-  name: Program
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Program.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebAPI.Program
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Program
-  nameWithType: Program
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Program.CreateHostBuilder(System.String[])
-  name: CreateHostBuilder(String[])
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Program.html#AzureDeveloperTemplates_AdB2C_WebAPI_Program_CreateHostBuilder_System_String___
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Program.CreateHostBuilder(System.String[])
-  name.vb: CreateHostBuilder(String())
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Program.CreateHostBuilder(System.String[])
-  fullName.vb: AzureDeveloperTemplates.AdB2C.WebAPI.Program.CreateHostBuilder(System.String())
-  nameWithType: Program.CreateHostBuilder(String[])
-  nameWithType.vb: Program.CreateHostBuilder(String())
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Program.CreateHostBuilder*
-  name: CreateHostBuilder
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Program.html#AzureDeveloperTemplates_AdB2C_WebAPI_Program_CreateHostBuilder_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Program.CreateHostBuilder
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Program.CreateHostBuilder
-  nameWithType: Program.CreateHostBuilder
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Program.Main(System.String[])
-  name: Main(String[])
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Program.html#AzureDeveloperTemplates_AdB2C_WebAPI_Program_Main_System_String___
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Program.Main(System.String[])
-  name.vb: Main(String())
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Program.Main(System.String[])
-  fullName.vb: AzureDeveloperTemplates.AdB2C.WebAPI.Program.Main(System.String())
-  nameWithType: Program.Main(String[])
-  nameWithType.vb: Program.Main(String())
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Program.Main*
-  name: Main
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Program.html#AzureDeveloperTemplates_AdB2C_WebAPI_Program_Main_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Program.Main
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Program.Main
-  nameWithType: Program.Main
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup
-  name: Startup
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebAPI.Startup
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup
-  nameWithType: Startup
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  name: Startup(IConfiguration)
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html#AzureDeveloperTemplates_AdB2C_WebAPI_Startup__ctor_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: Startup.Startup(IConfiguration)
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.#ctor*
-  name: Startup
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html#AzureDeveloperTemplates_AdB2C_WebAPI_Startup__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Startup.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Startup
-  nameWithType: Startup.Startup
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configuration
-  name: Configuration
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html#AzureDeveloperTemplates_AdB2C_WebAPI_Startup_Configuration
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configuration
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configuration
-  nameWithType: Startup.Configuration
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configuration*
-  name: Configuration
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html#AzureDeveloperTemplates_AdB2C_WebAPI_Startup_Configuration_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configuration
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configuration
-  nameWithType: Startup.Configuration
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-  name: Configure(IApplicationBuilder, IWebHostEnvironment)
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html#AzureDeveloperTemplates_AdB2C_WebAPI_Startup_Configure_Microsoft_AspNetCore_Builder_IApplicationBuilder_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-  nameWithType: Startup.Configure(IApplicationBuilder, IWebHostEnvironment)
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configure*
-  name: Configure
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html#AzureDeveloperTemplates_AdB2C_WebAPI_Startup_Configure_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configure
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.Configure
-  nameWithType: Startup.Configure
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: ConfigureServices(IServiceCollection)
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html#AzureDeveloperTemplates_AdB2C_WebAPI_Startup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-- uid: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.ConfigureServices*
-  name: ConfigureServices
-  href: api/AzureDeveloperTemplates.AdB2C.WebAPI.Startup.html#AzureDeveloperTemplates_AdB2C_WebAPI_Startup_ConfigureServices_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebAPI.Startup.ConfigureServices
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebAPI.Startup.ConfigureServices
-  nameWithType: Startup.ConfigureServices
-- uid: AzureDeveloperTemplates.AdB2C.WebApp
-  name: AzureDeveloperTemplates.AdB2C.WebApp
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.WebApp
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp
-  nameWithType: AzureDeveloperTemplates.AdB2C.WebApp
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages
-  name: AzureDeveloperTemplates.AdB2C.WebApp.Pages
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.html
-  commentId: N:AzureDeveloperTemplates.AdB2C.WebApp.Pages
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages
-  nameWithType: AzureDeveloperTemplates.AdB2C.WebApp.Pages
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel
-  name: ErrorModel
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel
-  nameWithType: ErrorModel
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel})
-  name: ErrorModel(ILogger<ErrorModel>)
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel__
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel})
-  name.vb: ErrorModel(ILogger(Of ErrorModel))
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ErrorModel(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel>)
-  fullName.vb: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ErrorModel(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel))
-  nameWithType: ErrorModel.ErrorModel(ILogger<ErrorModel>)
-  nameWithType.vb: ErrorModel.ErrorModel(ILogger(Of ErrorModel))
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.#ctor*
-  name: ErrorModel
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ErrorModel
-  nameWithType: ErrorModel.ErrorModel
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.OnGet
-  name: OnGet()
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel_OnGet
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.OnGet
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.OnGet()
-  nameWithType: ErrorModel.OnGet()
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.OnGet*
-  name: OnGet
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel_OnGet_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.OnGet
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.OnGet
-  nameWithType: ErrorModel.OnGet
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.RequestId
-  name: RequestId
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel_RequestId
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.RequestId
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.RequestId
-  nameWithType: ErrorModel.RequestId
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.RequestId*
-  name: RequestId
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel_RequestId_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.RequestId
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.RequestId
-  nameWithType: ErrorModel.RequestId
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ShowRequestId
-  name: ShowRequestId
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel_ShowRequestId
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ShowRequestId
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ShowRequestId
-  nameWithType: ErrorModel.ShowRequestId
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ShowRequestId*
-  name: ShowRequestId
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_ErrorModel_ShowRequestId_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ShowRequestId
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.ErrorModel.ShowRequestId
-  nameWithType: ErrorModel.ShowRequestId
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel
-  name: IndexModel
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel
-  nameWithType: IndexModel
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel})
-  name: IndexModel(ILogger<IndexModel>)
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_IndexModel__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_AdB2C_WebApp_Pages_IndexModel__
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel})
-  name.vb: IndexModel(ILogger(Of IndexModel))
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.IndexModel(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel>)
-  fullName.vb: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.IndexModel(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel))
-  nameWithType: IndexModel.IndexModel(ILogger<IndexModel>)
-  nameWithType.vb: IndexModel.IndexModel(ILogger(Of IndexModel))
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.#ctor*
-  name: IndexModel
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_IndexModel__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.IndexModel
-  nameWithType: IndexModel.IndexModel
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.OnGet
-  name: OnGet()
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_IndexModel_OnGet
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.OnGet
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.OnGet()
-  nameWithType: IndexModel.OnGet()
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.OnGet*
-  name: OnGet
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_IndexModel_OnGet_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.OnGet
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.IndexModel.OnGet
-  nameWithType: IndexModel.OnGet
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel
-  name: PrivacyModel
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel
-  nameWithType: PrivacyModel
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel})
-  name: PrivacyModel(ILogger<PrivacyModel>)
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivacyModel__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivacyModel__
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel})
-  name.vb: PrivacyModel(ILogger(Of PrivacyModel))
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.PrivacyModel(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel>)
-  fullName.vb: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.PrivacyModel(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel))
-  nameWithType: PrivacyModel.PrivacyModel(ILogger<PrivacyModel>)
-  nameWithType.vb: PrivacyModel.PrivacyModel(ILogger(Of PrivacyModel))
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.#ctor*
-  name: PrivacyModel
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivacyModel__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.PrivacyModel
-  nameWithType: PrivacyModel.PrivacyModel
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.OnGet
-  name: OnGet()
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivacyModel_OnGet
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.OnGet
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.OnGet()
-  nameWithType: PrivacyModel.OnGet()
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.OnGet*
-  name: OnGet
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivacyModel_OnGet_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.OnGet
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivacyModel.OnGet
-  nameWithType: PrivacyModel.OnGet
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel
-  name: PrivateContentModel
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel
-  nameWithType: PrivateContentModel
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.OnGet
-  name: OnGet()
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivateContentModel_OnGet
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.OnGet
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.OnGet()
-  nameWithType: PrivateContentModel.OnGet()
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.OnGet*
-  name: OnGet
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivateContentModel_OnGet_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.OnGet
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.OnGet
-  nameWithType: PrivateContentModel.OnGet
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.UserId
-  name: UserId
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivateContentModel_UserId
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.UserId
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.UserId
-  nameWithType: PrivateContentModel.UserId
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.UserId*
-  name: UserId
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.html#AzureDeveloperTemplates_AdB2C_WebApp_Pages_PrivateContentModel_UserId_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.UserId
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Pages.PrivateContentModel.UserId
-  nameWithType: PrivateContentModel.UserId
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Program
-  name: Program
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Program.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebApp.Program
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Program
-  nameWithType: Program
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Program.CreateHostBuilder(System.String[])
-  name: CreateHostBuilder(String[])
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Program.html#AzureDeveloperTemplates_AdB2C_WebApp_Program_CreateHostBuilder_System_String___
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Program.CreateHostBuilder(System.String[])
-  name.vb: CreateHostBuilder(String())
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Program.CreateHostBuilder(System.String[])
-  fullName.vb: AzureDeveloperTemplates.AdB2C.WebApp.Program.CreateHostBuilder(System.String())
-  nameWithType: Program.CreateHostBuilder(String[])
-  nameWithType.vb: Program.CreateHostBuilder(String())
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Program.CreateHostBuilder*
-  name: CreateHostBuilder
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Program.html#AzureDeveloperTemplates_AdB2C_WebApp_Program_CreateHostBuilder_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Program.CreateHostBuilder
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Program.CreateHostBuilder
-  nameWithType: Program.CreateHostBuilder
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Program.Main(System.String[])
-  name: Main(String[])
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Program.html#AzureDeveloperTemplates_AdB2C_WebApp_Program_Main_System_String___
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Program.Main(System.String[])
-  name.vb: Main(String())
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Program.Main(System.String[])
-  fullName.vb: AzureDeveloperTemplates.AdB2C.WebApp.Program.Main(System.String())
-  nameWithType: Program.Main(String[])
-  nameWithType.vb: Program.Main(String())
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Program.Main*
-  name: Main
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Program.html#AzureDeveloperTemplates_AdB2C_WebApp_Program_Main_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Program.Main
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Program.Main
-  nameWithType: Program.Main
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup
-  name: Startup
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html
-  commentId: T:AzureDeveloperTemplates.AdB2C.WebApp.Startup
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup
-  nameWithType: Startup
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  name: Startup(IConfiguration)
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html#AzureDeveloperTemplates_AdB2C_WebApp_Startup__ctor_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: Startup.Startup(IConfiguration)
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup.#ctor*
-  name: Startup
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html#AzureDeveloperTemplates_AdB2C_WebApp_Startup__ctor_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Startup.#ctor
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Startup
-  nameWithType: Startup.Startup
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configuration
-  name: Configuration
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html#AzureDeveloperTemplates_AdB2C_WebApp_Startup_Configuration
-  commentId: P:AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configuration
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configuration
-  nameWithType: Startup.Configuration
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configuration*
-  name: Configuration
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html#AzureDeveloperTemplates_AdB2C_WebApp_Startup_Configuration_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configuration
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configuration
-  nameWithType: Startup.Configuration
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-  name: Configure(IApplicationBuilder, IWebHostEnvironment)
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html#AzureDeveloperTemplates_AdB2C_WebApp_Startup_Configure_Microsoft_AspNetCore_Builder_IApplicationBuilder_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-  nameWithType: Startup.Configure(IApplicationBuilder, IWebHostEnvironment)
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configure*
-  name: Configure
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html#AzureDeveloperTemplates_AdB2C_WebApp_Startup_Configure_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configure
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup.Configure
-  nameWithType: Startup.Configure
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: ConfigureServices(IServiceCollection)
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html#AzureDeveloperTemplates_AdB2C_WebApp_Startup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.AdB2C.WebApp.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-- uid: AzureDeveloperTemplates.AdB2C.WebApp.Startup.ConfigureServices*
-  name: ConfigureServices
-  href: api/AzureDeveloperTemplates.AdB2C.WebApp.Startup.html#AzureDeveloperTemplates_AdB2C_WebApp_Startup_ConfigureServices_
-  commentId: Overload:AzureDeveloperTemplates.AdB2C.WebApp.Startup.ConfigureServices
-  isSpec: "True"
-  fullName: AzureDeveloperTemplates.AdB2C.WebApp.Startup.ConfigureServices
-  nameWithType: Startup.ConfigureServices
 - uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI
   name: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI
   href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.html
@@ -839,11 +83,11 @@ references:
   commentId: T:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions
   nameWithType: ServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.ConfigureAppSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.ConfigureAppSettings(IServiceCollection,IConfiguration)
   name: ConfigureAppSettings(IServiceCollection, IConfiguration)
-  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Extensions_ServiceCollectionExtensions_ConfigureAppSettings_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.ConfigureAppSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.ConfigureAppSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Extensions_ServiceCollectionExtensions_ConfigureAppSettings_IServiceCollection_IConfiguration_
+  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.ConfigureAppSettings(IServiceCollection,IConfiguration)
+  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.ConfigureAppSettings(IServiceCollection, IConfiguration)
   nameWithType: ServiceCollectionExtensions.ConfigureAppSettings(IServiceCollection, IConfiguration)
 - uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.ConfigureAppSettings*
   name: ConfigureAppSettings
@@ -852,11 +96,11 @@ references:
   isSpec: "True"
   fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.ConfigureAppSettings
   nameWithType: ServiceCollectionExtensions.ConfigureAppSettings
-- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.RegisterDependencies(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.RegisterDependencies(IServiceCollection,IConfiguration)
   name: RegisterDependencies(IServiceCollection, IConfiguration)
-  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Extensions_ServiceCollectionExtensions_RegisterDependencies_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.RegisterDependencies(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.RegisterDependencies(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Extensions_ServiceCollectionExtensions_RegisterDependencies_IServiceCollection_IConfiguration_
+  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.RegisterDependencies(IServiceCollection,IConfiguration)
+  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.RegisterDependencies(IServiceCollection, IConfiguration)
   nameWithType: ServiceCollectionExtensions.RegisterDependencies(IServiceCollection, IConfiguration)
 - uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Extensions.ServiceCollectionExtensions.RegisterDependencies*
   name: RegisterDependencies
@@ -877,13 +121,13 @@ references:
   commentId: T:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy
   fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy
   nameWithType: SimpleTracingPolicy
-- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy})
+- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.#ctor(ILogger{AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy})
   name: SimpleTracingPolicy(ILogger<SimpleTracingPolicy>)
-  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Policies_SimpleTracingPolicy__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Policies_SimpleTracingPolicy__
-  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy})
+  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Policies_SimpleTracingPolicy__ctor_ILogger_AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Policies_SimpleTracingPolicy__
+  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.#ctor(ILogger{AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy})
   name.vb: SimpleTracingPolicy(ILogger(Of SimpleTracingPolicy))
-  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.SimpleTracingPolicy(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy>)
-  fullName.vb: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.SimpleTracingPolicy(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy))
+  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.SimpleTracingPolicy(ILogger<AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy>)
+  fullName.vb: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.SimpleTracingPolicy(ILogger(Of AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy))
   nameWithType: SimpleTracingPolicy.SimpleTracingPolicy(ILogger<SimpleTracingPolicy>)
   nameWithType.vb: SimpleTracingPolicy.SimpleTracingPolicy(ILogger(Of SimpleTracingPolicy))
 - uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Policies.SimpleTracingPolicy.#ctor*
@@ -1007,11 +251,11 @@ references:
   commentId: T:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup
   fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup
   nameWithType: Startup
-- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.#ctor(IConfiguration)
   name: Startup(IConfiguration)
-  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Startup__ctor_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
+  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Startup__ctor_IConfiguration_
+  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.#ctor(IConfiguration)
+  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Startup(IConfiguration)
   nameWithType: Startup.Startup(IConfiguration)
 - uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.#ctor*
   name: Startup
@@ -1033,11 +277,11 @@ references:
   isSpec: "True"
   fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configuration
   nameWithType: Startup.Configuration
-- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configure(IApplicationBuilder,IWebHostEnvironment)
   name: Configure(IApplicationBuilder, IWebHostEnvironment)
-  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Startup_Configure_Microsoft_AspNetCore_Builder_IApplicationBuilder_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_
-  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Startup_Configure_IApplicationBuilder_IWebHostEnvironment_
+  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configure(IApplicationBuilder,IWebHostEnvironment)
+  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configure(IApplicationBuilder, IWebHostEnvironment)
   nameWithType: Startup.Configure(IApplicationBuilder, IWebHostEnvironment)
 - uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configure*
   name: Configure
@@ -1046,11 +290,11 @@ references:
   isSpec: "True"
   fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.Configure
   nameWithType: Startup.Configure
-- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.ConfigureServices(IServiceCollection)
   name: ConfigureServices(IServiceCollection)
-  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Startup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.html#AzureDeveloperTemplates_AzureCoreExtensions_WebAPI_Startup_ConfigureServices_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.ConfigureServices(IServiceCollection)
+  fullName: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.ConfigureServices(IServiceCollection)
   nameWithType: Startup.ConfigureServices(IServiceCollection)
 - uid: AzureDeveloperTemplates.AzureCoreExtensions.WebAPI.Startup.ConfigureServices*
   name: ConfigureServices
@@ -1171,13 +415,13 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel
   fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel
   nameWithType: FileProcessingChannel
-- uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel})
+- uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.#ctor(ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel})
   name: FileProcessingChannel(ILogger<FileProcessingChannel>)
-  href: api/AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.html#AzureDeveloperTemplates_Starter_API_BackgroundServices_Channels_FileProcessingChannel__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_Starter_API_BackgroundServices_Channels_FileProcessingChannel__
-  commentId: M:AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel})
+  href: api/AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.html#AzureDeveloperTemplates_Starter_API_BackgroundServices_Channels_FileProcessingChannel__ctor_ILogger_AzureDeveloperTemplates_Starter_API_BackgroundServices_Channels_FileProcessingChannel__
+  commentId: M:AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.#ctor(ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel})
   name.vb: FileProcessingChannel(ILogger(Of FileProcessingChannel))
-  fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.FileProcessingChannel(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel>)
-  fullName.vb: AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.FileProcessingChannel(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel))
+  fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.FileProcessingChannel(ILogger<AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel>)
+  fullName.vb: AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.FileProcessingChannel(ILogger(Of AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel))
   nameWithType: FileProcessingChannel.FileProcessingChannel(ILogger<FileProcessingChannel>)
   nameWithType.vb: FileProcessingChannel.FileProcessingChannel(ILogger(Of FileProcessingChannel))
 - uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel.#ctor*
@@ -1232,13 +476,13 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService
   fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService
   nameWithType: EventsBackgroundService
-- uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.#ctor(AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor,Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService})
+- uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.#ctor(AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor,ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService})
   name: EventsBackgroundService(IReceivedEventsProcessor, ILogger<EventsBackgroundService>)
-  href: api/AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.html#AzureDeveloperTemplates_Starter_API_BackgroundServices_EventsBackgroundService__ctor_AzureDeveloperTemplates_Starter_Infrastructure_Services_Events_Interfaces_IReceivedEventsProcessor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_Starter_API_BackgroundServices_EventsBackgroundService__
-  commentId: M:AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.#ctor(AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor,Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService})
+  href: api/AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.html#AzureDeveloperTemplates_Starter_API_BackgroundServices_EventsBackgroundService__ctor_AzureDeveloperTemplates_Starter_Infrastructure_Services_Events_Interfaces_IReceivedEventsProcessor_ILogger_AzureDeveloperTemplates_Starter_API_BackgroundServices_EventsBackgroundService__
+  commentId: M:AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.#ctor(AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor,ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService})
   name.vb: EventsBackgroundService(IReceivedEventsProcessor, ILogger(Of EventsBackgroundService))
-  fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.EventsBackgroundService(AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor, Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService>)
-  fullName.vb: AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.EventsBackgroundService(AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor, Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService))
+  fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.EventsBackgroundService(AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor, ILogger<AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService>)
+  fullName.vb: AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.EventsBackgroundService(AzureDeveloperTemplates.Starter.Infrastructure.Services.Events.Interfaces.IReceivedEventsProcessor, ILogger(Of AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService))
   nameWithType: EventsBackgroundService.EventsBackgroundService(IReceivedEventsProcessor, ILogger<EventsBackgroundService>)
   nameWithType.vb: EventsBackgroundService.EventsBackgroundService(IReceivedEventsProcessor, ILogger(Of EventsBackgroundService))
 - uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.EventsBackgroundService.#ctor*
@@ -1267,13 +511,13 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService
   fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService
   nameWithType: FileProcessingBackgroundService
-- uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService},AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel,AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService)
+- uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.#ctor(ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService},AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel,AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService)
   name: FileProcessingBackgroundService(ILogger<FileProcessingBackgroundService>, FileProcessingChannel, IStorageService)
-  href: api/AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.html#AzureDeveloperTemplates_Starter_API_BackgroundServices_FileProcessingBackgroundService__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_Starter_API_BackgroundServices_FileProcessingBackgroundService__AzureDeveloperTemplates_Starter_API_BackgroundServices_Channels_FileProcessingChannel_AzureDeveloperTemplates_Starter_Infrastructure_Services_Storage_Interfaces_IStorageService_
-  commentId: M:AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService},AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel,AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService)
+  href: api/AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.html#AzureDeveloperTemplates_Starter_API_BackgroundServices_FileProcessingBackgroundService__ctor_ILogger_AzureDeveloperTemplates_Starter_API_BackgroundServices_FileProcessingBackgroundService__AzureDeveloperTemplates_Starter_API_BackgroundServices_Channels_FileProcessingChannel_AzureDeveloperTemplates_Starter_Infrastructure_Services_Storage_Interfaces_IStorageService_
+  commentId: M:AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.#ctor(ILogger{AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService},AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel,AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService)
   name.vb: FileProcessingBackgroundService(ILogger(Of FileProcessingBackgroundService), FileProcessingChannel, IStorageService)
-  fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.FileProcessingBackgroundService(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService>, AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel, AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService)
-  fullName.vb: AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.FileProcessingBackgroundService(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService), AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel, AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService)
+  fullName: AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.FileProcessingBackgroundService(ILogger<AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService>, AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel, AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService)
+  fullName.vb: AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.FileProcessingBackgroundService(ILogger(Of AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService), AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel, AzureDeveloperTemplates.Starter.Infrastructure.Services.Storage.Interfaces.IStorageService)
   nameWithType: FileProcessingBackgroundService.FileProcessingBackgroundService(ILogger<FileProcessingBackgroundService>, FileProcessingChannel, IStorageService)
   nameWithType.vb: FileProcessingBackgroundService.FileProcessingBackgroundService(ILogger(Of FileProcessingBackgroundService), FileProcessingChannel, IStorageService)
 - uid: AzureDeveloperTemplates.Starter.API.BackgroundServices.FileProcessingBackgroundService.#ctor*
@@ -1308,13 +552,13 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Controllers.FileController
   fullName: AzureDeveloperTemplates.Starter.API.Controllers.FileController
   nameWithType: FileController
-- uid: AzureDeveloperTemplates.Starter.API.Controllers.FileController.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.Controllers.FileController},AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel)
+- uid: AzureDeveloperTemplates.Starter.API.Controllers.FileController.#ctor(ILogger{AzureDeveloperTemplates.Starter.API.Controllers.FileController},AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel)
   name: FileController(ILogger<FileController>, FileProcessingChannel)
-  href: api/AzureDeveloperTemplates.Starter.API.Controllers.FileController.html#AzureDeveloperTemplates_Starter_API_Controllers_FileController__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_Starter_API_Controllers_FileController__AzureDeveloperTemplates_Starter_API_BackgroundServices_Channels_FileProcessingChannel_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Controllers.FileController.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.Controllers.FileController},AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel)
+  href: api/AzureDeveloperTemplates.Starter.API.Controllers.FileController.html#AzureDeveloperTemplates_Starter_API_Controllers_FileController__ctor_ILogger_AzureDeveloperTemplates_Starter_API_Controllers_FileController__AzureDeveloperTemplates_Starter_API_BackgroundServices_Channels_FileProcessingChannel_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Controllers.FileController.#ctor(ILogger{AzureDeveloperTemplates.Starter.API.Controllers.FileController},AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel)
   name.vb: FileController(ILogger(Of FileController), FileProcessingChannel)
-  fullName: AzureDeveloperTemplates.Starter.API.Controllers.FileController.FileController(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.Starter.API.Controllers.FileController>, AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel)
-  fullName.vb: AzureDeveloperTemplates.Starter.API.Controllers.FileController.FileController(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.Starter.API.Controllers.FileController), AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel)
+  fullName: AzureDeveloperTemplates.Starter.API.Controllers.FileController.FileController(ILogger<AzureDeveloperTemplates.Starter.API.Controllers.FileController>, AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel)
+  fullName.vb: AzureDeveloperTemplates.Starter.API.Controllers.FileController.FileController(ILogger(Of AzureDeveloperTemplates.Starter.API.Controllers.FileController), AzureDeveloperTemplates.Starter.API.BackgroundServices.Channels.FileProcessingChannel)
   nameWithType: FileController.FileController(ILogger<FileController>, FileProcessingChannel)
   nameWithType.vb: FileController.FileController(ILogger(Of FileController), FileProcessingChannel)
 - uid: AzureDeveloperTemplates.Starter.API.Controllers.FileController.#ctor*
@@ -1420,11 +664,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions
   nameWithType: AppBuilderExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.UseSwaggerServices(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+- uid: AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.UseSwaggerServices(IApplicationBuilder)
   name: UseSwaggerServices(IApplicationBuilder)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.html#AzureDeveloperTemplates_Starter_API_Core_AppBuilderExtensions_UseSwaggerServices_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.UseSwaggerServices(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.UseSwaggerServices(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.html#AzureDeveloperTemplates_Starter_API_Core_AppBuilderExtensions_UseSwaggerServices_IApplicationBuilder_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.UseSwaggerServices(IApplicationBuilder)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.UseSwaggerServices(IApplicationBuilder)
   nameWithType: AppBuilderExtensions.UseSwaggerServices(IApplicationBuilder)
 - uid: AzureDeveloperTemplates.Starter.API.Core.AppBuilderExtensions.UseSwaggerServices*
   name: UseSwaggerServices
@@ -1445,11 +689,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration
   fullName: AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration
   nameWithType: InvalidModelStateMvcBuilderConfiguration
-- uid: AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.ConfigureInvalidModelStateHandling(Microsoft.Extensions.DependencyInjection.IMvcBuilder)
+- uid: AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.ConfigureInvalidModelStateHandling(IMvcBuilder)
   name: ConfigureInvalidModelStateHandling(IMvcBuilder)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.html#AzureDeveloperTemplates_Starter_API_Core_Configuration_InvalidModelStateMvcBuilderConfiguration_ConfigureInvalidModelStateHandling_Microsoft_Extensions_DependencyInjection_IMvcBuilder_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.ConfigureInvalidModelStateHandling(Microsoft.Extensions.DependencyInjection.IMvcBuilder)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.ConfigureInvalidModelStateHandling(Microsoft.Extensions.DependencyInjection.IMvcBuilder)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.html#AzureDeveloperTemplates_Starter_API_Core_Configuration_InvalidModelStateMvcBuilderConfiguration_ConfigureInvalidModelStateHandling_IMvcBuilder_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.ConfigureInvalidModelStateHandling(IMvcBuilder)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.ConfigureInvalidModelStateHandling(IMvcBuilder)
   nameWithType: InvalidModelStateMvcBuilderConfiguration.ConfigureInvalidModelStateHandling(IMvcBuilder)
 - uid: AzureDeveloperTemplates.Starter.API.Core.Configuration.InvalidModelStateMvcBuilderConfiguration.ConfigureInvalidModelStateHandling*
   name: ConfigureInvalidModelStateHandling
@@ -1470,11 +714,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions
   nameWithType: ConfigurationServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(IServiceCollection,IConfiguration)
   name: AddAppConfiguration(IServiceCollection, IConfiguration)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_ConfigurationServiceCollectionExtensions_AddAppConfiguration_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_ConfigurationServiceCollectionExtensions_AddAppConfiguration_IServiceCollection_IConfiguration_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(IServiceCollection,IConfiguration)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration(IServiceCollection, IConfiguration)
   nameWithType: ConfigurationServiceCollectionExtensions.AddAppConfiguration(IServiceCollection, IConfiguration)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.ConfigurationServiceCollectionExtensions.AddAppConfiguration*
   name: AddAppConfiguration
@@ -1489,11 +733,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions
   nameWithType: DataServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.AddDataServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.AddDataServices(IServiceCollection)
   name: AddDataServices(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_DataServiceCollectionExtensions_AddDataServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.AddDataServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.AddDataServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_DataServiceCollectionExtensions_AddDataServices_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.AddDataServices(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.AddDataServices(IServiceCollection)
   nameWithType: DataServiceCollectionExtensions.AddDataServices(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DataServiceCollectionExtensions.AddDataServices*
   name: AddDataServices
@@ -1508,11 +752,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions
   nameWithType: DomainServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.AddDomainServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.AddDomainServices(IServiceCollection)
   name: AddDomainServices(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_DomainServiceCollectionExtensions_AddDomainServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.AddDomainServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.AddDomainServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_DomainServiceCollectionExtensions_AddDomainServices_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.AddDomainServices(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.AddDomainServices(IServiceCollection)
   nameWithType: DomainServiceCollectionExtensions.AddDomainServices(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.DomainServiceCollectionExtensions.AddDomainServices*
   name: AddDomainServices
@@ -1527,11 +771,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions
   nameWithType: EventsServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.AddEventsService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.AddEventsService(IServiceCollection)
   name: AddEventsService(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_EventsServiceCollectionExtensions_AddEventsService_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.AddEventsService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.AddEventsService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_EventsServiceCollectionExtensions_AddEventsService_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.AddEventsService(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.AddEventsService(IServiceCollection)
   nameWithType: EventsServiceCollectionExtensions.AddEventsService(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.EventsServiceCollectionExtensions.AddEventsService*
   name: AddEventsService
@@ -1546,11 +790,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions
   nameWithType: IdentityServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(IServiceCollection)
   name: AddIdentityService(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_IdentityServiceCollectionExtensions_AddIdentityService_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_IdentityServiceCollectionExtensions_AddIdentityService_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService(IServiceCollection)
   nameWithType: IdentityServiceCollectionExtensions.AddIdentityService(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.IdentityServiceCollectionExtensions.AddIdentityService*
   name: AddIdentityService
@@ -1565,11 +809,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions
   nameWithType: LoggingServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.AddLoggingServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.AddLoggingServices(IServiceCollection)
   name: AddLoggingServices(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_LoggingServiceCollectionExtensions_AddLoggingServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.AddLoggingServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.AddLoggingServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_LoggingServiceCollectionExtensions_AddLoggingServices_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.AddLoggingServices(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.AddLoggingServices(IServiceCollection)
   nameWithType: LoggingServiceCollectionExtensions.AddLoggingServices(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.LoggingServiceCollectionExtensions.AddLoggingServices*
   name: AddLoggingServices
@@ -1584,11 +828,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions
   nameWithType: MessagingServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.AddMessagingService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.AddMessagingService(IServiceCollection)
   name: AddMessagingService(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_MessagingServiceCollectionExtensions_AddMessagingService_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.AddMessagingService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.AddMessagingService(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_MessagingServiceCollectionExtensions_AddMessagingService_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.AddMessagingService(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.AddMessagingService(IServiceCollection)
   nameWithType: MessagingServiceCollectionExtensions.AddMessagingService(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.MessagingServiceCollectionExtensions.AddMessagingService*
   name: AddMessagingService
@@ -1603,11 +847,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions
   nameWithType: StorageServiceCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.AddStorageServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.AddStorageServices(IServiceCollection)
   name: AddStorageServices(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_StorageServiceCollectionExtensions_AddStorageServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.AddStorageServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.AddStorageServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_StorageServiceCollectionExtensions_AddStorageServices_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.AddStorageServices(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.AddStorageServices(IServiceCollection)
   nameWithType: StorageServiceCollectionExtensions.AddStorageServices(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.StorageServiceCollectionExtensions.AddStorageServices*
   name: AddStorageServices
@@ -1622,11 +866,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions
   fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions
   nameWithType: SwaggerCollectionExtensions
-- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.AddSwagger(IServiceCollection)
   name: AddSwagger(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_SwaggerCollectionExtensions_AddSwagger_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.html#AzureDeveloperTemplates_Starter_API_Core_DependencyInjection_SwaggerCollectionExtensions_AddSwagger_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.AddSwagger(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.AddSwagger(IServiceCollection)
   nameWithType: SwaggerCollectionExtensions.AddSwagger(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Core.DependencyInjection.SwaggerCollectionExtensions.AddSwagger*
   name: AddSwagger
@@ -1647,13 +891,13 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware
   fullName: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware
   nameWithType: ExceptionHandlerMiddleware
-- uid: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware},Microsoft.AspNetCore.Http.RequestDelegate)
+- uid: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.#ctor(ILogger{AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware},RequestDelegate)
   name: ExceptionHandlerMiddleware(ILogger<ExceptionHandlerMiddleware>, RequestDelegate)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.html#AzureDeveloperTemplates_Starter_API_Core_Middleware_ExceptionHandlerMiddleware__ctor_Microsoft_Extensions_Logging_ILogger_AzureDeveloperTemplates_Starter_API_Core_Middleware_ExceptionHandlerMiddleware__Microsoft_AspNetCore_Http_RequestDelegate_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.#ctor(Microsoft.Extensions.Logging.ILogger{AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware},Microsoft.AspNetCore.Http.RequestDelegate)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.html#AzureDeveloperTemplates_Starter_API_Core_Middleware_ExceptionHandlerMiddleware__ctor_ILogger_AzureDeveloperTemplates_Starter_API_Core_Middleware_ExceptionHandlerMiddleware__RequestDelegate_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.#ctor(ILogger{AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware},RequestDelegate)
   name.vb: ExceptionHandlerMiddleware(ILogger(Of ExceptionHandlerMiddleware), RequestDelegate)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.ExceptionHandlerMiddleware(Microsoft.Extensions.Logging.ILogger<AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware>, Microsoft.AspNetCore.Http.RequestDelegate)
-  fullName.vb: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.ExceptionHandlerMiddleware(Microsoft.Extensions.Logging.ILogger(Of AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware), Microsoft.AspNetCore.Http.RequestDelegate)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.ExceptionHandlerMiddleware(ILogger<AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware>, RequestDelegate)
+  fullName.vb: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.ExceptionHandlerMiddleware(ILogger(Of AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware), RequestDelegate)
   nameWithType: ExceptionHandlerMiddleware.ExceptionHandlerMiddleware(ILogger<ExceptionHandlerMiddleware>, RequestDelegate)
   nameWithType.vb: ExceptionHandlerMiddleware.ExceptionHandlerMiddleware(ILogger(Of ExceptionHandlerMiddleware), RequestDelegate)
 - uid: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.#ctor*
@@ -1663,11 +907,11 @@ references:
   isSpec: "True"
   fullName: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.ExceptionHandlerMiddleware
   nameWithType: ExceptionHandlerMiddleware.ExceptionHandlerMiddleware
-- uid: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+- uid: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext)
   name: Invoke(HttpContext)
-  href: api/AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.html#AzureDeveloperTemplates_Starter_API_Core_Middleware_ExceptionHandlerMiddleware_Invoke_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.html#AzureDeveloperTemplates_Starter_API_Core_Middleware_ExceptionHandlerMiddleware_Invoke_HttpContext_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext)
+  fullName: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext)
   nameWithType: ExceptionHandlerMiddleware.Invoke(HttpContext)
 - uid: AzureDeveloperTemplates.Starter.API.Core.Middleware.ExceptionHandlerMiddleware.Invoke*
   name: Invoke
@@ -1770,11 +1014,11 @@ references:
   commentId: T:AzureDeveloperTemplates.Starter.API.Startup
   fullName: AzureDeveloperTemplates.Starter.API.Startup
   nameWithType: Startup
-- uid: AzureDeveloperTemplates.Starter.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+- uid: AzureDeveloperTemplates.Starter.API.Startup.#ctor(IConfiguration)
   name: Startup(IConfiguration)
-  href: api/AzureDeveloperTemplates.Starter.API.Startup.html#AzureDeveloperTemplates_Starter_API_Startup__ctor_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: AzureDeveloperTemplates.Starter.API.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
+  href: api/AzureDeveloperTemplates.Starter.API.Startup.html#AzureDeveloperTemplates_Starter_API_Startup__ctor_IConfiguration_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Startup.#ctor(IConfiguration)
+  fullName: AzureDeveloperTemplates.Starter.API.Startup.Startup(IConfiguration)
   nameWithType: Startup.Startup(IConfiguration)
 - uid: AzureDeveloperTemplates.Starter.API.Startup.#ctor*
   name: Startup
@@ -1796,11 +1040,11 @@ references:
   isSpec: "True"
   fullName: AzureDeveloperTemplates.Starter.API.Startup.Configuration
   nameWithType: Startup.Configuration
-- uid: AzureDeveloperTemplates.Starter.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+- uid: AzureDeveloperTemplates.Starter.API.Startup.Configure(IApplicationBuilder,IWebHostEnvironment)
   name: Configure(IApplicationBuilder, IWebHostEnvironment)
-  href: api/AzureDeveloperTemplates.Starter.API.Startup.html#AzureDeveloperTemplates_Starter_API_Startup_Configure_Microsoft_AspNetCore_Builder_IApplicationBuilder_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-  fullName: AzureDeveloperTemplates.Starter.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+  href: api/AzureDeveloperTemplates.Starter.API.Startup.html#AzureDeveloperTemplates_Starter_API_Startup_Configure_IApplicationBuilder_IWebHostEnvironment_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Startup.Configure(IApplicationBuilder,IWebHostEnvironment)
+  fullName: AzureDeveloperTemplates.Starter.API.Startup.Configure(IApplicationBuilder, IWebHostEnvironment)
   nameWithType: Startup.Configure(IApplicationBuilder, IWebHostEnvironment)
 - uid: AzureDeveloperTemplates.Starter.API.Startup.Configure*
   name: Configure
@@ -1809,11 +1053,11 @@ references:
   isSpec: "True"
   fullName: AzureDeveloperTemplates.Starter.API.Startup.Configure
   nameWithType: Startup.Configure
-- uid: AzureDeveloperTemplates.Starter.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AzureDeveloperTemplates.Starter.API.Startup.ConfigureServices(IServiceCollection)
   name: ConfigureServices(IServiceCollection)
-  href: api/AzureDeveloperTemplates.Starter.API.Startup.html#AzureDeveloperTemplates_Starter_API_Startup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AzureDeveloperTemplates.Starter.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AzureDeveloperTemplates.Starter.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AzureDeveloperTemplates.Starter.API.Startup.html#AzureDeveloperTemplates_Starter_API_Startup_ConfigureServices_IServiceCollection_
+  commentId: M:AzureDeveloperTemplates.Starter.API.Startup.ConfigureServices(IServiceCollection)
+  fullName: AzureDeveloperTemplates.Starter.API.Startup.ConfigureServices(IServiceCollection)
   nameWithType: Startup.ConfigureServices(IServiceCollection)
 - uid: AzureDeveloperTemplates.Starter.API.Startup.ConfigureServices*
   name: ConfigureServices

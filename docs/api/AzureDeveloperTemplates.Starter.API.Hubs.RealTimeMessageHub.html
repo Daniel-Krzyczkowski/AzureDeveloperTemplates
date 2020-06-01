@@ -78,64 +78,13 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Microsoft.AspNetCore.SignalR.Hub</span></div>
-    <div class="level2"><span class="xref">RealTimeMessageHub</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">System.IDisposable</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.SignalR.Hub.Dispose()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync()</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.SignalR.Hub.Clients</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.SignalR.Hub.Context</span>
-    </div>
-    <div>
-      <span class="xref">Microsoft.AspNetCore.SignalR.Hub.Groups</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RealTimeMessageHub</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AzureDeveloperTemplates.Starter.API.Hubs.html">AzureDeveloperTemplates.Starter.API.Hubs</a></h6>
   <h6><strong>Assembly</strong>: AzureDeveloperTemplates.Starter.API.dll</h6>
   <h5 id="AzureDeveloperTemplates_Starter_API_Hubs_RealTimeMessageHub_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Authorize]
-public class RealTimeMessageHub : Hub, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class RealTimeMessageHub : Hub</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -152,8 +101,7 @@ public class RealTimeMessageHub : Hub, IDisposable</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HubMethodName(&quot;direct-message&quot;)]
-public Task SendDirectMessageToUser(string sampleMessageAsJson)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task SendDirectMessageToUser(string sampleMessageAsJson)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,10 +135,6 @@ public Task SendDirectMessageToUser(string sampleMessageAsJson)</code></pre>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">System.IDisposable</span>
-  </div>
 </article>
           </div>
           
