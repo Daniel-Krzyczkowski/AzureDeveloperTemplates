@@ -23,5 +23,3 @@ jobs:
       run: dotnet build ./src/azure-function-with-dependency-injection-template/AzureDeveloperTemplates.sln --configuration Release
     - name: Build azure-core-extensions-asp-net-core-template
       run: dotnet build ./src/azure-core-extensions-asp-net-core-template/AzureDeveloperTemplates.sln --configuration Release
-    - name: Build azure-ad-b2c-asp-net-core-and-uwp-template
-      run: dotnet build ./src/azure-ad-b2c-asp-net-core-and-uwp-template/AzureDeveloperTemplates.sln --configuration Release
