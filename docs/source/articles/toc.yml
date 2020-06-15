@@ -8,6 +8,8 @@
   href: azure-sql-db-repository-pattern-asp-net-core-template.md
 - name: Azure Service Bus SDK with ASP .NET Core
   href: azure-service-bus-sdk-asp-net-core-template.md
+- name: Azure Cosmos DB SDK with ASP .NET Core
+  href: azure-cosmos-db-sdk-repository-pattern-asp-net-core-template.md
 - name: Azure Storage Blobs SDK with ASP .NET Core
   href: azure-blob-storage-sdk-asp-net-core-template.md
 - name: Azure Event Hub SDK with ASP .NET Core
