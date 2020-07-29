@@ -5,6 +5,8 @@
 
 ![.NET Core](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/workflows/.NET%20Core/badge.svg)
 
+![CodeQL security scanning](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/workflows/CodeQL/badge.svg)
+
 
 ### [Documentation together with code samples](https://daniel-krzyczkowski.github.io/AzureDeveloperTemplates/)
 
