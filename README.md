@@ -33,7 +33,7 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
+[Azure Developer Templates Starter project](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
 
 
 ### Azure Storage Blobs SDK with ASP .NET Core
@@ -44,7 +44,7 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
+[Azure Developer Templates Starter project](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
 
 
 ### Azure clients integration with ASP .NET Core using Microsoft.Extensions.Azure.Core Library
@@ -57,7 +57,7 @@
 
 #### Source code:
 
-[Azure clients integration with ASP .NET Core using Microsoft.Extensions.Azure.Core Library Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-core-extensions-asp-net-core-template)
+[Azure clients integration with ASP .NET Core using Microsoft.Extensions.Azure.Core Library](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-core-extensions-asp-net-core-template)
 
 
 ### Azure Cosmos DB SDK with ASP .NET Core
@@ -69,7 +69,7 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
+[Azure Developer Templates Starter project](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
 
 ### Azure Event Hub SDK with ASP .NET Core
 
@@ -80,7 +80,7 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
+[Azure Developer Templates Starter project](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
 
 ### Azure Function With Dependency Injection
 
@@ -92,7 +92,7 @@
 
 #### Source code:
 
-[Azure Function With Dependency Injection Template](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template)
+[Azure Function With Dependency Injection](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-function-with-dependency-injection-template)
 
 
 ### Azure Service Bus SDK with ASP .NET Core
@@ -104,7 +104,7 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
+[Azure Developer Templates Starter project](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
 
 
 ### Azure SignalR Service SDK with ASP .NET Core
@@ -116,7 +116,7 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
+[Azure Developer Templates Starter project](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
 
 
 ### Azure SQL DB Repository Pattern with Entity Framework Core and ASP .NET Core
@@ -129,4 +129,4 @@
 
 #### Source code:
 
-[Azure Developer Templates Starter project on GitHub](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
+[Azure Developer Templates Starter project](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-asp-net-core-starter-template)
